@@ -1,2 +1,5 @@
+name = "stars_2023_2024"
+uuid = "810fa65c-5df3-4a95-ae58-4f62087949da"
+
 [deps]
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
