@@ -22,4 +22,4 @@ $$R_\odot\sim 7\times 10^{10}\;\mathrm{[cm]},\quad M_\odot \sim 2\times 10^{33}\
 
 ### 1: Timescales of stellar evolution
 
-asdasd
+TBD
