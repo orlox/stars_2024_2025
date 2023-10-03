@@ -15,10 +15,10 @@ luminosity:
 $$R_\odot\sim 7\times 10^{10}\;\mathrm{[cm]},\quad M_\odot \sim 2\times 10^{33}\;\mathrm{[g]},\quad L_\odot \sim 4\times 10^{33}\;\mathrm{[erg\;s^{-1}]}$$
 
 - Thermal timescale: One of the main early hypothesis to explain the energy
-source of the Sun was that it originated from its slow contraction into its own
-gravitational potential. In such a case, a rough estimate of the energy the Sun
-would have radiated through its life is given by the negative of the
-gravitational potential energy $E_\mathrm{g}$:
+    source of the Sun was that it originated from its slow contraction into its own
+    gravitational potential. In such a case, a rough estimate of the energy the Sun
+    would have radiated through its life is given by the negative of the
+    gravitational potential energy $E_\mathrm{g}$:
 
     $$E_\mathrm{g} \sim \displaystyle -\frac{GM_\odot^2}{R_\odot}.$$
 
