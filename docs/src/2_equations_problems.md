@@ -26,7 +26,7 @@ Consider a polytropic equation of state of the form
 
 $$P = K \rho^\gamma,$$
 
-where $C$ is a constant. If the density of a fluid element is perturbed slightly by an amount $\delta \rho\ll\rho$, then the pressure is perturbed by an amount
+where $K$ is a constant. If the density of a fluid element is perturbed slightly by an amount $\delta \rho\ll\rho$, then the pressure is perturbed by an amount
 
 $$P_0+\delta P = K (\rho_0+\delta\rho)^\gamma \simeq K\rho_0^\gamma\left(1+\frac{\gamma \delta\rho}{\rho_0}\right),$$
 
@@ -52,7 +52,7 @@ Using this answer the following questions:
 
     where $a_r$ is the radial component of the acceleration. Compute the resulting acceleration after the perturbation $\delta r=\alpha r_0$. For which values of $\gamma$ does the resulting acceleration point inwards or outwards? What does this say about stability?
 
-### Mass-Radius relationship for a polytrope
+### 4: Mass-Radius relationship for a polytrope
 
 The structure of a star with a polytropic equation of state $P=K \rho^{1+1/n}$ can be computed using the Lane-Emden equation,
 
@@ -70,7 +70,7 @@ $m(z)=4\pi r_n^3 \rho_\mathrm{c}(-z^2 w_n'(z)).$
 
 ## Solutions
 
-### Constant density star
+### 1: Constant density star
 
 Using the expression of $m(r)$ we can write the hydrostatic equilibrium equation as,
 
@@ -88,7 +88,7 @@ The pressure at an arbitrary radius can be obtained by changing the integration 
 
 $$\int_0^r \frac{\partial P}{\partial r} dr = P(r) - P_\mathrm{c}=-\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).$$
 
-### Lower bound on central pressure of the Sun
+### 2: Lower bound on central pressure of the Sun
 
 We can integrate the equation over mass, again ignoring central pressure:
 
@@ -104,7 +104,7 @@ $$P_\mathrm{c}=\frac{GM^2}{8\pi R^4}\left(\frac{M}{M_\odot}\right)^2\left(\frac{
 
 Considering one atmosphere is $\sim 10^6\;\mathrm{dyne\;cm^{-2}}$, this means the core of the sun has over eight orders of magnitude higher pressure than we get on our daily lives!
 
-### Dynamical instability
+### 3: Dynamical instability
 
 We start by noting that:
 
@@ -132,7 +132,7 @@ $$\frac{1}{4\pi (r_0+\alpha r_0)^2}\frac{\partial^2 r_0}{\partial t^2} = \frac{G
 
 This implies that for expansion ($\alpha>0$) we will get an outwards acceleration if $\gamma<4/3$, which is an unstable situation. Conversely, if we had contraction ($\alpha<0$) we would obtain a negative acceleration.
 
-### Mass-Radius relationship for a polytrope
+### 4: Mass-Radius relationship for a polytrope
 
 The mass of the star up to a certain radius can be obtained by integrating the continuity equation:
 
