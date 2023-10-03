@@ -100,7 +100,7 @@ $$P_\mathrm{c} > \int_0^{M} \frac{Gm}{4\pi R^4}=\frac{GM^2}{8\pi R^4}.$$
 
 It is quite common to write expressions like this for any star, but scaled to the properties of the Sun. We can do this by evaluating the expression for the solar radius and mass, while keeping the relevant power laws on mass and radius:
 
-$$P_\mathrm{c}=\frac{GM^2}{8\pi R^4}\left(\frac{M}{M_\odot}\right)^2\left(\frac{R}{R_\odot}\right)^{-4}\simeq 4.5\times 10^{14}\;\mathrm{[dyne\;cm^{-2}]} \left(\frac{M}{M_\odot}\right)^2\left(\frac{R}{R_\odot}\right)^{-4}.$$
+$$P_\mathrm{c}=\frac{GM_\odot^2}{8\pi R_\odot^4}\left(\frac{M}{M_\odot}\right)^2\left(\frac{R}{R_\odot}\right)^{-4}\simeq 4.5\times 10^{14}\;\mathrm{[dyne\;cm^{-2}]} \left(\frac{M}{M_\odot}\right)^2\left(\frac{R}{R_\odot}\right)^{-4}.$$
 
 Considering one atmosphere is $\sim 10^6\;\mathrm{dyne\;cm^{-2}}$, this means the core of the sun has over eight orders of magnitude higher pressure than we get on our daily lives!
 
