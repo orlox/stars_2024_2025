@@ -6,8 +6,8 @@ function ignore_code_blocks(content)
     #content = replace(content, "###" => "##")  # make level 3 headers level 2
 end
 
-Literate.markdown("./src/1_introduction_computational.jl", "./src/", preprocess=ignore_code_blocks)
-Literate.markdown("./src/2_equations_computational.jl", "./src/", preprocess=ignore_code_blocks)
+Literate.markdown("./docs/src/1_introduction_computational.jl", "./docs/src/", preprocess=ignore_code_blocks)
+Literate.markdown("./docs/src/2_equations_computational.jl", "./docs/src/", preprocess=ignore_code_blocks)
 
 makedocs(sitename="Stellar Structure and Evolution",
         pages= ["index.md",
