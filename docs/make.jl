@@ -17,7 +17,9 @@ makedocs(sitename="Stellar Structure and Evolution",
                                               "1_introduction_computational.md"],
                 "Equations (03/10/23)" => ["Notes" => "2_equations.md",
                                               "Exercises"=>"2_equations_problems.md",
-                                              "2_equations_computational.md"]
+                                              "2_equations_computational.md"],
+                "Energy equation and EOS (10/10/23)" => ["Notes" => "3_eos1.md",
+                                              "Exercises"=>"3_eos1_problems.md"]
                 ])
 
 deploydocs(

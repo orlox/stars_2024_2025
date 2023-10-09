@@ -18,7 +18,7 @@ Using the Lagrangian form of the equation of hydrostatic equilibrium,
 
 $$\frac{\partial P}{\partial m}=-\frac{Gm}{4\pi r^4},$$
 
-place a lower bound on the central density of the sun by making use of the basic property that anywhere within the stellar interior we have that $r<R_\odot$.
+place a lower bound on the central pressure of the sun by making use of the basic property that anywhere within the stellar interior we have that $r<R_\odot$.
 
 ### 3: Dynamical instability
 
@@ -140,7 +140,7 @@ $$m(r)=\int_0^r 4\pi r^2 \rho dr.$$
 
 Using $\rho = \rho_c w_n^n$ we find
 
-$$m(r)=4\pi r^2 \rho_c \int_0^r r^2 w_n^n dr = 4\pi r_n^3 \rho_c \int_0^z z^2 w_n^n.$$
+$$m(r)=4\pi \rho_c \int_0^r r^2 w_n^n dr = 4\pi r_n^3 \rho_c \int_0^z z^2 w_n^ndz.$$
 
 The integrand can be replaced using the Lane-Equation, which gives allows for immediate integration:
 
