@@ -1,3 +1,3 @@
-# # Solving the Lane-Embden equation
+# # Solving the Lane-Emden equation
 
 # TBD
