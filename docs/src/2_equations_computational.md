@@ -2,7 +2,7 @@
 EditURL = "2_equations_computational.jl"
 ```
 
-# Solving the Lane-Embden equation
+# Solving the Lane-Emden equation
 
 TBD
 
