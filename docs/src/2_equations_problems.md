@@ -86,7 +86,11 @@ $$P_c = \frac{4\pi \rho_c^2 G}{6} R^2.$$
 
 The pressure at an arbitrary radius can be obtained by changing the integration limits
 
-$$\int_0^r \frac{\partial P}{\partial r} dr = P(r) - P_\mathrm{c}=-\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).$$
+$$\int_0^r \frac{\partial P}{\partial r} dr = P(r) - P_\mathrm{c},$$
+
+which can be rewritten as
+
+$$P(r) = -\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).$$
 
 ### 2: Lower bound on central pressure of the Sun
 
