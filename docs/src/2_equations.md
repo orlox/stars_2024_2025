@@ -145,19 +145,19 @@ where $M$ is the total mass of the star. The two conditions at the core are very
 
 We can then count the number of unkowns against the number of differential equations. We have not considered composition yet, but for each element we consider, we will have one equation describing its time derivative. Using a Lagrangian formulation we have the following unkowns:
 
-- $r(m,t)$
-- $\rho(m,t)$
-- $P(m,t)$
-- $s(m,t)$
-- $T(m,t)$
-- $L(m,t)$
-- $\varepsilon_\mathrm{nuc}(m,T)$
+- The radius $r(m,t)$
+- The density $\rho(m,t)$
+- The pressure $P(m,t)$
+- The specific entropy $s(m,t)$
+- The temperature $T(m,t)$
+- The luminosity $L(m,t)$
+- And the rate of nuclear energy generation rate $\varepsilon_\mathrm{nuc}(m,T)$
 
 This is a total of 7 unkown variables, with only 3 differential equations! This conundrum will be solved in the following way:
 
-- $\rho$, $P$, $s$ and $T$: An equation of state (EOS) of the fluid will gives us two of these properties by specifying any of the other two (as well as the composition). This reduces the number of unkown properties by 2.
-- $L$: This will come from our study of energy transport, which will give us an equation for $L$ in terms of all other local properties such as the temperature gradient.
-- $\varepsilon_\mathrm{nuc}$: This is a microphysical property that depends on local conditions such as temperature, density, and composition. We will see how it is computed when we study nuclear reactions.
+-  $\rho$, $P$, $s$ and $T$: An equation of state (EOS) of the fluid will gives us two of these properties by specifying any of the other two (as well as the composition). This reduces the number of unkown properties by 2.
+-  $L$: This will come from our study of energy transport, which will give us an equation for $L$ in terms of all other local properties such as the temperature gradient.
+-  $\varepsilon_\mathrm{nuc}$: This is a microphysical property that depends on local conditions such as temperature, density, and composition. We will see how it is computed when we study nuclear reactions.
 
 ## Virial theorem
 
@@ -165,5 +165,74 @@ Consider the Lagrangian form of the equation of motion, in the case where gravit
 
 $$\boxed{\frac{\partial P}{\partial m}=-\frac{Gm}{4\pi r^4}.}$$
 
-A very useful expression, known as the virial theorem,
+A very useful expression, known as the virial theorem, can be derived by multiplying both sides by $4\pi r^3$ and integrating over mass,
 
+$$\int_0^M 4\pi r^2 \frac{\partial P}{\partial m}\mathrm{d}m=\int_0^M -\frac{Gm}{r}\mathrm{d}m$$
+
+The right hand term is the gravitational potential energy, $E_g$, which corresponds to assembling the star by succesively bringing mass elements $\mathrm{d}m$ from infinity. The left hand side can be rewritten using integration by parts:
+
+$$\int_0^M 4\pi r^2 \frac{\partial P}{\partial m}\mathrm{d}m = \left.(4\pi r^2 P)\right|_{m=0}^{m=M}-\int 12\pi r^2 \frac{\partial r}{\partial m}P \mathrm{d}m.$$
+
+The first term on the right hand side vanishes from the boundary conditions, and using the continuity equation we have
+
+$$\int 4\pi r^2 \frac{\partial P}{\partial m}\mathrm{d}m = -3\int_0^M\frac{P}{\rho}\mathrm{d}m,$$
+
+which gives us the virial theorem
+
+$$\boxed{E_g = -3\int_0^M\frac{P}{\rho}\mathrm{d}m}\tag{1.5}$$
+
+To see what this implies, let's consider the very simple case of a monoatomic gas:
+
+$$P=nk_\mathrm{B}T,\quad n=\frac{\rho}{m_g},\tag{1.6}$$
+
+where $k_\mathrm{B}$ is Boltzmann's constant and $m_g$ is the mass of the individual gas particles. This is very simplified as it does not account for electrons in an ionized gas, but this will be generalized in later classes. For the monoatomic ideal gas the energy per particle is
+
+$$e=\frac{3}{2}k_\mathrm{B}T,$$
+
+from which we can compute the specific (meaning, per unit mass) internal energy of the gas,
+
+$$u=\frac{e}{m_g}=\frac{3}{2}\frac{k_\mathrm{B}T}{m_g}.\tag{1.7}$$
+
+Plugging $(1.7)$ and $(1.6)$ into $(1.5)$ we find
+
+$$E_g = -2\int_0^M u \mathrm{d}m=-2E_i,$$
+
+where $E_i$ is the internal energy of the gas. The total energy of the gas can be determined by adding up the potential and gravitational energies, which combined with the previous equation results in
+
+$$E=E_g+E_i=-E_i.$$
+
+From this we see that the total energy is negative (as expected for a bound star) and that as a star loses (for instance, due to radiation at their surface), its internal energy increases. This implies that a star will often increase its temperature as a consequence of mass loss! Often this is referred to as stars having a negative heat capacity.
+
+## Lane-Emden equation
+
+Consider the continuity and hydrostatic equilibrium equations in their Eularian form,
+
+$$\frac{\partial m}{\partial r}=4\pi r^2 \rho,\quad \frac{\partial P}{\partial r}=-\frac{Gm\rho}{r^2}.$$
+
+It could be possible to find solutions to these equations if there was a simple relationship of the form $P=P(\rho)$ (meaning, temperature independent), such that we only only have as unkowns $\rho(r)$ and $m(r)$. As it turns out an important particular case is that of a so called polytropic equation of state,
+
+$$P=K\rho^\gamma,$$
+
+where $K$ and $\gamma$ are constant. Depending on the relevant equation of state that describes a star at a given stage, we will see both cases where $K$ is a function of fundamental constants that is independent of a specific star, as well as cases where $K$ can vary during the evolution of a star. Rather than using the exponent $\gamma$, it is common to use the polytropic index $n$, with
+
+$$P=K\rho^{1+1/n}.$$
+
+We can combine the equation of hydrostatic equilibrium with the equation of continuity to obtain a single second order differential equation as follows:
+
+$$\left.\frac{\partial P}{\partial r}=-\frac{Gm\rho}{r^2}\quad\right/\cdot \frac{r^2}{\rho}$$
+$$\left. \frac{r^2}{\rho}\frac{\partial P}{\partial r}=-Gm\quad\right/\frac{\partial}{\partial r} $$
+$$\frac{\partial}{\partial r}\left(\frac{r^2}{\rho}\frac{\partial P}{\partial r}\right)=-G\frac{\partial m}{\partial r}=-4\pi G \rho r^2.\tag{1.8}$$
+
+If we have a polytropic relationship between density and pressure, then this is just a second order differential equation for $\rho(r)$, and we can obtain a solution for it if we have two boundary conditions. A useful dimensionless form of this equation can be obtained if we define a new variable $z$ instead of $r$ from
+
+$$r=r_n z,\qquad r_n \equiv \sqrt{\frac{(n+1)P_c}{4\pi G\rho_c^2}},$$
+
+and we define a function $w(z)$ such that
+
+$$\rho = \rho_c \left[w(z)\right]^n\rightarrow P=P_c\left[w(z)\right]^{n+1},$$
+
+where $\rho_c$ and $P_c$ are the central density and pressure. Using $z$ and $w(z)$ to replace $r$, $\rho$ and $P$ in Equation (1.8), one obtains the Lane-Emden equation:
+
+$$\frac{1}{z^2}\frac{\mathrm{d}}{\mathrm{d} z}\left(z^2\frac{\mathrm{d}w}{\mathrm{d}z}\right)=-w^n.$$
+
+We need two boundary conditions, one of them clearly being $w(0)=1$ as we require the central density and pressure to be $\rho_c$ and $P_c$ respectively. The second boundary condition can be determined from a restriction on the central temperature gradient. Since near the core the mass is given by $m\simeq 4\pi r^3 \rho_c/3$, the equation of hydrostatic equilibrium implies that $(\partial P/\partial r)|_{r=0}=0$ which in turn implies that $w'|_{\xi=0}=0$. With these two boundary conditions the Lane-Emden equation has a unique solution for each $n$, and using our definition of the stellar surface as $P(R)=0$, the surface is determined by the first value $\xi_1$ for which $w(\xi_1)=0$. As we consider different equations of state which can be approximated as polytropes, the Lane-Emden equation will be a useful source of insight to determine how different properties of the star (such as their mass and radius) relate to each other.

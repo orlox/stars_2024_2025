@@ -92,11 +92,11 @@ $$\left(\frac{\partial P}{\partial T}\right)_v=\frac{P\delta}{T\alpha}.$$
 
 We start by noting that
 
-$$\frac{d P}{d T} = \left(\frac{\partial P}{\partial T}\right)_\rho \frac{d T}{dt} + \left(\frac{\partial P}{\partial \rho}\right)_T \frac{d \rho}{dt}$$
+$$\frac{d P}{d t} = \left(\frac{\partial P}{\partial T}\right)_\rho \frac{d T}{dt} + \left(\frac{\partial P}{\partial \rho}\right)_T \frac{d \rho}{dt}$$
 
 Turning the derivatives into derivatives over the logarithms, and replacing with $\chi_T$ and $\chi_\rho$, gives us
 
-$$\frac{d P}{d T} = \frac{P\chi_T}{T}\frac{d T}{dt} + \frac{P\chi_\rho}{\rho}\frac{d \rho}{dt}.$$
+$$\frac{d P}{d t} = \frac{P\chi_T}{T}\frac{d T}{dt} + \frac{P\chi_\rho}{\rho}\frac{d \rho}{dt}.$$
 
 We then replace this in the energy equation with $T$ and $P$ as independent variables:
 
