@@ -126,8 +126,8 @@ One can combine Equations $(1.2)$, $(1.2)$ and $(1.3)$ to obtain the equation of
 
 We then have two different forms for the equations of stellar structure and evolution, which depend on whether we use $r$ or $m$ as the independent spatial variable. If $r$ is the independent variable then the equations are in "Eularian" form, while using $m$ as independent variable is the "Lagrangian" form. The equation of continuity $(1.3)$ can be used to switch between both formulations, and these are summarized in the table below (note that for the energy equation we are using a time derivative at fixed mass in both formulations).
 
-||Eularian|Lagrangian|
-|-|-|-|
+|     |Eularian|Lagrangian|
+|-----|--------|----------|
 |Independent variable|$m=m(r)$|$r=r(m)$|
 |Continuity equation|$\displaystyle\frac{\partial m}{\partial r}=4\pi r^2\rho$|$\displaystyle{\frac{\partial r}{\partial m}}=\frac{1}{4\pi r^2 \rho}$|
 |Equation of motion|$\displaystyle a_r = -\frac{Gm}{r^2} - \frac{1}{\rho}\frac{\partial P}{\partial r}$|$\displaystyle a_r = -\frac{Gm}{r^2} - 4\pi r^2\frac{\partial P}{\partial m}$|
@@ -219,8 +219,8 @@ $$P=K\rho^{1+1/n}.$$
 
 We can combine the equation of hydrostatic equilibrium with the equation of continuity to obtain a single second order differential equation as follows:
 
-$$\left.\frac{\partial P}{\partial r}=-\frac{Gm\rho}{r^2}\quad\right/\cdot \frac{r^2}{\rho}$$
-$$\left. \frac{r^2}{\rho}\frac{\partial P}{\partial r}=-Gm\quad\right/\frac{\partial}{\partial r} $$
+$$\left.\frac{\partial P}{\partial r}=-\frac{Gm\rho}{r^2}\quad\right/ \frac{r^2}{\rho}\cdot$$
+$$\left.\frac{r^2}{\rho}\frac{\partial P}{\partial r}=-Gm\quad\right/ \frac{\partial}{\partial r}\cdot$$
 $$\frac{\partial}{\partial r}\left(\frac{r^2}{\rho}\frac{\partial P}{\partial r}\right)=-G\frac{\partial m}{\partial r}=-4\pi G \rho r^2.\tag{1.8}$$
 
 If we have a polytropic relationship between density and pressure, then this is just a second order differential equation for $\rho(r)$, and we can obtain a solution for it if we have two boundary conditions. A useful dimensionless form of this equation can be obtained if we define a new variable $z$ instead of $r$ from
