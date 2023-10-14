@@ -120,3 +120,113 @@ $$c_P\equiv \left(\frac{\partial q}{\partial T}\right)_P=\left(\frac{\partial u}
 and similarly, we have the specific heat at constant volume,
 
 $$c_v\equiv \left(\frac{\partial q}{\partial T}\right)_v=\left(\frac{\partial u}{\partial T}\right).$$
+
+
+## Rewriting the energy equation
+
+We aim to write the energy equation (2.8) in terms of the pressure and temperature. For this we have that
+
+$$\mathrm{d}q=\mathrm{d}u+P\mathrm{d}v=A\mathrm{d}T+B\mathrm{d}P.$$
+
+Our objective is to find $A$ and $B$. For this we will need two seemingly (at first) unrelated results.
+
+1. Consider the relationship between $u$, $v$ and $T$,
+
+   $$\mathrm{d}u = \left(\frac{\partial u}{\partial v}\right)_T \mathrm{d}v + \left(\frac{\partial u}{\partial T}\right)_v\mathrm{d}T.\tag{2.10}$$
+
+   We also have that
+
+   $$\mathrm{d}s=\frac{\mathrm{d}q}{T}=\frac{1}{T}\left(\mathrm{d}u + P\mathrm{d}v\right),$$
+
+   were after applying Equation $(2.10)$ gives us
+
+   $$\mathrm{d}s=\frac{1}{T}\left[\left(\frac{\partial u}{\partial v}\right)_T + P\right]\mathrm{d}v + \frac{1}{T}\left(\frac{\partial u}{\partial T}\right)_v.$$
+
+   As $\mathrm{d}s$ is a total differential (in contrast to $\mathrm{d}q$ which is an [imperfect differential](https://en.wikipedia.org/wiki/Inexact_differential)) we have that
+
+   $$\frac{\partial^2 s}{\partial T\partial v}=\frac{\partial^2 s}{\partial v\partial T}$$
+   $$\rightarrow \frac{\partial}{\partial T}\left[\frac{1}{T}\left(\frac{\partial u}{\partial v}\right)_T+\frac{P}{T}\right]=\frac{1}{T}\frac{\partial^2 u}{\partial v\partial T}$$
+
+   which after performing the derivative on the left hand side gives us the following relationship:
+
+   $$\boxed{\left(\frac{\partial u}{\partial v}\right)_T=T\left(\frac{\partial P}{\partial T}\right)_v-P}\tag{2.11}$$
+
+2. We will now derive a relationship between the specific heats. We start from $(2.10)$,
+
+   $$\frac{\mathrm{d}u}{\mathrm{d}T}=\left(\frac{\partial u}{\partial v}\right)_T\frac{\mathrm{d} v}{\mathrm{d} T}+\left(\frac{\partial u}{\partial T}\right)_v$$
+   $$\left(\frac{\partial u}{\partial T}\right)_P=\left(\frac{\partial u}{\partial v}\right)_T\left(\frac{\partial v}{\partial T}\right)_P+\left(\frac{\partial u}{\partial T}\right)_v.$$
+
+   We use $(2.11)$ on the right hand side,
+
+   $$\left(\frac{\partial u}{\partial T}\right)_P=\left[T\left(\frac{\partial P}{\partial T}\right)_v-P\right]\left(\frac{\partial v}{\partial T}\right)_P + \left(\frac{\partial u}{\partial T}\right)_v,$$
+
+   and after rearranging terms we get
+
+   $$\left(\frac{\partial u}{\partial T}\right)_P + P\left(\frac{\partial u}{\partial T}\right)_P-\left(\frac{\partial u}{\partial T}\right)_v = T\left(\frac{\partial P}{\partial T}\right)_v\left(\frac{\partial v}{\partial T}\right)_P$$
+   $$c_P-c_v = T\left(\frac{\partial P}{\partial T}\right)_v\left(\frac{\partial v}{\partial T}\right)_P.\tag{2.12}$$
+
+   We leave it as part of the exercises to show that
+
+   $$\left(\frac{\partial P}{\partial T}\right)_v=-\frac{\left(\frac{\partial P}{\partial T}\right)_P}{\left(\frac{\partial v}{\partial P}\right)_T}=\frac{P\delta}{T\alpha}, \tag{2.13}$$
+
+   and that
+
+   $$T\left(\frac{\partial v}{\partial T}\right)_P=\frac{\delta}{\rho}.$$
+
+   Using these two expressions in Equation $(2.14)$ results in
+
+   $$\boxed{c_P-c_v = \frac{P\delta^2}{T\rho\alpha}}.\tag{2.14}$$
+
+We now have what we need to rewrite our energy equation. Let's start from
+
+$$\mathrm{d}q = \mathrm{d}u + P \mathrm{d}v.$$
+
+Applying $(2.10)$ we get
+
+$$\mathrm{d}q = \left(\frac{\partial u}{\partial T}\right)_v\mathrm{d}T + \left(\frac{\partial u}{\partial v}\right)_T\mathrm{d}v+P\mathrm{d}v$$
+$$=\left(\frac{\partial u}{\partial T}\right)_v+\left[\left(\frac{\partial u}{\partial v}\right)_T+P\right]\mathrm{d}v.$$
+
+We use $(2.11)$ on the left hand side,
+
+$$\mathrm{d}q=\left(\frac{\partial u}{\partial T}\right)_v\mathrm{d}T+T\left(\frac{\partial P}{\partial T}\right)_v\mathrm{d}v.$$
+
+We note that $c_v=(\partial u/\partial T)_v$ and $\mathrm{d}v=-\mathrm{d}\rho/\rho^2$, and use Equation $(2.13)$ on the right hand side,
+
+$$\mathrm{d}q = c_v\mathrm{d}T-\frac{P\delta}{\rho\alpha}\frac{\mathrm{d}\rho}{\rho}$$
+$$=c_v\mathrm{d}T-\frac{P\delta}{\rho\alpha}\left(\alpha\frac{\mathrm{d}P}{P}-\delta\frac{\mathrm{d}T}{T}\right)$$
+$$=\left(c_v+\frac{P\delta^2}{\rho T \alpha}\right)\mathrm{d}T-\frac{\delta}{\rho}\mathrm{d}.P$$
+
+Using Equation $(2.14)$ we finally get what we were looking for:
+$$\mathrm{d}q = c_P\mathrm{d}T-\frac{\delta}{\rho}\mathrm{d}P.$$
+Using this expression we obtain the energy equation in terms of $\partial P/\partial t$ and $\partial T/\partial t$,
+
+$$\boxed{c_P\frac{\partial T}{\partial t}+\frac{\delta}{\rho}\frac{\partial P}{\partial t}=\varepsilon_\mathrm{nuc}-\frac{\partial L}{\partial m}.}$$
+
+A very useful property of the gas is the adiabatic temperature gradient,
+
+$$\nabla_\mathrm{ad}=\left(\frac{\partial \ln T}{\partial \ln P}\right)_\mathrm{ad},$$
+
+where "ad" indicates a change at constant entropy ($\mathrm{d}s=0$). Using Equation $(2.15)$ together with $T\mathrm{d}s=\mathrm{d}q$, we get
+
+$$\left.\left(\frac{\partial T}{\partial P}\right)_\mathrm{ad}=-\frac{\delta}{c_P\rho}\quad\right/\frac{P}{T}\cdot$$
+$$\boxed{\nabla_\mathrm{ad}=\frac{P\delta}{T\rho c_P}.}$$
+
+We will find later on that in some cases we can approximate a star as a ball of constant entropy, which implies
+
+$$\nabla\equiv\frac{\partial \ln T}{\partial \ln P}=\nabla_\mathrm{ad},$$
+
+where $\nabla$ represents the actual temperature gradient with respect to pressure through the star.
+
+## Deriving a pressure from a distribution
+
+So, once we manage to write down our EOS as $\rho=\rho(P,T)$, and we also determine its internal energy $u=u(P,T)$, we can determine $c_P$, $\alpha$ and $\delta$. This gives us what we need for the energy equation.
+
+But how can we derive $\rho(P,T) and $u(P,T)$? Next class we'll work on that, considering that a gas has multiple particles with a distribution of their velocities (and momenta). We can express the number of particles in a volume $\mathrm{d}V$ that have a momentum between $p$ and $p+\mathrm{d}p$ as
+
+$$N(p,p+\mathrm{d}p)=n_p\mathrm{d}p\mathrm{d}V=nf(p)\mathrm{d}p\mathrm{d}V,$$
+
+where $n$ is the number of particles per unit volume and $f(p)$ is a probability density for a particle to have a given momentum.If we can find $f(p)$ then we can determine macroscopic properties such as pressure and internal energy density. For example, next week we'll show that
+
+$$P=\frac{1}{3}\int_0^\infty v_p p n_p\mathrm{d}p,$$
+
+where $v_p$ is the velocity of a particle with momentum $p$.
