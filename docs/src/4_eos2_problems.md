@@ -141,7 +141,7 @@ The final exponent in the power law will only depend on the powers of radius and
 
 ### 4: Neutron star versus white dwarf radii
 
-Using the relationship between pressure and radii, $r_n$ can be expressed for the white dwarf case as
+Using the relationship between pressure and density, $r_n$ can be expressed for the white dwarf case as
 
 $$r_{n,WD}^2=Cm_e^{-1}\mu_e^{-5/3}\rho_c^{-1/3},$$
 
