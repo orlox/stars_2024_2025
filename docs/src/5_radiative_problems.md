@@ -42,11 +42,11 @@ where $k_\mathrm{C}$ is the Coulomb constant and $e$ is the electron charge. The
 
 Let us estimate the relative contributions of radiative and conductive energy transport at the core of the Sun, by comparing their corresponding opacities. The conductive opacity can be determined from the conduction coefficient using
 
-$$ \kappa_\mathrm{cd} = \frac{4 a c T^3}{3 k_\mathrm{cd}\rho},$$
+$$\kappa_\mathrm{cd} = \frac{4 a c T^3}{3 k_\mathrm{cd}\rho},$$
 
 and from the previous exercise you should have found
 
-$$ k_\mathrm{cd} \sim \frac{k_B^{7/2}T^{5/2}}{\pi m_e^{1/2}k_C^2 e^4},$$
+$$k_\mathrm{cd} \sim \frac{k_B^{7/2}T^{5/2}}{\pi m_e^{1/2}k_C^2 e^4},$$
 
 and the central density and temperature of the Sun are
 
@@ -59,7 +59,7 @@ Some constant that you will need to use are:
 - the Boltzmann constant $k_\mathrm{B}\sim 10^{-16}\;[\mathrm{cm^2\;g\;s^{-2}\;K^{-1}}]$
 - the speed of light $c\sim 3\times 10^{10}\;\mathrm{[cm\;s^{-1}]}$
 - the radiation constant $a\sim10^{-14}\;\mathrm{[erg\;cm^{-3}\;K^{-4}]}$
-- $k_Ce^2\sim 2\times 10^{-19}\;\mathrm{[cm^3\; g\; s^{-2}]}$
+- The Coulomb constant times the square of the electric charge, $k_Ce^2\sim 2\times 10^{-19}\;\mathrm{[cm^3\; g\; s^{-2}]}$
 
 ## Solutions
 
