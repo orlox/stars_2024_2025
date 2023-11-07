@@ -28,6 +28,9 @@ makedocs(sitename="Stellar Structure and Evolution",
                                               "Exercises"=>"6_convection_problems.md"],
                 "Nucleosynthesis (07/11/23)" => ["Notes" => "7_nucleo.md",
                                               "Exercises"=>"7_nucleo_problems.md"],
+                "LAB1 (14/11/2023)" => ["Stellar evolution codes" => "8_SE_codes.md",
+                                        "Instructions" => "8_instructions.md",
+                                        "Questions"=>"8_questions.md"],
                 ])
 
 deploydocs(
