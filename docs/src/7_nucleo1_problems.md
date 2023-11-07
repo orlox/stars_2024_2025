@@ -31,8 +31,7 @@ where $m_\mathrm{H}$ and $m_\mathrm{He}$ are the atomic masses of the hydrogen a
 
 $$m_u c^2\simeq 931\:\mathrm{MeV}=0.00149\:\mathrm{erg}\:.$$
 
-- Later on we will show that for stars burning hydrogen through the mainly through the PP
-chain, their mass luminosity relationship in the zero age main sequence (ZAMS) is approximately: 
+- Later on we will show that for stars burning hydrogen through the mainly through the PP chain, their mass luminosity relationship in the zero age main sequence (ZAMS) is approximately: 
 
   $$L_{\mathrm{ZAMS}}\propto M_{\mathrm{ZAMS}}^{5}\:,$$ 
 
