@@ -1,6 +1,6 @@
 # Instructions
 
-Modules for Experiments in Stellar Astrophysics (MESA) {cite}`MESA2022` is a state of the art, open-source 1D stellar evolution code. MESA is built to allow users to run experiments in stellar evolution, with a huge variety of possibilities for input physics and customization. You are strongly encouraged to give a look at the [documentation](https://docs.mesastar.org/en/release-r21.12.1/) to discover more about the software. We will specifically use the MESAstar module to evolve a single star.
+Modules for Experiments in Stellar Astrophysics (MESA) [^Jermyn2022] is a state of the art, open-source 1D stellar evolution code. MESA is built to allow users to run experiments in stellar evolution, with a huge variety of possibilities for input physics and customization. You are strongly encouraged to give a look at the [documentation](https://docs.mesastar.org/en/release-r21.12.1/) to discover more about the software. We will specifically use the MESAstar module to evolve a single star.
 
 ## Lab intro
 In this lab you will learn how to evolve a star with MESA and how to interpret its outputs in terms of the theory of stellar structure and evolution you have seen so far. In particular
@@ -10,7 +10,7 @@ In this lab you will learn how to evolve a star with MESA and how to interpret i
 
 <li>
 
- <b><u>FIRST HOUR</b></u>: see [Stellar evolution codes](https://orlox.github.io/stars_2023_2024/dev/). Theoretical overview of the software. The basic numerical scheme used to solve the set of stellar structure and evolution equations; the boundary conditions for the differential equations; the software infrastructure and usage of inlists, output files. 
+ <b><u>FIRST HOUR</b></u>: see [Stellar evolution models](https://orlox.github.io/stars_2023_2024/dev/). Theoretical overview of the software. The basic numerical scheme used to solve the set of stellar structure and evolution equations; the boundary conditions for the differential equations; the software infrastructure and usage of inlists, output files. 
 </li>
 <li>
 
@@ -68,6 +68,7 @@ If the number comes directly out of your simulation, be sure to explicitly say w
 <!-- Remember that guiding us through your reasoning goes exclusively at your own advantage! -->
 
 ### Formalities
+
 <ul>
 <li>
 
@@ -76,14 +77,14 @@ If the number comes directly out of your simulation, be sure to explicitly say w
 
 <li>
 
-<b>SUBMISSION FORMAT</b> Submit a tar / zip named as ```name_lastname_XMsun_LAB1.zip```, where $X$ is defined as $M=X\:M_{\odot}$ and $M$ is the mass of your assigned star (see below!). 
+<b>SUBMISSION FORMAT</b> Submit a tar / zip named as ```name_lastname_XMsun_LAB1.zip```, where $X$ is defined as $M=X\:M_{\odot}$ and $M$ is the mass of your assigned star (see below!). Remember to always include your ```inlist_project``` in the submission.
 
 <br>
 <center>
-<div align="center" style="padding: 2px; border: 2px dashed red; display: inline-block;">
+<div align="center" style="padding: 8px; border: 2px dashed red; display: inline-block;">
 
 <b> 🚨 Attention 🚨 </b> <br>
-Include your ```inlist_project``` too!
+Reports are INDIVIDUAL: each student<br> is expected to hand in their own report.
 </div>
 </center>
 </li>
@@ -235,3 +236,7 @@ Please find below the list of pairs of masses, together with the team (student A
 |    **9**    |         8        |         0.8         |
 
 </center>
+
+[^Jermyn2022]:
+    The Astrophysical Journal Supplement Series, Volume 265, Issue 1, id.15, 38 pp.
+    https://ui.adsabs.harvard.edu/abs/2023ApJS..265...15J/abstract
