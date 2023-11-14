@@ -14,13 +14,13 @@ Let's collect and summarize the system of differential equations derived in the 
 
 3. **ENERGY EQUATION**
    
-   $T\dfrac{\partial s}{\partial t}=-\dfrac{\partial L}{\partial m}+\epsilon_{\mathrm{nuc}}\hspace{8.1cm}$  
+   $\dfrac{\partial L}{\partial m}=\epsilon_{\mathrm{nuc}}-c_P\dfrac{\partial T}{\partial t}+\dfrac{\delta}{\rho}\dfrac{\partial P}{\partial t}\hspace{8.1cm}$  
    
 4. **ENERGY TRANSPORT EQUATION**
    
    $\dfrac{\partial T}{\partial m}=-\dfrac{Gm}{4\pi r^4}\dfrac{T}{P}\nabla\hspace{6.56cm}$    
    
-   with $\hspace{0.25cm}\nabla=\nabla_{\mathrm{rad}}\hspace{0.25cm}\mathrm{if}\hspace{0.25cm}\nabla_{\mathrm{rad}}\leq\nabla_{\mathrm{ad}}\:, \nabla=\nabla_{\mathrm{ad}}+\Delta\nabla\hspace{0.25cm}\mathrm{if}\hspace{0.25cm}\nabla_{\mathrm{rad}}>\nabla_{\mathrm{ad}}$
+   with $\hspace{0.25cm}\nabla=\nabla_{\mathrm{rad}}\hspace{0.25cm}\mathrm{if}\hspace{0.25cm}\nabla_{\mathrm{rad}}\leq\nabla_{\mathrm{ad}}\:, \nabla=\nabla_{\mathrm{ad}}\hspace{0.25cm}\mathrm{if}\hspace{0.25cm}\nabla_{\mathrm{rad}}>\nabla_{\mathrm{ad}}$
 
 5. **ABUNDANCE EQUATION**
    
@@ -53,17 +53,19 @@ with $Q_{ij}$ being the $Q$-value of the reaction between species $i$ with $j$, 
 $$\mathrm{EOS}\hspace{1cm}\rho=\rho(P,T,X_i)$$
 
 #### Assumed microphysics ingredients
-These are again characteristics of the stellar material, which are describing the physics we put in our model to reach the desired degree of complexity: the Rosseland mean opacity $\kappa$, the nuclear reaction rates $r_{i,j}$ for the chosen network of isotopes, the thermodynamic gradients $\nabla_{\mathrm{rad}}$ and $\nabla_{\mathrm{ad}}$, the specific entropy $s$. As studied in the lectures, we assume that these are known as a function of $(P,T,X_i)$. Summarizing:
+These are again characteristics of the stellar material, which are describing the physics we put in our model to reach the desired degree of complexity: the Rosseland mean opacity $\kappa$, the nuclear reaction rates $r_{i,j}$ for the chosen network of isotopes, the specific entropy $s$. As studied in the lectures, we assume that these are known as a function of $(P,T,X_i)$:
 
 $$\kappa=\kappa(P,T,X_i)$$
 $$r_{jk}=r_{jk}(P,T,X_i)\hspace{0.5cm}\Rightarrow\hspace{0.5cm}\epsilon_{\mathrm{nuc}}=\epsilon_{\mathrm{nuc}}(P,T,X_i)$$
+
+Lastly, the thermodynamic gradients $\nabla_{\mathrm{rad}}$ and $\nabla_{\mathrm{ad}}$ are also assumed to be known functions of $(P,T,X_i)$, once the EOS is known:
+
 $$\nabla_{\mathrm{rad}}=\nabla_{\mathrm{rad}}(P,T,X_i)\:,\hspace{1cm}\nabla_{\mathrm{ad}}=\nabla_{\mathrm{ad}}(P,T,X_i)$$
-$$s=s(P,T,X_i)$$
 
 If you now look at the symbols that are left, you can count the following: $r(m,t)$, $P(t,m)$, $T(m,t)$, $L(m,t)$, to be added to the $I$ mass fractions $X_i(m,t)$. We have therefore $I+4$ unknowns for $I+4$ equations.
 
 #### Initial conditions $t=t_0$
-By looking at the quantities that show time derivatives in the system of equations, we see that the radius $r(m,t)$ appears as first and second derivative with respect to time; specific entropy $s(m,t)$ and mass fractions $X_i(m,t)$ appear as first derivatives with respect to time. Therefore, we need to know the initial values of $r(m,t_0)$, $\dot{r}(m,t_0)$, $s(m,t_0)$, $X_i(m,t_0)$, $\forall\: m$.
+By looking at the quantities that show time derivatives in the system of equations, we see that the radius $r(m,t)$ appears as first and second derivative with respect to time; specific entropy $s(m,t)$ (if you recast the time derivatives of $P$ and $T$ into -$T\partial s/\partial t$) and mass fractions $X_i(m,t)$ appear as first derivatives with respect to time. Therefore, we need to know the initial values of $r(m,t_0)$, $\dot{r}(m,t_0)$, $s(m,t_0)$, $X_i(m,t_0)$, $\forall\: m$.
 
 ### What is a stellar model?
 The $I+4$ non-linear partial differential equations must be solved simultaneously as a function of the two independent variables $(m,t)$, namely a solution to the above set of equations will span the interval $0\leq m\leq M$, with $M$ depending on mass loss, and $t\geq t_0$, with $t_0$ being an initial time. Notice that we will only find physically relevant solutions once we specify
@@ -73,7 +75,20 @@ The $I+4$ non-linear partial differential equations must be solved simultaneousl
 
 **DEF**: A solution $r(m,t)$, $P(t,m)$, $T(m,t)$, $L(m,t)$, $X_i(m,t)$ for which all the above is satisfied is called **a stellar model**.
 
-## Boundary conditions
+### Discretization
+TODO
+
+#### Convergence
+These difference equations represent an **approximation** of the full differential equations, the accuracy of which can be improved by reducing $\Delta t$ and $\Delta m$. A good approach is to choose $m_j$ for each $j$ such, that all variables change by less than a predefined upper limit between points $j$ and $j-1$. *Spatial convergence* of the stellar model is achieved when the change in variables is reduced such that the numerical solution no longer depends on the $\Delta m$. Similarly, *temporal convergence* is achieved when the change in the variables is reduced till independence on $\Delta t$.
+
+### Linearization
+TODO
+
+**NB** There's no guarantee for the iteration procedure for improving the approximations  to always converge! In fact if the chosen approximation is too far from the solution, then the required corrections are so large that one cannot neglect the second-order terms, and the linearization is not appropriate anymore.
+
+
+
+<!-- ## Boundary conditions
 TODO
 ### Center $m=0$
 
@@ -93,7 +108,7 @@ At each given $X_i(m)$, we need to solve for 4 unknown functions $r$, $P$, $T$, 
 The method under these assumptions is particularly suitable to compute stellar models during the core-hydrogen burning stage, and the outcome gives us what we call **standard models**. In reality more complex, state-of-the-art stellar evolution codes, like MESA, solve the full set with mixing terms, and are able to treat all the stages of the evolution.
 
 #### From PDEs to ODEs
-With the above simplifications, we got rid of all the time derivatives in the equations 1-4. Therefore, we are not dealing anymore with a system of partial differential equations, but with a system of **ordinary** differential equations. AS a result, we can write the 4 equations in this way
+With the above simplifications, we got rid of all the time derivatives in the equations 1-4. Therefore, we are not dealing anymore with a system of partial differential equations, but with a system of **ordinary** differential equations. As a result, we can write the 4 equations in this way
 
 $$\dfrac{dy_i}{dm}=f_i(y_1,y_2,y_3,y_4)\hspace{1cm}\mathrm{with}\hspace{0.5cm}i=1,2,3,4$$
 where we have called $y_1=r$, $y_2=P$, $y_3=T$ and $y_4=L$.
@@ -114,7 +129,7 @@ $$B_i=0$$
 $$\mathrm{with}\hspace{0.5cm}B_1\equiv y_2^1-\pi(y_1^1,y_4^1)\:,\hspace{0.5cm}B_2\equiv y_3^1-\theta(y_1^1,y_4^1)\:,\hspace{1cm}i=1,2\:.$$
 
 #### Core $j=K$
-Lastly, we need to impose the boundary conditions in the center $m=0$. Notice that if we want to know the solution $r(m)$, $P(m)$, $T(m)$, $L(m)$ in $K$ grid points, we are diving the star in $K-1$ intervals: every discretization point will have an $m^j$ with $j=1,\:...\: K$. The upper boundary is located at $j=1$, and the core at $j=K$. We can write
+Lastly, we need to impose the boundary conditions in the center $m=0$. Notice that if we want to know the solution $r(m)$, $P(m)$, $T(m)$, $L(m)$ in $K$ grid points, we are dividing the star in $K-1$ intervals: every discretization point will have an $m^j$ with $j=1,\:...\: K$. The upper boundary is located at $j=1$, and the core at $j=K$. We can write
 
 $$C_i\left(y_1^{K-1},\: ... \:,y_4^{K-1},y_2^K,y_3^K\right)=0\:,\hspace{1cm}i=1,2,3,4\:,$$
 
@@ -157,4 +172,4 @@ When the determinant of the Henyey matrix is not zero, we can obtain the correct
 
 In general, we will need more consecutive iterations. The approximate solution can be improved until either the absolute values of all corrections $\delta y_i^j$, or the absolute values of all right-hand sides in 1-3, drop below a chosen limit, i.e. the required accuracy.
 
-**NB** There's no guarantee for the iteration procedure for improving the approximations  to always converge! In fact if the chosen approximation is too far from the solution, then the required corrections are so large that one cannot neglect the second-order terms, and the linearization is not appropriate anymore.
+**NB** There's no guarantee for the iteration procedure for improving the approximations  to always converge! In fact if the chosen approximation is too far from the solution, then the required corrections are so large that one cannot neglect the second-order terms, and the linearization is not appropriate anymore. -->

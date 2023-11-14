@@ -28,9 +28,8 @@ makedocs(sitename="Stellar Structure and Evolution",
                                               "Exercises"=>"6_convection_problems.md"],
                 "Nucleosynthesis (07/11/23)" => ["Notes" => "7_nucleo1.md",
                                               "Exercises"=>"7_nucleo1_problems.md"],
-                "LAB1 (14/11/2023)" => [
+                "LAB1 (14/11/2023)" => ["Stellar evolution models" => "8_SE_codes.md",
                                         "Instructions" => "8_instructions.md",
-                                        "Stellar evolution models" => "8_SE_codes.md",
                                         "Questions"=>"8_questions.md"],
                 ])
 

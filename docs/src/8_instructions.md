@@ -1,6 +1,6 @@
 # Instructions
 
-Modules for Experiments in Stellar Astrophysics (MESA) [^Jermyn2022] is a state of the art, open-source 1D stellar evolution code. MESA is built to allow users to run experiments in stellar evolution, with a huge variety of possibilities for input physics and customization. You are strongly encouraged to give a look at the [documentation](https://docs.mesastar.org/en/release-r21.12.1/) to discover more about the software. We will specifically use the MESAstar module to evolve a single star.
+Modules for Experiments in Stellar Astrophysics (MESA) [^Paxton2011] is a state of the art, open-source 1D stellar evolution code. MESA is built to allow users to run experiments in stellar evolution, with a huge variety of possibilities for input physics and customization. You are strongly encouraged to give a look at the [documentation](https://docs.mesastar.org/en/release-r21.12.1/) to discover more about the software. We will specifically use the MESAstar module to evolve a single star.
 
 ## Lab intro
 In this lab you will learn how to evolve a star with MESA and how to interpret its outputs in terms of the theory of stellar structure and evolution you have seen so far. In particular
@@ -8,7 +8,7 @@ In this lab you will learn how to evolve a star with MESA and how to interpret i
 - **FIRST HOUR**: see [Stellar evolution models](https://orlox.github.io/stars_2023_2024/dev/). Theoretical overview of the software. The basic numerical scheme used to solve the set of stellar structure and evolution equations; the boundary conditions for the differential equations; the software infrastructure and usage of inlists, output files.
 
 - **SECOND HOUR**: set up your simulation and save the outputs in your local machines / USB memory / personal folder in the system, as you will need to use it at home to post-process the information and write a report. This time at the lab is mainly meant for you to run the simulation while you have someone that can help you (me); if, at the end, you still have some time, you can start answering the questions of the report.  
-  NB: you will have to run **two** simulations of two stars with different masses, and save **both** those outputs. Be sure to do that before you leave the session.
+  NB: you will have to run **two** simulations of two stars with different masses, and save **both** those outputs. Be sure to do that before you leave the session. 
 
 
 ## The report
@@ -140,9 +140,9 @@ teff = matrix["log_Teff"]
 ## The assigned masses
 Due to the number of available computers in the lab, you all will be paired during the session. This means that every student (A) will have a mate (B) to look at the simulations with. Each team (student A + student B) of students will have to produce, **during the session**, a total of two simulations (simulation 1 + simulation 2), and save the outputs for later use (at home). These two simulations will serve the following purposes:
 
-- **Simulation 1**  will evolve a star of initial mass $M$. Student A will have to answer all the questions aside from **Massive vs Low Mass evolution** by taking into account exclusively the outcome of simulation 1. Student B will make use of the outcome of simulation 1 just to answer the aforesaid question.
+- **Simulation 1**  will evolve a star of initial mass $M$. Student A will have to answer all the questions, aside from **Massive vs Low Mass evolution** and a small part of the question on **Variations of the EoS: Radiation Pressure and Degeneracy**, by taking into account exclusively the outcome of simulation 1. Student B will make use of the outcome of simulation 1 just to answer the aforesaid question.
 
-- **Simulation 2** will evolve a star of initial mass $M'\neq M$. Student B will have to answer all the questions aside from  **Massive vs Low Mass evolution** by taking into account exclusively the outcome of simulation 2. Student A will make use of the outcome of simulation 2 just to answer the aforesaid question.
+- **Simulation 2** will evolve a star of initial mass $M'\neq M$. Student B will have to answer all the questions, aside from  **Massive vs Low Mass evolution** and a small part of the question on **Variations of the EoS: Radiation Pressure and Degeneracy**, by taking into account exclusively the outcome of simulation 2. Student A will make use of the outcome of simulation 2 just to answer the aforesaid question.
 
 Please find below the list of pairs of masses, together with the team (student A + student B) number. I'll give you the team number once you're paired in the lab and make sure that no pairs of masses is picked by two different teams.
 
@@ -159,6 +159,6 @@ Please find below the list of pairs of masses, together with the team (student A
 |    **9**    |         8        |         0.8         |
 
 
-[^Jermyn2022]:
-    The Astrophysical Journal Supplement Series, Volume 265, Issue 1, id.15, 38 pp.
-    https://ui.adsabs.harvard.edu/abs/2023ApJS..265...15J/abstract
+[^Paxton2011]:
+    The Astrophysical Journal Supplement, Volume 192, Issue 1, article id. 3, 35 pp. (2011).
+    https://ui.adsabs.harvard.edu/abs/2011ApJS..192....3P/abstract

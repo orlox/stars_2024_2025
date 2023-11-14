@@ -1,7 +1,7 @@
 # Questions
 
 ## Preliminary instructions
-Download the input files from your [Toledo](https://toledo.kuleuven.be/portal) page of the Stellar Structure & Evolution class. You should find those in the last published announcement. After decompressing your download, put the content in the ```MESA_LAB1``` directory:
+Download the input files from your [Toledo](https://toledo.kuleuven.be/portal) page of the Stellar Structure & Evolution class, or from here [input_files_LAB1](assets/lab1_input.tar.xz). You should find those in the last published announcement. After decompressing your download, put the content in the ```MESA_LAB1``` directory:
 
 ```bash
 # Move to the directory of your choice
@@ -57,7 +57,7 @@ You are good to go: run the simulation 1 using the [instructions](https://orlox.
 Once the simulation 1 is done, edit your ```inlist_project``` as above, but this time assuming that your mass for the simulation 2 is $M'=X'\:M_{\odot}$: substitute every $X$ value with your $X'$ value. This is necessary to avoid overwriting your previous output.
 
 🚨 **ATTENTION** 🚨  
-Before leaving the session, save your ```MESA_LAB1``` folder somewhere: your local machines / USB memory / personal folder in the system. In the following, I am going to assume that you are at home writing your report: specifically, you are **student A** assigned with mass $M=X\:M_{\odot}$ for your simulation 1, and you will use $M'\neq M$ just to answer the question on  *Massive vs Low Mass evolution*. 
+Before leaving the session, save your ```MESA_LAB1``` folder somewhere: your local machines / USB memory / personal folder in the system. In the following, I am going to assume that you are at home writing your report: specifically, you are **student A** assigned with mass $M=X\:M_{\odot}$ for your simulation 1, and you will use $M'\neq M$ just to answer the question on  *Massive vs Low Mass evolution* and for a small part of the question on *Variations of the EoS: Radiation Pressure and Degeneracy*. 
 
 ## I. The Pre Main Sequence and Main Sequence (2 pts)
 You evolved a model star with initial mass $M$ along the Pre Main Sequence (PMS) phases and its Main Sequence (MS):
@@ -94,7 +94,12 @@ You evolved a model star with initial mass $M$ along the Pre Main Sequence (PMS)
 
    You will have to give a look at the ```./LOGS_XMsun/history.data``` file. You should be able to read the information you need from those columns. **NB**: the ```star_age``` column that you'll use as a check is in unit of years!
 
-   *Hint*: A good indicator of the start of the ZAMS is the central hydrogen abundance ```center_h1```.
+   *Hint I*: What we call ZAMS is actually an arbitrary definition on which literature doesn't agree. A good way to find the start of the ZAMS is to look into the nuclear reaction rates luminosity $L_{\mathrm{nuc}}$ (see column ```log_Lnuc```, in $L_{\odot}$ units) and see if it is a significant fraction ($\sim 90\%$) of the total surface luminosity, ```luminosity```, in $L_{\odot}$ units.
+
+    * After reaching the ZAMS, your star should start burning hydrogen in its core. Try and plot the total surface luminosity as compared to the total hydrogen burning luminosity (which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS).
+
+      *Hint II*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file.
+
 
 2. **TIMESCALE OF MS PHASE**  
 
@@ -122,7 +127,7 @@ where $E_{\mathrm{gr}}$ stands for gravitational potential energy, $E_{\mathrm{i
 
 2. **INTERNAL ENERGY**
 
-   Compute the internal energy $E_{\mathrm{int}}$ of your star <b>at ZAMS</b>. Do it directly from the formal definition:
+   Compute the internal energy $E_{\mathrm{int}}$ of your star at ZAMS. Do it directly from the formal definition:
 
    $$E_{\mathrm{int}}\equiv\int_0^M\:u(m)dm\:,$$
 
@@ -135,7 +140,7 @@ where $E_{\mathrm{gr}}$ stands for gravitational potential energy, $E_{\mathrm{i
 
 Let us now verify that (and how) the virial theorem, always valid in theory under the assumption of spherical symmetry and hydrostatic equilibrium, is actually at work in our simulation. Remember that this theorem connects two important energy reservoirs of the star, i.e. $E_{\mathrm{grav}}$ and $E_{\mathrm{int}}$, and it allows us to interpret the star's phases of evolution. 
 
-1. **VIRIAL THEOREM**
+4. **VIRIAL THEOREM**
 
    Remember that the most general form of the virial theorem is the following:  
 
@@ -143,9 +148,9 @@ Let us now verify that (and how) the virial theorem, always valid in theory unde
 
     with $P=P(m)$ and $\rho=\rho(m)$ being the pressure and density profiles along the star's structure. You already computed $E_{\mathrm{gr}}$ in the previous steps; compute now the left-hand-side (LHS) of the equation **at ZAMS**, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?
 
-    *Hint*: You should be able to find the information you need in the columns ```logRho``` and ```logP``` of your ```profileN.data``` file. Also: all the logarithms you'll encounter are in base 10.
+    *Hint*: You should be able to find the information you need in the columns ```logRho``` and ```logP``` of your ```profileN.data``` file. Also: all the logarithms you'll encounter are in base 10. 
 
-2. **THE EQUATION OF STATE**  
+5. **THE EQUATION OF STATE**  
    
      During your class you derived the following form of the virial theorem in the particular case of perfect, non-relativistic and monoatomic gas:
 
@@ -158,18 +163,18 @@ Let us now verify that (and how) the virial theorem, always valid in theory unde
      under the assumption of $\phi=\mathrm{const}$ along the star structure. Write the expression of the total energy $E_{\mathrm{tot}}$ of your star and find out the $\phi$-dependent condition under which your system remains bound.  
      You also have all the ingredients to find out the value of this $\phi$ for your simulation **at ZAMS**: how close is it to be $\phi=3/2$? What do you think can be the reason behind the departure, if there's any?
 
-3. **CHECK ALONG THE EVOLUTION**
+6. **CHECK ALONG THE EVOLUTION**
 
    Up to now, you worked with a particular profile, i.e. the solution of the stellar structure equations at a fixed timestep. What you can also do is to verify the form of the virial theorem along the entire evolutionary track. Assume that $\phi=3/2$ (you already discussed the goodness of the assumption at ZAMS), and do the check by plotting $E_{\mathrm{int}}$ and $-1/2 E_{\mathrm{gr}}$ at each timestep. At which point(s) of the evolution do you see the worst (or best) agreement? Motivate.  
    Plot, together with the above two quantities, also $E_{\mathrm{tot}}$; can you tell, by virtue of the virial theorem in hold, what is happening during the evolution of your star?
 
    *Hint*: You should be able to find the information you need in the columns ```total_gravitational_energy```, ```total_internal_energy``` and ```tot_E``` of your ```history.data``` file. I suggest to use, as x-axis, a quantity that can monotonically trace the evolution of your star, for example its age. And try to highlight the ZAMS as well.
 
-4. **THERMAL EQUILIBRIUM**
+<!-- 7. **THERMAL EQUILIBRIUM**
 
-   After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into *thermal equilibrium*. In this situation, the energy balance equation simplifies to a simpler form, in which $\epsilon_{\mathrm{gr}}=0$ due to the star being in stationary state:
+   After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into *thermal equilibrium*. In this situation, the star reaches a state of balance where the surface luminosity matches the nuclear burning luminosity, and locally the luminosity gradient is perfectly balanced by the energy injection at each layer:
 
-   $$\mathrm{THERMAL\: EQUILIBRIUM}\hspace{2cm}\dfrac{\partial l}{\partial m}=\epsilon_{\mathrm{nuc}}-\epsilon_{\nu}\hspace{0.5cm}\Leftrightarrow\hspace{0.5cm}L_{\mathrm{surf}}=L_{\mathrm{nuc}}-L_{\nu}$$
+   $$\mathrm{THERMAL\: EQUILIBRIUM}\hspace{2cm}\dfrac{\partial l}{\partial m}=\epsilon_{\mathrm{nuc}}-\epsilon_{\nu}\:,\hspace{0.5cm}L_{\mathrm{surf}}=L_{\mathrm{nuc}}-L_{\nu}$$
 
    where we just integrated the local quantities $l=l(m)$, $\epsilon_{\mathrm{nuc}}=\epsilon_{\mathrm{nuc}}(m)$ and $\epsilon_{\nu}=\epsilon_{\nu}(m)$ over the star's structure and defined the surface, nuclear and neutrino luminosity as follows
 
@@ -177,16 +182,16 @@ Let us now verify that (and how) the virial theorem, always valid in theory unde
 
    For the early stages of the evolution, such as PMS and MS, and for the purposes of this lab1, ignoring the neutrino energy losses, i.e. $L_{\nu}=0$, is a good approximation. Go ahead and verify that $L_{\mathrm{surf}}=L_{\mathrm{nuc}}$ along the MS.
 
-   *Hint*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file, both in $L_{\odot}$ units. Be aware that ```log_LH``` stores the integrated power of a specific nuclear process, i.e. the hydrogen burning, which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS.
+   *Hint*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file, both in $L_{\odot}$ units. Be aware that ```log_LH``` stores the integrated power of a specific nuclear process, i.e. the hydrogen burning, which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS. -->
 
-## III. The Equation of State: polytropes (4 pts)
-We want now to see if we can describe our star in terms of a polytropic equation of state (EoS), i.e. one of the form
+## III. Convection and Energy Transport (4 pts)
+<!-- We want now to see if we can describe our star in terms of a polytropic equation of state (EoS), i.e. one of the form
 
 $$\mathrm{POLYTROPIC\: EOS}\hspace{2cm}P=C\:\rho^{1+1/n}\:$$
 
-where $C$ and $n$ are both constants and $n$ is called "polytropic index". Polytropic stellar models are simplified, but they played an important role in the historical development of stellar structure theory; furthermore, there are a couple of situations in which we can still describe the star's structure with them with good approximation.
+where $C$ and $n$ are both constants and $n$ is called "polytropic index". Polytropic stellar models are simplified, but they played an important role in the historical development of stellar structure theory; furthermore, there are a couple of situations in which we can still describe the star's structure with them with good approximation. -->
 
-1. **FROM GENERAL TO POLYTROPIC EOS**
+<!-- 1. **FROM GENERAL TO POLYTROPIC EOS**
 
    Remember the first law of thermodynamics and the definition of specific internal energy $u$ and specific volume $v\equiv 1/\rho$, the change in heat content in a thermodynamic process within stellar interiors is given by
 
@@ -196,41 +201,39 @@ where $C$ and $n$ are both constants and $n$ is called "polytropic index". Polyt
 
    $$u=\phi\dfrac{P}{\rho}\hspace{0.25cm}\Rightarrow\hspace{0.25cm}\dfrac{dP}{P}=\dfrac{\phi+1}{\phi}\dfrac{d\rho}{\rho}\:.$$
 
-   Once you showed this, just put $\phi=\mathrm{const}=3/2$ and thus calculate the value of the correspondent polytropic index $n$, by comparing the outcome of your derivation with the polytropic EoS general form. You already discussed the goodness of $\phi=3/2$ assumption, i.e. how close your gas is to be perfect, non relativistic and monoatomic, along the evolutionary track.
+   Once you showed this, just put $\phi=\mathrm{const}=3/2$ and thus calculate the value of the correspondent polytropic index $n$, by comparing the outcome of your derivation with the polytropic EoS general form. You already discussed the goodness of $\phi=3/2$ assumption, i.e. how close your gas is to be perfect, non relativistic and monoatomic, along the evolutionary track. -->
+During the early PMS phase, the star's structure is almost completely convective: opacity of outer layers is so high, due to the very low temperatures, that radiative energy transport is made inefficient and the convective envelope is sinking so deep in the star that almost the entire structure experiences convection. 
 
-2. **POLYTROPES AND THE PMS**
-
-   During the early PMS phase, the star's structure is completely convective: opacity of outer layers is so high, due to the very low temperatures, that radiative energy transport is made inefficient and the convective envelope is sinking so deep in the star that the entire structure experiences convection. 
-
-   - Convince yourself that all of the above holds for your model **during the first stages of   the PMS**. In your lectures you studied a formal criterion, the *Schwarzschild criterion*, for stability against convection:
+   1. Convince yourself that all of the above holds for your model **during the first stages of   the PMS**. In your lectures you studied a formal criterion, the *Schwarzschild criterion*, for stability against convection:
 
       $$\mathrm{SCHWARZSCHILD\: CRITERION}\hspace{2cm}\nabla_{\mathrm{rad}}\equiv\dfrac{3}{16\pi a c G}\dfrac{P}{T^4}\dfrac{\kappa l}{m}<\nabla_{\mathrm{ad}}$$
 
       where $a=7.566\times 10^{-15}\:\mathrm{erg}\:\mathrm{cm}^{-3}\:\mathrm{K}^{-4}$ is the radiation constant, $P=P(m)$, $T=T(m)$, $\kappa=\kappa (m)$ and $l=l(m)$ are the pressure, temperature, opacity and luminosity profiles along the stellar structure; $\nabla_{\mathrm{ad}}$ and $\nabla_{\mathrm{rad}}$ are the adiabatic and radiative temperature gradients. Verify that there's a stage of the evolution in which this criterion holds *globally* in your star. You might want to produce a plot like one of those present in your saved pngs to support your argument.
 
-   - How close is $\nabla_{\mathrm{ad}}$ to be $\nabla_{\mathrm{ad}}\simeq 0.4$ in this stage? What does this number mean? Motivate why $\nabla_{\mathrm{ad}}$ drops below $0.4$ around the outer layers of your star and why, close to your core, that value is almost correct.
-   - How long does your star stay completely convective? I.e., how relevant is this stage of evolution with respect to the total age of your star?
+   2. Remember the [exercise](https://orlox.github.io/stars_2023_2024/dev/6_convection_problems/) in which we showed that $\nabla_{\mathrm{ad}}= 0.4$ for an ideal gas without radiation. How close is the $\nabla_{\mathrm{ad}}$ of your simulation to be $\nabla_{\mathrm{ad}}\simeq 0.4$ in this stage? Motivate why $\nabla_{\mathrm{ad}}$ drops below $0.4$ around the outer layers of your star and why, close to your core, that value is almost correct.
+   3. How is the actual temperature gradient as compared to the adiabatic one? Remember that in class we mentioned that, very often, one can make the approximation $\nabla\approx\nabla_{\mathrm{ad}}$ in convective regions. Compute the degree of superadiabaticity $\nabla-\nabla_{\mathrm{ad}}$ and discuss the goodness of the approximation in your simulation. 
+   4. How long does your star stay completely convective? I.e., how relevant is this stage of evolution with respect to the total age of your star?
 
-    *Hint I*: You can select the completely convective model during the PMS by looking at the ```grid_XMsun.png``` files, in particular at the Kippenhahn diagram, i.e. the one showing mass coordinates $m/M_{\odot}$ of interesting zones as a function of the model number. When the light blue region spans the entire mass range, you have convection over all you structure. The mapping from model number to the right ```profileN.data``` should be straightforward from the ```profiles.index``` file.
+   *Hint I*: You can select the completely convective model during the PMS by looking at the ```grid_XMsun.png``` files, in particular at the Kippenhahn diagram, i.e. the one showing mass coordinates $m/M_{\odot}$ of interesting zones as a function of the model number. When the light blue region spans the entire mass range, you have convection over all you structure. The mapping from model number to the right ```profileN.data``` should be straightforward from the ```profiles.index``` file.
 
-     *Hint II*: You should be able to find the useful information in the columns ```grada``` (adiabatic temperature gradient) and ```gradr``` (radiative temperature gradient).
+   *Hint II*: You should be able to find the useful information in the columns ```grada``` (adiabatic temperature gradient), ```gradr``` (radiative temperature gradient), and ```actual_gradT``` (actual temperature gradient).
 
-## IV. The Equation of State: radiation pressure? (3 pts)
-In this question you will study the contribution, to the EoS, of the gas of photons, i.e. the radiation pressure contribution $P_{\mathrm{rad}}$. Until now, you discussed the goodness of the ideal gas assumption for your model, and extensively showed its action along the evolution of your system. But does it mean that the photons' contribution is not even there, or not important?
+## IV. Variations of the EoS: Radiation Pressure and Degeneracy (3 pts)
+We will start by studying the contribution, to the EoS, of the gas of photons, i.e. the **radiation pressure** contribution $P_{\mathrm{rad}}$. Until now, you discussed the goodness of the ideal gas assumption for your model, and extensively showed its action along the evolution of your system. But does it mean that the photons' contribution is not even there, or not important?
 
-Remember that in general the pressure inside a star is **the sum** of the gas pressure and radiation pressure:
+Remember that in general the pressure inside a star is **the sum** of the gas pressure and radiation pressure. For an ideal gas with a radiation contribution, we can write
 
 $$P=P_{\mathrm{gas}}+P_{\mathrm{rad}}=P_{\mathrm{ions}}+P_{\mathrm{e}}+P_{\mathrm{rad}}=\dfrac{\mathcal{R}}{\mu}\rho T+\dfrac{1}{3}a T^4\:$$
 $$\mathrm{with}\hspace{0.5cm}\mathcal{R}=8.31447\times 10^{7}\:\mathrm{erg}\:\mathrm{g}^{-1}\:\mathrm{K}^{-1}\:,$$
 $$a=7.56578\times 10^{-15}\:\mathrm{erg}\:\mathrm{cm}^{-3}\:\mathrm{K}^{-4}\:,$$
 
-where $P_{\mathrm{e}}$ is the contribution of free electrons, $P_{\mathrm{ions}}$ the one from ions, $\mathcal{R}$ is universal gas constant and $a$ is the radiation constant. Be aware that the fact that we wrote $P_{\mathrm{gas}}=\mathcal{R}/\mu \rho T$ implies that we are considering the gas of electrons to be non-degenerate (see below).
+where $P_{\mathrm{e}}$ is the contribution of free electrons, $P_{\mathrm{ions}}$ the one from ions, $\mathcal{R}$ is universal gas constant and $a$ is the radiation constant. Be aware this form of $P_{\mathrm{gas}}=\mathcal{R}/\mu \rho T$ is implying that we are considering the gas of electrons to be non-degenerate (see below).
 
 1. **THE FRACTION OF RADIATION**
 
-   You will study now the profile concerning the **TAMS** stage of your simulation. Finding this profile is particularly easy, since it's the last one printed from your simulation run, and you will find it as it is called ```XMsun_at_TAMS_profile.data```, in your top level of the ```MESA_LAB1``` directory. 
+   Let's examine the profile concerning the **TAMS** stage of your simulation. Finding this profile is particularly easy, since it's the last one printed from your simulation run, and you will find it as it is called ```XMsun_at_TAMS_profile.data```, in your top level of the ```MESA_LAB1``` directory. 
 
-   - Plot the total pressure $P$, the radiation pressure $P_{\mathrm{rad}}$ and the gas pressure $P_{\mathrm{gas}}$ contributions all together for the profile **at TAMS**. Quantify the impact of the radiation pressure contribution by defining a fraction $\beta$ as follows<br>
+   - Plot the total pressure $P$, the radiation pressure $P_{\mathrm{rad}}$ and the gas pressure $P_{\mathrm{gas}}$ contributions all together for the profile **at TAMS**. Quantify the impact of the radiation pressure contribution by defining a fraction $\beta$ as follows
 
      $$P_{\mathrm{gas}}=\beta P\hspace{0.5cm}\mathrm{and}\hspace{0.5cm}P_{\mathrm{rad}}=(1-\beta)P\:.$$
 
@@ -238,11 +241,8 @@ where $P_{\mathrm{e}}$ is the contribution of free electrons, $P_{\mathrm{ions}}
 
      *Hint*: Look at the columns ```pressure```, ```prad``` and ```pgas```.
 
-   - You may also want to verify the theoretical formulas above, making use of the column ```mu``` for the mean molecular weight per gas particle, ```logT``` for the temperature and ```logRho``` for the density.
-
-2. **SOME DEGENERACY DEGREE**?
-
-   Let us lastly verify whether neglecting the contribution of degeneracy pressure from electrons, thus treating them as classical particles following $P_e=\mathcal{R}/\mu \rho T$, is a good assumption or not. From statistical mechanics, we know that Pauli exclusion principle forces degenerate electrons to pile up in levels with higher and higher momentum, till the maximum occupied level with the Fermi momentum $p_{\mathrm{F}}$. On the other hand, if the electron gas is classical, the particles are following a Maxwell-Boltzmann like distribution, with a maximum momentum given by $p_{\mathrm{max}}$, see [lecture on Degenerate EOS](https://orlox.github.io/stars_2023_2024/dev/4_eos2/#Polytropes-and-the-Chandrasekhar-mass). More specifically,
+  
+Let us now see whether neglecting the contribution of **degeneracy pressure** from electrons, thus treating them as classical particles following $P_e=\mathcal{R}/\mu \rho T$, is a good assumption or not. From statistical mechanics, we know that Pauli exclusion principle forces degenerate electrons to pile up in levels with higher and higher momentum, till the maximum occupied level with the Fermi momentum $p_{\mathrm{F}}$. On the other hand, if the electron gas is classical, the particles are following a Maxwell-Boltzmann like distribution, with a maximum momentum given by $p_{\mathrm{max}}$, see [lecture on Degenerate EOS](https://orlox.github.io/stars_2023_2024/dev/4_eos2/#Polytropes-and-the-Chandrasekhar-mass). More specifically,
 
    $$p_{\mathrm{F}}=h\left(\dfrac{3}{8\pi}n_e\right)^{1/3}\:,\hspace{0.5cm}p_{\mathrm{max}}=\sqrt{2m_eK_{\mathrm{B}}T}\:,$$
 
@@ -251,32 +251,39 @@ where $P_{\mathrm{e}}$ is the contribution of free electrons, $P_{\mathrm{ions}}
    $$\mathrm{PROXY\: FOR\: DEGENERACY\: DEGREE}$$
    $$\dfrac{p_{\mathrm{F}}}{p_{\mathrm{max}}}$$
 
+2. **SOME DEGENERACY DEGREE**?
+
+
+
    - See if the above ratio is $\gtrless 1$ for the profile **at TAMS**, and assess the goodness of the classical gas assumption. In which region do you see the highest degree of degeneracy, if you have some?
 
      *Hint*: There is no profile column providing the value for $n_e$, you would have to calculate it yourself in a reasonable way. Remember that by definition $n_e=\rho/\mu_{e}m_{u}$, and your gas is mainly made by $H$ and $He$.
-
+<!-- 
    - If you take the cubic power of the ratio $p_{\mathrm{F}}/p_{\mathrm{max}}$, you should obtain a scaling of this sort: $p_{\mathrm{F}}^3/p_{\mathrm{max}}^3\propto n_e/T^{3/2}$. MESA outputs a quantity, the "degeneracy parameter" in the core $\psi$, which can be shown to follow the same scaling, i.e. $\psi=\psi(n_e/T^{3/2})$, and it represents the degree of departure from the Maxwell-Boltzmann distribution. It can be shown (no proof required) that a formal criterion for degeneracy may actually be expressed in terms of $\psi$:
 
      $$\mathrm{NO\: DEGENERACY}\hspace{0.75cm}\mathrm{PARTIAL\: DEGENERACY}\hspace{0.75cm}\mathrm{STRONG \:DEGENERACY}$$
      $$\hspace{0.5cm}\psi\ll 0\hspace{4cm}\psi\gtrsim 0\hspace{4cm}\psi\gg 0$$
 
-     Examine MESA outputs and keep the above criterion in mind. What can you conclude about the degree of degeneracy in your track? And why is the value of $\psi$ *in the core* the relevant one?
+     Examine MESA outputs and keep the above criterion in mind. What can you conclude about the degree of degeneracy in your track? And why is the value of $\psi$ *in the core* the relevant 
+     *Hint*: MESA outputs this quantity for the core of your star along the entire evolutionary track, stored in ```center_degeneracy``` column (give a look at your ```grid_Xmsun.png``` too).  -->
 
-     *Hint*: MESA outputs this quantity for the core of your star along the entire evolutionary track, stored in ```center_degeneracy``` column (give a look at your ```grid_Xmsun.png``` too). 
+3. **COMPARISON BETWEEN MODELS**
+   
+   Now you'll finally use the output of your simulation 2, namely the second mass $M'=X'\:M\mathrm{\odot}$. Answer to the requests 1. and 2. of this question IV. also for this second mass, and discuss which model is more degenerate, and which one is more radiation pressure dominated.
 
 ## V. Massive vs Low Mass evolution (2 pts)
 
-Now you'll finally use the output of your simulation 2, namely the second mass $M'=X'\:M\mathrm{\odot}$; the goal is to make you aware of some differences in the evolution of a low mass ($M'\gtrsim 1\:\mathrm{\odot}$) star versus a relatively higher mass ($M'\gtrsim 5\:\mathrm{\odot}$) one. You will study the differences in great detail in the following classes, but there are some key points that can be observed also along the MS.
+You will again use the output of your simulation 2: here the goal is to make you aware of some differences in the evolution of a low mass ($M'\gtrsim 1\:\mathrm{\odot}$) star versus a relatively higher mass ($M'\gtrsim 5\:\mathrm{\odot}$) one. You will study the differences in great detail in the following classes, but there are some key points that can be observed also along the MS.
 
 1. **CONVECTIVE OR RADIATIVE CORE**?    
    
     Consider you models $M$ and $M'$.
     - Do they experience convection in their core, during the nuclear burning of H? What does it imply, in terms of elements abundances profiles in the core?
-    - Does the size of the convective core increase or decrease during the nuclear burning of H? 
+    - If the star has a convective core, does its size increase or decrease during the nuclear burning of H? 
 
     *Hint*: you can follow the information stored in ```mass_conv_core``` in your ```history.data``` file. Or, you can also answer qualitatively by looking at the Kippenhahn diagram, and the abundances profiles plot in your ```grid_XMsun.png``` and ```grid_X'Msun.png```. In this context, you can (not mandatory) include screenshots of you pgstar window to prove your point.
 
-1. **CONVECTIVE OR RADIATIVE ENVELOPE**?
+2. **CONVECTIVE OR RADIATIVE ENVELOPE**?
 
     Consider you models $M$ and $M'$. 
      - Do they experience convection in their envelope, during the nuclear burning of H? Quantify the different convective envelope masses you are seeing. 
@@ -284,7 +291,7 @@ Now you'll finally use the output of your simulation 2, namely the second mass $
 
    *Hint:* you can give a rough estimate of the envelope masses by looking at at the Kippenhahn diagram in your ```grid_XMsun.png``` and ```grid_X'Msun.png```. For the motivation on convection to occur in the envelope, I suggest to give a look at one of the other diagrams present in your pgstar window, i.e. the one showing the opacity curve 😁
 
-1. **THE SURFACE PROPERTIES**
+3. **THE SURFACE PROPERTIES**
 
    Give a look at the HR diagram, i.e. the $(\log T_{\mathrm{eff}}(\mathrm{K}), \:\log L(L_{\odot}))$ plane. Plot your two tracks together in such plane, highlighting the ZAMS. 
     - Compare the orders of magnitude for the surface luminosity $\log L(L_{\odot})$ for your two stars and try to explain the difference you're seeing, in terms of the mass-luminosity relation that you saw in your lectures. Is your more massive star of the pair more luminous **at ZAMS**? By how much?
@@ -311,6 +318,6 @@ This bonus question is meant for you to gain a better understanding of the ingre
        in which $\kappa_{0}$ is a constant that depends on the chemical composition. Where in your star can you see a power-law-ish trend being dominant?
 
     - If I remind you that Hydrogen recombines at $~ 10^4\:\mathrm{K}$, mostly independently on the density $\rho$, can you tell where (and if!) this feature is playing a role?
-2. **ELECTRON SCATTERING**
+<!-- 2. **ELECTRON SCATTERING**
 
-   Verify that $\kappa_{\mathrm{es}}$ is dominant in the core both at ZAMS and at TAMS, showing that the plasma of completely ionized gas is a good description of the core along your evolutionary track.
+   Verify that $\kappa_{\mathrm{es}}$ is dominant in the core both at ZAMS and at TAMS, showing that the plasma of completely ionized gas is a good description of the core along your evolutionary track. -->
