@@ -96,15 +96,13 @@ You evolved a model star with initial mass $M$ along the Pre Main Sequence (PMS)
 
    *Hint I*: What we call ZAMS is actually an arbitrary definition on which literature doesn't agree. A good way to find the start of the ZAMS is to look into the nuclear reaction rates luminosity $L_{\mathrm{nuc}}$ (see column ```log_Lnuc```, in $L_{\odot}$ units) and see if it is a significant fraction ($\sim 90\%$) of the total surface luminosity, ```luminosity```, in $L_{\odot}$ units.
 
-    * After reaching the ZAMS, your star should start burning hydrogen in its core. Try and plot the total surface luminosity as compared to the total hydrogen burning luminosity (which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS).
+   * After reaching the ZAMS, your star should start burning hydrogen in its core. Try and plot the total surface luminosity as compared to the total hydrogen burning luminosity (which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS).
 
-      *Hint II*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file.
-
+   *Hint II*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file.
 
 2. **TIMESCALE OF MS PHASE**  
 
    How much time $\tau_{\mathrm{MS}}$ does your star spend in the MS phase in the simulation? To which order of magnitude estimate above would you associate this timescale? What does this mean in terms of the star's equilibrium?
-
 
 3. **TIMESCALE OF PMS PHASE**  
 
@@ -138,17 +136,16 @@ where $E_{\mathrm{gr}}$ stands for gravitational potential energy, $E_{\mathrm{i
    Compute the internal energy $E_{\mathrm{kin}}$ of your star **at ZAMS**. Remember that your star is supposed to be in hydrostatic equilibrium: this should already give you a hint on $E_{\mathrm{kin}}$. If you don't know how to calculate it, give a look at a column called ```cell_specific_KE```, which stands for specific kinetic energy of a single cell (ergs/g) and convince yourself about what you see.  
    You now have all the ingredients to compute $E_{\mathrm{tot}}=E_{\mathrm{gr}}+E_{\mathrm{int}}+E_{\mathrm{kin}}$. Is your system bound at ZAMS?
 
-Let us now verify that (and how) the virial theorem, always valid in theory under the assumption of spherical symmetry and hydrostatic equilibrium, is actually at work in our simulation. Remember that this theorem connects two important energy reservoirs of the star, i.e. $E_{\mathrm{grav}}$ and $E_{\mathrm{int}}$, and it allows us to interpret the star's phases of evolution. 
-
 4. **VIRIAL THEOREM**
 
+   Let us now verify that (and how) the virial theorem, always valid in theory under the assumption of spherical symmetry and hydrostatic equilibrium, is actually at work in our simulation. Remember that this theorem connects two important energy reservoirs of the star, i.e. $E_{\mathrm{grav}}$ and $E_{\mathrm{int}}$, and it allows us to interpret the star's phases of evolution. 
    Remember that the most general form of the virial theorem is the following:  
 
-    $$\mathrm{VIRIAL\: THEOREM}\hspace{2cm}\int_0^M\:\dfrac{P}{\rho}dm=-\dfrac{1}{3}E_{\mathrm{gr}}\:,$$
+   $$\mathrm{VIRIAL\: THEOREM}\hspace{2cm}\int_0^M\:\dfrac{P}{\rho}dm=-\dfrac{1}{3}E_{\mathrm{gr}}\:,$$
 
-    with $P=P(m)$ and $\rho=\rho(m)$ being the pressure and density profiles along the star's structure. You already computed $E_{\mathrm{gr}}$ in the previous steps; compute now the left-hand-side (LHS) of the equation **at ZAMS**, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?
+   with $P=P(m)$ and $\rho=\rho(m)$ being the pressure and density profiles along the star's structure. You already computed $E_{\mathrm{gr}}$ in the previous steps; compute now the left-hand-side (LHS) of the equation **at ZAMS**, and verify the theorem! Do you expect it to hold at all timesteps too or just at ZAMS?
 
-    *Hint*: You should be able to find the information you need in the columns ```logRho``` and ```logP``` of your ```profileN.data``` file. Also: all the logarithms you'll encounter are in base 10. 
+   *Hint*: You should be able to find the information you need in the columns ```logRho``` and ```logP``` of your ```profileN.data``` file. Also: all the logarithms you'll encounter are in base 10. 
 
 5. **THE EQUATION OF STATE**  
    
@@ -170,38 +167,8 @@ Let us now verify that (and how) the virial theorem, always valid in theory unde
 
    *Hint*: You should be able to find the information you need in the columns ```total_gravitational_energy```, ```total_internal_energy``` and ```tot_E``` of your ```history.data``` file. I suggest to use, as x-axis, a quantity that can monotonically trace the evolution of your star, for example its age. And try to highlight the ZAMS as well.
 
-<!-- 7. **THERMAL EQUILIBRIUM**
-
-   After reaching the ZAMS, your star should start burning hydrogen in its core and thus set into *thermal equilibrium*. In this situation, the star reaches a state of balance where the surface luminosity matches the nuclear burning luminosity, and locally the luminosity gradient is perfectly balanced by the energy injection at each layer:
-
-   $$\mathrm{THERMAL\: EQUILIBRIUM}\hspace{2cm}\dfrac{\partial l}{\partial m}=\epsilon_{\mathrm{nuc}}-\epsilon_{\nu}\:,\hspace{0.5cm}L_{\mathrm{surf}}=L_{\mathrm{nuc}}-L_{\nu}$$
-
-   where we just integrated the local quantities $l=l(m)$, $\epsilon_{\mathrm{nuc}}=\epsilon_{\mathrm{nuc}}(m)$ and $\epsilon_{\nu}=\epsilon_{\nu}(m)$ over the star's structure and defined the surface, nuclear and neutrino luminosity as follows
-
-   $$L_{\mathrm{surf}}\equiv\int_{0}^M\dfrac{\partial l}{\partial m}dm\:,\hspace{0.25cm}L_{\mathrm{nuc}}\equiv\int_0^M\epsilon_{\mathrm{nuc}}dm\:,\hspace{0.25cm}L_{\nu}\equiv\int_0^M\epsilon_{\nu}dm\:.$$
-
-   For the early stages of the evolution, such as PMS and MS, and for the purposes of this lab1, ignoring the neutrino energy losses, i.e. $L_{\nu}=0$, is a good approximation. Go ahead and verify that $L_{\mathrm{surf}}=L_{\mathrm{nuc}}$ along the MS.
-
-   *Hint*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file, both in $L_{\odot}$ units. Be aware that ```log_LH``` stores the integrated power of a specific nuclear process, i.e. the hydrogen burning, which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS. -->
 
 ## III. Convection and Energy Transport (4 pts)
-<!-- We want now to see if we can describe our star in terms of a polytropic equation of state (EoS), i.e. one of the form
-
-$$\mathrm{POLYTROPIC\: EOS}\hspace{2cm}P=C\:\rho^{1+1/n}\:$$
-
-where $C$ and $n$ are both constants and $n$ is called "polytropic index". Polytropic stellar models are simplified, but they played an important role in the historical development of stellar structure theory; furthermore, there are a couple of situations in which we can still describe the star's structure with them with good approximation. -->
-
-<!-- 1. **FROM GENERAL TO POLYTROPIC EOS**
-
-   Remember the first law of thermodynamics and the definition of specific internal energy $u$ and specific volume $v\equiv 1/\rho$, the change in heat content in a thermodynamic process within stellar interiors is given by
-
-   $$dq=du+Pdv=du-\dfrac{P}{\rho^2}d\rho\:.$$
-
-   By taking into account a general equation of state and an adiabatic ($dq=0$) process, you should be able to show the following: 
-
-   $$u=\phi\dfrac{P}{\rho}\hspace{0.25cm}\Rightarrow\hspace{0.25cm}\dfrac{dP}{P}=\dfrac{\phi+1}{\phi}\dfrac{d\rho}{\rho}\:.$$
-
-   Once you showed this, just put $\phi=\mathrm{const}=3/2$ and thus calculate the value of the correspondent polytropic index $n$, by comparing the outcome of your derivation with the polytropic EoS general form. You already discussed the goodness of $\phi=3/2$ assumption, i.e. how close your gas is to be perfect, non relativistic and monoatomic, along the evolutionary track. -->
 During the early PMS phase, the star's structure is almost completely convective: opacity of outer layers is so high, due to the very low temperatures, that radiative energy transport is made inefficient and the convective envelope is sinking so deep in the star that almost the entire structure experiences convection. 
 
    1. Convince yourself that all of the above holds for your model **during the first stages of   the PMS**. In your lectures you studied a formal criterion, the *Schwarzschild criterion*, for stability against convection:
@@ -252,20 +219,9 @@ Let us now see whether neglecting the contribution of **degeneracy pressure** fr
    $$\dfrac{p_{\mathrm{F}}}{p_{\mathrm{max}}}$$
 
 2. **SOME DEGENERACY DEGREE**?
+   See if the above ratio is $\gtrless 1$ for the profile **at TAMS**, and assess the goodness of the classical gas assumption. In which region do you see the highest degree of degeneracy, if you have some?
 
-
-
-   - See if the above ratio is $\gtrless 1$ for the profile **at TAMS**, and assess the goodness of the classical gas assumption. In which region do you see the highest degree of degeneracy, if you have some?
-
-     *Hint*: There is no profile column providing the value for $n_e$, you would have to calculate it yourself in a reasonable way. Remember that by definition $n_e=\rho/\mu_{e}m_{u}$, and your gas is mainly made by $H$ and $He$.
-<!-- 
-   - If you take the cubic power of the ratio $p_{\mathrm{F}}/p_{\mathrm{max}}$, you should obtain a scaling of this sort: $p_{\mathrm{F}}^3/p_{\mathrm{max}}^3\propto n_e/T^{3/2}$. MESA outputs a quantity, the "degeneracy parameter" in the core $\psi$, which can be shown to follow the same scaling, i.e. $\psi=\psi(n_e/T^{3/2})$, and it represents the degree of departure from the Maxwell-Boltzmann distribution. It can be shown (no proof required) that a formal criterion for degeneracy may actually be expressed in terms of $\psi$:
-
-     $$\mathrm{NO\: DEGENERACY}\hspace{0.75cm}\mathrm{PARTIAL\: DEGENERACY}\hspace{0.75cm}\mathrm{STRONG \:DEGENERACY}$$
-     $$\hspace{0.5cm}\psi\ll 0\hspace{4cm}\psi\gtrsim 0\hspace{4cm}\psi\gg 0$$
-
-     Examine MESA outputs and keep the above criterion in mind. What can you conclude about the degree of degeneracy in your track? And why is the value of $\psi$ *in the core* the relevant 
-     *Hint*: MESA outputs this quantity for the core of your star along the entire evolutionary track, stored in ```center_degeneracy``` column (give a look at your ```grid_Xmsun.png``` too).  -->
+   *Hint*: There is no profile column providing the value for $n_e$, you would have to calculate it yourself in a reasonable way. Remember that by definition $n_e=\rho/\mu_{e}m_{u}$, and your gas is mainly made by $H$ and $He$.
 
 3. **COMPARISON BETWEEN MODELS**
    
@@ -318,6 +274,3 @@ This bonus question is meant for you to gain a better understanding of the ingre
        in which $\kappa_{0}$ is a constant that depends on the chemical composition. Where in your star can you see a power-law-ish trend being dominant?
 
     - If I remind you that Hydrogen recombines at $~ 10^4\:\mathrm{K}$, mostly independently on the density $\rho$, can you tell where (and if!) this feature is playing a role?
-<!-- 2. **ELECTRON SCATTERING**
-
-   Verify that $\kappa_{\mathrm{es}}$ is dominant in the core both at ZAMS and at TAMS, showing that the plasma of completely ionized gas is a good description of the core along your evolutionary track. -->
