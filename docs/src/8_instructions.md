@@ -111,9 +111,20 @@ After running a simulation, this folder will contain the following elements:
    List of all the information, about evolutionary quantities along the track, that are printed in the output file ```history.data```, and used in the pgstar dynamic window.
 
 ### How to run MESA
-You will always run MESA from the folder called ```MESA_LAB1```. In such folder, there is a very nicely written ```README.rst``` file with a reminder on how to run / compile (and restart, when needed) the simulation. I'm summarizing here the general instructions for future reference (**but don't run the simulation now!** Just keep these in mind and we'll use them in a bit):
+You will always run MESA from the folder called ```MESA_LAB1```. In such folder, there is a very nicely written ```README.rst``` file with a reminder on how to run / compile (and restart, when needed) the simulation. Download the input files from your [Toledo](https://toledo.kuleuven.be/portal) page of the Stellar Structure & Evolution class, or from here [input_files_LAB1](assets/lab1_input.tar.xz), and put them inside the ```MESA_LAB1``` folder.
+
 ```bash
-# Move to the MESA_LAB1 directory
+# Move to the directory of your choice
+cd MESA_LAB1
+# Decompress the downloaded file from Toledo
+tar -xf lab1_input.tar.xz
+# Copy all the input files and put them in place of the ones already present in the MESA_LAB1 folder
+cp -R ./lab1_input/* .
+```
+
+I'm summarizing herebelow the general instructions for future reference (**but don't run the simulation now!** Just keep these in mind and we'll use them in a bit):
+```bash
+# Move to the MESA_LAB1 directory if you're not there already
 cd MESA_LAB1
 # Compile and produce the executable called "star"
 ./mk
