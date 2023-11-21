@@ -98,7 +98,7 @@ You evolved a model star with initial mass $M$ along the Pre Main Sequence (PMS)
 
    * After reaching the ZAMS, your star should start burning hydrogen in its core. Try and plot the total surface luminosity as compared to the total hydrogen burning luminosity (which is the only contribution to your $L_{\mathrm{nuc}}$ during the MS).
 
-   *Hint II*: You should find the interesting information in the columns ```luminosity``` and ```log_LH``` of your ```history.data``` file.
+   *Hint II*: You should find the interesting information in the columns ```luminosity```, ```log_R``` (which is $\log_{10}R(R_{\odot})$) and ```log_LH``` of your ```history.data``` file. 
 
 2. **TIMESCALE OF MS PHASE**  
 
@@ -237,7 +237,7 @@ You will again use the output of your simulation 2: here the goal is to make you
     - Do they experience convection in their core, during the nuclear burning of H? What does it imply, in terms of elements abundances profiles in the core?
     - If the star has a convective core, does its size increase or decrease during the nuclear burning of H? 
 
-    *Hint*: you can follow the information stored in ```mass_conv_core``` in your ```history.data``` file. Or, you can also answer qualitatively by looking at the Kippenhahn diagram, and the abundances profiles plot in your ```grid_XMsun.png``` and ```grid_X'Msun.png```. In this context, you can (not mandatory) include screenshots of you pgstar window to prove your point.
+    *Hint*: you can follow the information stored in ```mass_conv_core``` in your ```history.data``` file. Or, you can also answer qualitatively by looking at the Kippenhahn diagram, and the abundances profiles plot in your ```grid_XMsun.png``` and ```grid_X'Msun.png```. In this context, you can (not mandatory) include screenshots of your pgstar window to prove your point.
 
 2. **CONVECTIVE OR RADIATIVE ENVELOPE**?
 
@@ -260,7 +260,7 @@ This bonus question is meant for you to gain a better understanding of the ingre
 
 1. **THE TOTAL OPACITY AT ZAMS**
 
-   Plot the **ZAMS** profile of the total radiative opacity $\log\kappa$ (see column ```log_opacity```). This is the result of very complicated ingredients from atomic physics and chemistry blended together, but there should be some easily recognizable features.
+   Plot the **ZAMS** profile of the total radiative opacity $\log\kappa$ (see column ```opacity```). This is the result of very complicated ingredients from atomic physics and chemistry blended together, but there should be some easily recognizable features.
 
     - Remember that the **electron scattering** opacity $\kappa_{\mathrm{es}}$, in the Thomson classical limit, can be expressed by
 
