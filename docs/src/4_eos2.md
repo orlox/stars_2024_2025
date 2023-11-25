@@ -34,15 +34,15 @@
 
  Computing pressure is a bit more complex. Consider a slab of area $\mathrm{d}\sigma$ embedded in the gas, on which particles will be bouncing,
 
- IMAGE
+ ![asdf](assets/4_eos2/pressure1.svg)
 
  A particle with momentum $p$ colliding at an angle $\theta$ with respect to the normal will transfer momentum equal to
 
  $$\Delta p = 2p\cos{\theta}.\tag{3.1}$$
 
-The pressure corresponds to a force per unit area, and a force corresponds to a change in momentum per unit time. This means that if we know the rate of collisions per unit time and direction on $\mathrm{d}\sigma$ we can integrate over all directions to get the pressure. Let's consider particles coming from a direction $\theta,\phi$, which cover a solid angle $\mathrm{d}\vec{\Omega}$ in the direction of their momenta $p$,
+The pressure corresponds to a force per unit area, and a force corresponds to a change in momentum per unit time. This means that if we know the rate of collisions per unit time and direction on $\mathrm{d}\sigma$ we can integrate over all directions to get the pressure. Let's consider particles coming from a direction $\theta,\phi$, which cover a solid angle $\mathrm{d}\vec{\Omega}$ in the direction of their momenta $p$ and hit the slab $\mathrm{d}\sigma$,
 
-IMAGE
+ ![asdf](assets/4_eos2/pressure2.svg)
 
 As the distribution is isotropic, the number of particles with momenta between $p$ and $p+\mathrm{d}p$ contained in the solid angle $\mathrm{d}\vec{\Omega}$ is
 
@@ -50,7 +50,7 @@ $$N(p,p+\mathrm{d}p,\mathrm{d}\vec{\Omega})=\frac{f(p)}{4\pi}\mathrm{d}p\mathrm{
 
 next we need to know how many particles per unit time, unit momenta and unit solid angle will cross the slab. If we consider particles with momentum $p$ hitting the slab at an angle $\theta$, and take the velocity $v_p$ for a given momentum, then in a time $\Delta t$ all particles in an area $v_p\cos\theta\mathrm{d}\sigma\Delta t$ will cross the slab.
 
-IMAGE
+ ![asdf](assets/4_eos2/pressure3.svg)
 
 The number of collisions per unit time onto the slab, with momenta between $p$ and $p+\mathrm{d}p$ coming from a solid angle $\mathrm{d}\vec{\Omega}$ is
 
