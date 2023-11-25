@@ -92,7 +92,7 @@ The continuity equation describes how the density evolves as a function of time.
 
 $$\mathrm{dm}=(dl)^3\rho \rightarrow \frac{\partial \rho}{\partial t}=\frac{1}{\mathrm{dV}}\frac{\partial(\mathrm{d}m)}{\partial t}.$$
 
-The image below shows how, during an amount of time $\mathrm{d}t$ material would flow from the two sides of the box in the x-direction.
+The image below shows how, during an amount of time $\mathrm{d}t$, material would flow from the two sides of the box in the x-direction.
 
 ![asdf](assets/2_equations/continuity.svg)
 
@@ -133,17 +133,17 @@ We then have two different forms for the equations of stellar structure and evol
 |Equation of motion|$\displaystyle a_r = -\frac{Gm}{r^2} - \frac{1}{\rho}\frac{\partial P}{\partial r}$|$\displaystyle a_r = -\frac{Gm}{r^2} - 4\pi r^2\frac{\partial P}{\partial m}$|
 |Energy equation|$\displaystyle T\frac{\partial s}{\partial t}=-\frac{1}{4\pi r^2 \rho}\frac{\partial L}{\partial r}+\varepsilon_\mathrm{nuc}$|$\displaystyle T\frac{\partial s}{\partial t}=-\frac{\partial L}{\partial m}+\varepsilon_\mathrm{nuc}$|
 
-Now we can ask, can we actually solve these equations? On top of initial conditions we need boundary conditions (BCs) for each equation containing a spatial derivative (as these will result in an integration constant). Two general BCs can be set at the center of the star,
+Now we can ask, can we actually solve these equations? On top of initial conditions, we need boundary conditions (BCs) for each equation containing a spatial derivative (as these will result in an integration constant). Two general BCs can be set at the center of the star,
 
 $$r(m=0)=0,\quad L(m=0)=0.$$
 
-We need one additional boundary condition, which can be set at the surface. In regular applications one uses a definition of a photosphere, where the density and pressure are finite and most photons freely travel to infinity. For analytical purposes it is better to approximate the surface as the place where pressure vanishes,
+We need one additional boundary condition, which can be set at the surface. In regular applications, one uses a definition of a photosphere, where the density and pressure are finite and most photons freely travel to infinity. For analytical purposes it is better to approximate the surface as the place where pressure vanishes,
 
 $$P(m=M)=0,$$
 
 where $M$ is the total mass of the star. The two conditions at the core are very general, while we will refine the one at the surface later on in the course.
 
-We can then count the number of unkowns against the number of differential equations. We have not considered composition yet, but for each element we consider, we will have one equation describing its time derivative. Using a Lagrangian formulation we have the following unkowns:
+We can then count the number of unknowns against the number of differential equations. We have not considered composition yet, but for each element we consider, we will have one equation describing its time derivative. Using a Lagrangian formulation we have the following unknowns:
 
 - The radius $r(m,t)$
 - The density $\rho(m,t)$
@@ -153,9 +153,9 @@ We can then count the number of unkowns against the number of differential equat
 - The luminosity $L(m,t)$
 - And the rate of nuclear energy generation rate $\varepsilon_\mathrm{nuc}(m,T)$
 
-This is a total of 7 unkown variables, with only 3 differential equations! This conundrum will be solved in the following way:
+This is a total of 7 unknown variables, with only 3 differential equations! This conundrum will be solved in the following way:
 
--  $\rho$, $P$, $s$ and $T$: An equation of state (EOS) of the fluid will gives us two of these properties by specifying any of the other two (as well as the composition). This reduces the number of unkown properties by 2.
+-  $\rho$, $P$, $s$ and $T$: An equation of state (EOS) of the fluid will give us two of these properties by specifying any of the other two (as well as the composition). This reduces the number of unknown properties by 2.
 -  $L$: This will come from our study of energy transport, which will give us an equation for $L$ in terms of all other local properties such as the temperature gradient.
 -  $\varepsilon_\mathrm{nuc}$: This is a microphysical property that depends on local conditions such as temperature, density, and composition. We will see how it is computed when we study nuclear reactions.
 
@@ -209,7 +209,7 @@ Consider the continuity and hydrostatic equilibrium equations in their Eularian 
 
 $$\frac{\partial m}{\partial r}=4\pi r^2 \rho,\quad \frac{\partial P}{\partial r}=-\frac{Gm\rho}{r^2}.$$
 
-It could be possible to find solutions to these equations if there was a simple relationship of the form $P=P(\rho)$ (meaning, temperature independent), such that we only only have as unkowns $\rho(r)$ and $m(r)$. As it turns out an important particular case is that of a so called polytropic equation of state,
+It could be possible to find solutions to these equations if there was a simple relationship of the form $P=P(\rho)$ (meaning, temperature independent), such that we only have as unknowns $\rho(r)$ and $m(r)$. As it turns out an important particular case is that of a so called polytropic equation of state,
 
 $$P=K\rho^\gamma,$$
 
@@ -235,4 +235,4 @@ where $\rho_c$ and $P_c$ are the central density and pressure. Using $z$ and $w(
 
 $$\frac{1}{z^2}\frac{\mathrm{d}}{\mathrm{d} z}\left(z^2\frac{\mathrm{d}w}{\mathrm{d}z}\right)=-w^n.$$
 
-We need two boundary conditions, one of them clearly being $w(0)=1$ as we require the central density and pressure to be $\rho_c$ and $P_c$ respectively. The second boundary condition can be determined from a restriction on the central temperature gradient. Since near the core the mass is given by $m\simeq 4\pi r^3 \rho_c/3$, the equation of hydrostatic equilibrium implies that $(\partial P/\partial r)|_{r=0}=0$ which in turn implies that $w'|_{\xi=0}=0$. With these two boundary conditions the Lane-Emden equation has a unique solution for each $n$, and using our definition of the stellar surface as $P(R)=0$, the surface is determined by the first value $\xi_1$ for which $w(\xi_1)=0$. As we consider different equations of state which can be approximated as polytropes, the Lane-Emden equation will be a useful source of insight to determine how different properties of the star (such as their mass and radius) relate to each other.
+We need two boundary conditions, one of them clearly being $w(0)=1$ as we require the central density and pressure to be $\rho_c$ and $P_c$ respectively. The second boundary condition can be determined from a restriction on the central temperature gradient. Since near the core the mass is given by $m\simeq 4\pi r^3 \rho_c/3$, the equation of hydrostatic equilibrium implies that $(\partial P/\partial r)|_{r=0}=0$ which in turn implies that $w'|_{\xi=0}=0$. With these two boundary conditions the Lane-Emden equation has a unique solution for each $n$, and using our definition of the stellar surface as $P(R)=0$, the surface is determined by the first value $\xi_1$ for which $w(\xi_1)=0$. As we consider different equations of state that can be approximated as polytropes, the Lane-Emden equation will be a useful source of insight to determine how different properties of the star (such as their mass and radius) relate to each other.
