@@ -1,44 +1,44 @@
- # Degenerate equations of state
+# Degenerate equations of state
 
- Goals
- - Derive how $u$ and $P$ are obtained from a distribution of momenta
- - Pauli exclusion principle and degeneracy
- - Non-relativistic and extremely relativistic limits of a degenerate EOS
- - Polytropes & the Chandrasekhar mass
+Goals
+- Derive how $u$ and $P$ are obtained from a distribution of momenta
+- Pauli exclusion principle and degeneracy
+- Non-relativistic and extremely relativistic limits of a degenerate EOS
+- Polytropes & the Chandrasekhar mass
 
- ## Deriving $u$ and $P$
+## Deriving $u$ and $P$
 
- We will consider a distribution of momenta, such that the number of particles with momentum between $p$ and $p+\mathrm{d}p$ in a volume $\mathrm{d}V$ is
+We will consider a distribution of momenta, such that the number of particles with momentum between $p$ and $p+\mathrm{d}p$ in a volume $\mathrm{d}V$ is
 
- $$N(p,p+\mathrm{d}p)=f(p)\mathrm{d}p\mathrm{d}V.$$
+$$N(p,p+\mathrm{d}p)=f(p)\mathrm{d}p\mathrm{d}V.$$
 
- One example for $f(p)$ is the Maxwell-Boltzmann distribution,
+One example for $f(p)$ is the Maxwell-Boltzmann distribution,
 
- $$f(p)=n\frac{4\pi p^2}{(2\pi m k T)^{3/2}}\exp\left(-\frac{p^2}{2m k T}\right),$$
+$$f(p)=\displaystyle n\frac{4\pi p^2}{(2\pi m k T)^{3/2}}\exp\left(-\frac{p^2}{2m k T}\right),$$
 
- which has a maximum at
+which has a maximum at
 
- $$p_\mathrm{max}=(2m k T)^{1/2}.$$
+$$p_\mathrm{max}=(2m k T)^{1/2}.$$
 
- This distribution corresponds to the momenta of particles of mass $m$ in an ideal monoatomic gas. In the case of an ionized gas, or a gas with multiple ions of different type, each component follows the distribution with their corresponding mass and particle density. For instance, for free electrons we have
+This distribution corresponds to the momenta of particles of mass $m$ in an ideal monoatomic gas. In the case of an ionized gas, or a gas with multiple ions of different type, each component follows the distribution with their corresponding mass and particle density. For instance, for free electrons we have
 
- $$n_e = \frac{\rho}{\mu_e m_u},$$
+$$n_e = \displaystyle\frac{\rho}{\mu_e m_u},$$
 
- where $m_u$ is the atomic mass unit and $\mu_e$ is the mean molecular weight per electron. The quantity $\mu_e$ can be read as the number of atomic mass units in the fluid per electron, which means that for pure ionized hydrogen $\mu_e\simeq1$, while for pure ionized helium $\mu_e\simeq2$.
+where $m_u$ is the atomic mass unit and $\mu_e$ is the mean molecular weight per electron. The quantity $\mu_e$ can be read as the number of atomic mass units in the fluid per electron, which means that for pure ionized hydrogen $\mu_e\simeq1$, while for pure ionized helium $\mu_e\simeq2$.
 
- If each particle has an energy $E(p)$, then the specific internal energy of the gas is
+If each particle has an energy $E(p)$, then the specific internal energy of the gas is
 
- $$u = \frac{1}{\rho}\int_0^\infty E(p)f(p)\mathrm{d}p,\quad E(p)=mc^2\sqrt{\displaystyle 1+\frac{p^2}{m^2c^2}},$$
+$$u = \frac{1}{\rho}\int_0^\infty E(p)f(p)\mathrm{d}p,\quad E(p)=mc^2\sqrt{\displaystyle 1+\frac{p^2}{m^2c^2}},$$
 
- as the integral gives the internal energy per unit volume, which is turned into the specific internal energy by multiplying by the specific volume $\rho^{-1}$.
+as the integral gives the internal energy per unit volume, which is turned into the specific internal energy by multiplying by the specific volume $\rho^{-1}$.
 
- Computing pressure is a bit more complex. Consider a slab of area $\mathrm{d}\sigma$ embedded in the gas, on which particles will be bouncing,
+Computing pressure is a bit more complex. Consider a slab of area $\mathrm{d}\sigma$ embedded in the gas, on which particles will be bouncing,
 
- ![asdf](assets/4_eos2/pressure1.svg)
+![asdf](assets/4_eos2/pressure1.svg)
 
- A particle with momentum $p$ colliding at an angle $\theta$ with respect to the normal will transfer momentum equal to
+A particle with momentum $p$ colliding at an angle $\theta$ with respect to the normal will transfer momentum equal to
 
- $$\Delta p = 2p\cos{\theta}.\tag{3.1}$$
+$$\Delta p = 2p\cos{\theta}. \tag{3.1}$$
 
 The pressure corresponds to a force per unit area, and a force corresponds to a change in momentum per unit time. This means that if we know the rate of collisions per unit time and direction on $\mathrm{d}\sigma$ we can integrate over all directions to get the pressure. Let's consider particles coming from a direction $\theta,\phi$, which cover a solid angle $\mathrm{d}\vec{\Omega}$ in the direction of their momenta $p$ and hit the slab $\mathrm{d}\sigma$,
 
@@ -78,13 +78,13 @@ $$\mathrm{d}^3p=\frac{h^3}{2\mathrm{d}^3 x}.$$
 
 As they go to the lowest possible energy states, we can think they fill a sphere in momentum space up to a value $p_\mathrm{F}$, known as the Fermi momentum:
 
-IMAGE
+ ![asdf](assets/4_eos2/momentum.svg)
 
 The volume in momentum is simply
 
 $$\int_0^p 4\pi p^2 \mathrm{d} p = \frac{4\pi}{3}p_\mathrm{F}^3.$$
 
-Since we know each cell occupies a 6-D space $h^2/(2\mathrm{d}^3x)$, the number of particles in $\mathrm{d}^3x$ should be:
+Since we know each cell occupies a 3-D momentum-space volume $h^3/(2\mathrm{d}^3x)$, the number of particles in $\mathrm{d}^3x$ should be:
 
 $$N=n\mathrm{d}^3x = \frac{\left(\displaystyle \frac{4\pi}{3}p_\mathrm{F}^3\right)}{\displaystyle \left(\frac{h^3}{2\mathrm{d}^3x}\right)}=\frac{8\pi}{3h^3}p_\mathrm{F}^3 \mathrm{d}^3 x$$
 $$\rightarrow n=\frac{8\pi}{3h^3}p_\mathrm{F}^3.$$
@@ -103,11 +103,11 @@ $$\boxed{f(p)=
 \end{cases}}\tag{3.3}
 $$
 
-So how does this compare to a Maxwell-Boltzmann distribution?
+So how does this compare to a Maxwell-Boltzmann distribution? The image below (source to produce this figure available [here](assets/4_eos2/MB_versus_degenerate.jl)) shows the Maxwell Boltzmann distribution of electron momenta for different temperatures at the mass density of the solar core ($\sim 150\;\mathrm{g\,cm}^{-3}$). The hydrogen mass fraction at the solar core is $X\simeq 0.35$, and the electron number density can be determined under the assumption of full ionization using the approximation $\mu_e=2/(1+X)$.
 
-IMAGE
+![Degeneracy at solar core](assets/4_eos2/degeneracy.svg)
 
-As the temperature is lowered, the expectation from a Maxwell-Boltzmann distribution violates the Pauli-exclusion principle. In practice, one has a soft transition between the Maxwell-Boltzmann distribution and the distribution of a fully degenerate gas (equation $3.3$).
+The temperature at the core of the Sun is $\sim 1.5\times 10^7\,\mathrm{K}$, and we see that at the conditions of the solar center a Maxwell-Boltzmann distribution does not violate the Pauli exclusion principle. However, this is not the case as the temperature is lowered, and we see that if the solar core would instead have a temperature of a million Kelvin we expect significant quantum effects to play a role. In practice, one has a soft transition between the Maxwell-Boltzmann distribution and the distribution of a fully degenerate gas (equation $3.3$).
 
 ## Non-relativistic and extremely relativistic regimes of a degenerate EOS
 
