@@ -9,6 +9,7 @@ end
 Literate.markdown("./docs/src/1_introduction_computational.jl", "./docs/src/", preprocess=ignore_code_blocks)
 Literate.markdown("./docs/src/2_equations_computational.jl", "./docs/src/", preprocess=ignore_code_blocks)
 include("./src/assets/4_eos2/MB_versus_degenerate.jl")
+include("./src/assets/4_eos2/polytrope_plot.jl")
 
 makedocs(sitename="Stellar Structure and Evolution",
         pages= ["index.md",
