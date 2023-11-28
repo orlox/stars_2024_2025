@@ -30,7 +30,7 @@ $$\frac{dT^4}{dm}=-\frac{3\kappa l}{16\pi^2 a c r^4}.$$
 Assuming an ideal gas law without radiation, and an opacity of
 the form $\kappa=\kappa_0 \rho^aT^b$ (with $a$ and $b$ constant) show that two homologous stars of constant opacity (but not necessarily equal opacity between them) satisfy the relationship
 
-$$\left(\frac{T_2(x)}{T_1(x)}\right)^4=\frac{l_2(x)}{l_1(x)}\frac{M_2}{M_1}\frac{\kappa_2}{\kappa_1}\left(\frac{R_2}{R_1}\right)^4.$$
+$$\left(\frac{T_2(x)}{T_1(x)}\right)^4=\frac{l_2(x)}{l_1(x)}\frac{M_2}{M_1}\frac{\kappa_2}{\kappa_1}\left(\frac{R_2}{R_1}\right)^{-4}.$$
 
 ### 3: Homologous contraction
 
@@ -75,11 +75,11 @@ $$\frac{dT^4}{dx}=-\frac{3\kappa l M}{16\pi^2 a c r^4}.$$
 
 We consider a solution to the equations of stellar structure which we denote with the subscript $1$, and consider another analogous solution with a subscript $2$. The equation for radiative energy transport for star $1$ can be written as
 
-$$\frac{dT_1^4}{dx}=-\frac{3\kappa_1 l_1 M_1}{16\pi^2 a c r_1^4}=-\frac{3\kappa_2 l_2 M_2}{16\pi^2 a c r_2^4}\left[\frac{l_2}{l_1}\frac{M_1}{M_2}\frac{\kappa_2}{\kappa_1}\left(\frac{r_2}{r_1}\right)^4\right].$$
+$$\frac{dT_1^4}{dx}=-\frac{3\kappa_1 l_1 M_1}{16\pi^2 a c r_1^4}=-\frac{3\kappa_2 l_2 M_2}{16\pi^2 a c r_2^4}\left[\frac{l_1}{l_2}\frac{M_1}{M_2}\frac{\kappa_1}{\kappa_2}\left(\frac{r_1}{r_2}\right)^{-4}\right].$$
 
 On the right hand side we identify the equation of radiative energy transport for star $2$, such that we have
 
-$$\frac{dT_1^4}{dx}=\frac{dT_2^4}{dx}\left[\frac{l_2}{l_1}\frac{M_1}{M_2}\frac{\kappa_2}{\kappa_1}\left(\frac{r_2}{r_1}\right)^4\right].$$
+$$\frac{dT_1^4}{dx}=\frac{dT_2^4}{dx}\left[\frac{l_1}{l_2}\frac{M_1}{M_2}\frac{\kappa_1}{\kappa_2}\left(\frac{r_1}{r_2}\right)^{-4}\right].$$
 
 The desired result is then obtained by integrating from an arbitrary value of $x$ all the way to the surface ($x=1$), while ignoring the temperature at the surface. We can take the entire term in the brackets as constant, as we have shown in class that an ideal gas law without radiation implies $T$ follows a simple homology relationship. This means $\kappa=\kappa_0\rho^a T^b$ will do to, so the equation of radiative energy transport implies the same thing for the luminosity.
 
