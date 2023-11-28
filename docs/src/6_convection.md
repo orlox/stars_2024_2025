@@ -1,36 +1,36 @@
- # Convection
+# Convection
 
- Goals:
+Goals:
 
- - Schwarzschild criterion
- - Brunt-Väisälä frequency
- - Mixing length theory
+- Schwarzschild criterion
+- Brunt-Väisälä frequency
+- Mixing length theory
 
- ## Scharzschild criterion
+## Scharzschild criterion
 
- So far we have considered two processes to transport energy, conduction and radiation. If we were to consider higher and higher luminosities, while fixing the temperature, density and radius, we would need increasingly steeper temperature gradients (see equation $(4.8)$). But, as we will see now, dynamical instabilities arise if the temperature gradient becomes too steep.
+So far we have considered two processes to transport energy, conduction and radiation. If we were to consider higher and higher luminosities, while fixing the temperature, density and radius, we would need increasingly steeper temperature gradients (see equation $(4.8)$). But, as we will see now, dynamical instabilities arise if the temperature gradient becomes too steep.
 
- Let's consider a mass element that is radially displaced upwards a distance $\Delta r$.
+Let's consider a mass element that is radially displaced upwards a distance $\Delta r$.
 
- ![convective blob](assets/6_convection/convection.svg)
+![convective blob](assets/6_convection/convection.svg)
 
- Here we differentiate between properties of the mass element with the subscript "e" and those of its surroundings with a subscript "s". Before the perturbation, we take the properties of the element and its surroundings to be equal,
+Here we differentiate between properties of the mass element with the subscript "e" and those of its surroundings with a subscript "s". Before the perturbation, we take the properties of the element and its surroundings to be equal,
 
- $$\rho_\mathrm{e}(r)=\rho_\mathrm{s}(r),\quad T_\mathrm{e}(r)=T_\mathrm{s}(r),\quad P_\mathrm{e}(r)-P_\mathrm{s}(r).$$
+$$\rho_\mathrm{e}(r)=\rho_\mathrm{s}(r),\quad T_\mathrm{e}(r)=T_\mathrm{s}(r),\quad P_\mathrm{e}(r)-P_\mathrm{s}(r).$$
 
- We will also consider that the displacement happens slowly, such that sound waves quickly equalize the pressure of the mass element with its surroundings as it rises,
+We will also consider that the displacement happens slowly, such that sound waves quickly equalize the pressure of the mass element with its surroundings as it rises,
 
- $$P_\mathrm{e}(r+\Delta r) = P_\mathrm{s}(r+\Delta r).$$
+$$P_\mathrm{e}(r+\Delta r) = P_\mathrm{s}(r+\Delta r).$$
 
- This requires that the velocity of the moving element is much slower than the local sound speed.
+This requires that the velocity of the moving element is much slower than the local sound speed.
 
- We can now consider the stability of the displaced element. Let's define the following quantities:
+We can now consider the stability of the displaced element. Let's define the following quantities:
 
- $$D\rho(r)=\rho_\mathrm{e}(r)-\rho_\mathrm{s}(r), \quad DT(r)=T_\mathrm{e}(r)-T_\mathrm{s}(r).$$
+$$D\rho(r)=\rho_\mathrm{e}(r)-\rho_\mathrm{s}(r), \quad DT(r)=T_\mathrm{e}(r)-T_\mathrm{s}(r).$$
 
- After being displaced a distance $\Delta r$, the mass element will experience a radial buoyancy force
+After being displaced a distance $\Delta r$, the mass element will experience a radial buoyancy force
 
- $$F_\mathrm{r}=-g D\rho(r+\Delta r)\mathrm{d}V(r),$$
+$$F_\mathrm{r}=-g D\rho(r+\Delta r)\mathrm{d}V(r),$$
 
 where $g=Gm(r)/r^2$ is the local gravity. Given this, if for an upwards displacement (positive $\Delta r$) the density of the mass element becomes smaller than that of its surroundings, there will be a net outwards force and the system will be unstable. For a small $\Delta r$ we can write
 
@@ -125,7 +125,7 @@ But how much energy flux do we expect? In principle this is a very complex 3D hy
 
 As small perturbations induce instability, let's assume that a convective region is entirely composed of blobs of materials that are unstable and move up or down. We consider a slab of material of area $\mathrm{d}A$, and consider the mass elements crossing it in a time $\mathrm{d}t$,
 
-IMAGE
+![convective blob 2](assets/6_convection/blobs.svg)
 
 These elements have different velocities, sizes and temperature contrasts $DT$. We simplify things by taking all elements to have a characteristic absolute velocity $|v|$ and absolute temperature contrast $|DT|$ (positive for rising elements, negative otherwise). The amount of mass crossing $\mathrm{d}A$ upwards in time $\mathrm{d}t$ is
 
