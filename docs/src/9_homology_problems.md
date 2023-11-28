@@ -14,7 +14,7 @@ Consider the main isotopes of hydrogen, helium, carbon and oxygen that are produ
 |    **O**   |  8  |  16  |  15.994915  |
 
 Simplify all nuclear burning stages by assuming that they proceed as (we ignore neon burning here):
-- The star is composed purely of helium at the start
+- The star is composed purely of hydrogen at the start
 - All hydrogen is burnt into helium
 - All helium is burnt into carbon
 - All carbon is burnt into oxygen
