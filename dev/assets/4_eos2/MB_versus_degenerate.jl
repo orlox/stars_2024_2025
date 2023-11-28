@@ -51,7 +51,7 @@ pvals = pvals./p_F
 pvals2 = pvals2./p_F
 
 f = Figure();
-ax = Axis(f[1,1], xlabel=L"p/p_\mathrm{F}", ylabel=L"f(p)/(8\pi p^2/h^3)")
+ax = Axis(f[1,1], xlabel=L"p/p_\mathrm{F}", ylabel=L"f(p)/(8\pi p_\mathrm{F}^2/h^3)")
 lines!(ax, pvals, deg_dist, linestyle=:dash, label=L"Fully degenerate, $\propto p^2$")
 lines!(ax, pvals2, dist_MB1e7, label=L"MB, $T=10^7\;[\mathrm{K}]$")
 lines!(ax, pvals2, dist_MB5e6, label=L"MB, $T=3\times10^6\;[\mathrm{K}]$")
