@@ -65,7 +65,7 @@ end
 
 # make the plot
 f = Figure();
-ax = Axis(f[1,1])
+ax = Axis(f[1,1], xlabel=L"z", ylabel=L"w(z)")
 lines!(zvals[wvals.>0],wvals[wvals.>0], color="teal")
 
 # repeat for n=3
@@ -97,10 +97,10 @@ lines!(zvals[wvals.>0],wvals[wvals.>0], color="red2")
 text!(ax, 2.0,0.25, text=L"n=1.5", fontsize=50, rotation=-0.7pi/2, color="teal")
 text!(ax, 4.0,0.25, text=L"n=3", fontsize=50, rotation=-0.4pi/2, color="red2")
 
-text!(ax, 2.5,0.95, text=L"n=1.5", color="teal", fontsize=40)
-text!(ax, 2.5,0.85, text=L"z_n = 3.654,\; (-z^2 \mathrm{d}w/\mathrm{d}z)_{z=z_n}=2.174", color="teal", fontsize=40)
-text!(ax, 2.5,0.7, text=L"n=3", color="red2", fontsize=40)
-text!(ax, 2.5,0.6, text=L"z_n = 6.897,\; (-z^2 \mathrm{d}w/\mathrm{d}z)_{z=z_n}=2.018", color="red2", fontsize=40)
+text!(ax, 2.3,0.95, text=L"n=1.5", color="teal", fontsize=40)
+text!(ax, 2.3,0.85, text=L"z_n = 3.654,\; (-z^2 \mathrm{d}w/\mathrm{d}z)_{z=z_n}=2.174", color="teal", fontsize=40)
+text!(ax, 2.3,0.7, text=L"n=3", color="red2", fontsize=40)
+text!(ax, 2.3,0.6, text=L"z_n = 6.897,\; (-z^2 \mathrm{d}w/\mathrm{d}z)_{z=z_n}=2.018", color="red2", fontsize=40)
 
 ylims!(ax,0.0,1.05)
 xlims!(ax,0.0,8)

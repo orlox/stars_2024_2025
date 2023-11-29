@@ -157,7 +157,6 @@ $$r = r_nz,\quad r_n^2 = \frac{(n+1)P_\mathrm{c}}{4\pi G \rho_\mathrm{c}^2}.$$
 
 The surface is located at the value $z_n$ where the function has its first zero.
 
-IMAGE
 ![Degeneracy at solar core](assets/4_eos2/polytrope.svg)
 
 As part of the exercises it was also shown that the total mass of a polytropic model is
