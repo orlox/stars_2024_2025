@@ -33,6 +33,7 @@ makedocs(sitename="Stellar Structure and Evolution",
                 "LAB1 (14/11/2023)" => ["Stellar evolution models" => "8_SE_codes.md",
                                         "Instructions" => "8_instructions.md",
                                         "Questions"=>"8_questions.md"],
+<<<<<<< HEAD
                 "Main sequence and beyond (28/11/23)" => ["Notes" => "9_homology.md",
                                               "Exercises"=>"9_homology_problems.md"],
 <<<<<<< HEAD
