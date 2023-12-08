@@ -35,6 +35,8 @@ makedocs(sitename="Stellar Structure and Evolution",
                                         "Questions"=>"8_questions.md"],
                 "Main sequence and beyond (28/11/23)" => ["Notes" => "9_homology.md",
                                               "Exercises"=>"9_homology_problems.md"],
+                "LAB2 (12/12/2023)" => ["Instructions" => "11_instructions.md",
+                                    "Questions"=>"11_questions.md"],
                 ])
 
 deploydocs(
