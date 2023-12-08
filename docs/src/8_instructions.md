@@ -44,9 +44,6 @@ If you still have time during the second hour of the session, you can start goin
 
  - 🚨 **ATTENTION**: Reports are *individual*: each student is expected to hand in his/her own report 🚨
 
-
-
-
 ### Grades and deadlines
 The idea is that you go through *every* question; the final question (*Bonus: Radiative Opacities*) can give you bonus points for the final exam, but if you address all the other requests correctly and completely, you will be able to get the full grade of the report anyway. You will be given approximately 4 weeks to complete the report and send it to us.
 
