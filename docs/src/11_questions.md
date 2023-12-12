@@ -70,6 +70,8 @@ This will represent a factor 8 in time and spatial resolution between the most a
 
 - Does the resolution of your simulations behave as expected? Indicate the number of steps each simulation took, and see the number of zones by checking the `num_zones` column in your history file (you can take the value of the very last timestep).
 - If for a particular science case I would need to know the value of the helium core mass to a precision better than 1%, what choice of resolution option would you suggest? Of course we expect the highest resolution to be the most precise, but we want to balance simulation cost and precision. You can illustrate this by plotting the value of `he_core_mass` against the logarithm of the number of steps.
+  
+⏰ Time for the simulations: ~ 10mins in total ⏰
 
 ## II. Pop III versus Pop I stars (4 points)
 
@@ -96,6 +98,8 @@ The provided template comes ready to compute the evolution of a $Z=0.02$ star. T
 
 - What hydrogen burning process is dominant in the $Z=0$ star? Make a plot for each star showing the contribution of the pp, cno and triple alpha burning as a function of time and discuss. *Hint*: Massive stars are expected to produce most of their energy through the CNO cycle, so how can a massive star without CNO at the beginning of its evolution undergo the CNO cycle?
 - Check the radii of both stars at the TAMS. Is there a significant difference between them? What do you think is the main source of this difference?
+  
+⏰ Time for the simulations: ~ 2mins in total ⏰
 
 ## III. White dwarf formation (4 points)
 
@@ -157,8 +161,10 @@ You might also notice a large set of options that look like this:
 these are purely numerical adjustments for the calculations in order to optimize the runtime of the simulation for the purpose of a lab. In reality you want to avoid relaxing the tolerance to which solutions are computed!
 
 Using your simulation, answer the following questions:
-- Through what evolutionary phases does this star go? What type of white dwarf is formed at the end? Accompany your discussion with an HR diagram. Take particular care in describing how helium is ignited.
+- Through what evolutionary phases does this star go? What type of white dwarf is formed at the end? Accompany your discussion with an HR diagram, highlighting precisely some key evolutionary points and referring to them in your discussion. Take particular care in describing how helium is ignited.
 - Although no nuclear burning takes place in the outermost regions of the star, you will find the surface abundances of some heavy elements change significantly before any significant mass loss happens. What is the cause of this change?
+
+⏰ Time for the simulation: ~ 20mins in total ⏰
 
 ## IV. Iron-core collapse (4 points)
 
@@ -204,6 +210,8 @@ With your simulation completed, answer the following questions for your report:
 - Determine the time between the end of each burning phase (H, He, C, Ne, O, Si, core collapse). Compare it to the main-sequence lifetime.
 - At the end of your simulation, check the iron core-mass (fe_core_mass in your history file). Is there a relevance to that value?
 - From the profile at the end of your simulation plot the helium abundance across the entire star. Can you explain what is happening at the core?
+
+⏰ Time for the simulations: ~ 25mins in total ⏰
 
 [^Reimers1975]:
     Memoires of the Societe Royale des Sciences de Liege, Volume 8, pp. 369-382 (1975).
