@@ -4,9 +4,9 @@ In this second MESA lab we will cover a variety of examples that illustrate impo
 
 ## The report
 ### Formalities
-- **PAGE LIMIT** Maximum of 6 pages (including figures) with classical font and fontsize ($\geq$ 12pt please). Include your name and student number on the first page of the PDF.
+- **PAGE LIMIT** Maximum of 6 pages (including figures) with classical font and fontsize ($\geq$ 12pt please). Include your name and student number on the first page of the PDF. PLEASE RESPECT the limit, whichever tool you are using (LaTeX, Word, LibreOffice...). And if you wish to include your code (not necessary), please include it in a separate file in the submission. The report may only be a descriptive pdf, images included.
 
-- **SUBMISSION FORMAT** Submit a tar / zip named as ```name_lastname_LAB2.zip```.
+- **SUBMISSION FORMAT** Submit a tar / zip named as ```name_lastname_LAB2.zip```. PLEASE DON'T INCLUDE YOUR DATA. I only need your pdf file and, if you think it's needed (e.g. because you have doubts or you included a custom piece of code), the inlist_project files. 
 
 ### Grades and deadlines
 You will be given 5 weeks to complete the report and send it to us.
