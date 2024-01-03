@@ -175,7 +175,7 @@ During the early PMS phase, the star's structure is almost completely convective
 
       $$\mathrm{SCHWARZSCHILD\: CRITERION}\hspace{2cm}\nabla_{\mathrm{rad}}\equiv\dfrac{3}{16\pi a c G}\dfrac{P}{T^4}\dfrac{\kappa l}{m}<\nabla_{\mathrm{ad}}$$
 
-      where $a=7.566\times 10^{-15}\:\mathrm{erg}\:\mathrm{cm}^{-3}\:\mathrm{K}^{-4}$ is the radiation constant, $P=P(m)$, $T=T(m)$, $\kappa=\kappa (m)$ and $l=l(m)$ are the pressure, temperature, opacity and luminosity profiles along the stellar structure; $\nabla_{\mathrm{ad}}$ and $\nabla_{\mathrm{rad}}$ are the adiabatic and radiative temperature gradients. Verify that there's a stage of the evolution in which this criterion holds *globally* in your star. You might want to produce a plot like one of those present in your saved pngs to support your argument.
+      where $a=7.566\times 10^{-15}\:\mathrm{erg}\:\mathrm{cm}^{-3}\:\mathrm{K}^{-4}$ is the radiation constant, $P=P(m)$, $T=T(m)$, $\kappa=\kappa (m)$ and $l=l(m)$ are the pressure, temperature, opacity and luminosity profiles along the stellar structure; $\nabla_{\mathrm{ad}}$ and $\nabla_{\mathrm{rad}}$ are the adiabatic and radiative temperature gradients. Verify that there's a stage of the evolution in which convection happens *globally* in your star. You might want to produce a plot like one of those present in your saved pngs to support your argument.
 
    2. Remember the [exercise](https://orlox.github.io/stars_2023_2024/dev/6_convection_problems/) in which we showed that $\nabla_{\mathrm{ad}}= 0.4$ for an ideal gas without radiation. How close is the $\nabla_{\mathrm{ad}}$ of your simulation to be $\nabla_{\mathrm{ad}}\simeq 0.4$ in this stage? Motivate why $\nabla_{\mathrm{ad}}$ drops below $0.4$ around the outer layers of your star and why, close to your core, that value is almost correct.
    3. How is the actual temperature gradient as compared to the adiabatic one? Remember that in class we mentioned that, very often, one can make the approximation $\nabla\approx\nabla_{\mathrm{ad}}$ in convective regions. Compute the degree of superadiabaticity $\nabla-\nabla_{\mathrm{ad}}$ and discuss the goodness of the approximation in your simulation. 
@@ -260,7 +260,7 @@ This bonus question is meant for you to gain a better understanding of the ingre
 
 1. **THE TOTAL OPACITY AT ZAMS**
 
-   Plot the **ZAMS** profile of the total radiative opacity $\log\kappa$ (see column ```opacity```). This is the result of very complicated ingredients from atomic physics and chemistry blended together, but there should be some easily recognizable features.
+   Plot the **ZAMS** profile of the total radiative opacity $\kappa$ (see column ```opacity```). This is the result of very complicated ingredients from atomic physics and chemistry blended together, but there should be some easily recognizable features.
 
     - Remember that the **electron scattering** opacity $\kappa_{\mathrm{es}}$, in the Thomson classical limit, can be expressed by
 
