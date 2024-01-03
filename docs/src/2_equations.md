@@ -1,4 +1,4 @@
- # The equations of stellar structure and evolution
+# The equations of stellar structure and evolution
 
 Goals:
 

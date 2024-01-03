@@ -10,6 +10,7 @@ Literate.markdown("./docs/src/1_introduction_computational.jl", "./docs/src/", p
 Literate.markdown("./docs/src/2_equations_computational.jl", "./docs/src/", preprocess=ignore_code_blocks)
 include("./src/assets/4_eos2/MB_versus_degenerate.jl")
 include("./src/assets/4_eos2/polytrope_plot.jl")
+include("./src/assets/7_nucleo1/gamow.jl")
 
 makedocs(sitename="Stellar Structure and Evolution",
         pages= ["index.md",
@@ -33,7 +34,7 @@ makedocs(sitename="Stellar Structure and Evolution",
                 "LAB1 (14/11/2023)" => ["Stellar evolution models" => "8_SE_codes.md",
                                         "Instructions" => "8_instructions.md",
                                         "Questions"=>"8_questions.md"],
-                "Main sequence and beyond (28/11/23)" => ["Notes" => "9_homology.md",
+                "Main sequence homology (28/11/23)" => ["Notes" => "9_homology.md",
                                               "Exercises"=>"9_homology_problems.md"],
                 ])
 
