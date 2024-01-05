@@ -7,7 +7,7 @@ Goals:
 - Tunneling and the Gamow peak
 - Nuclear burning stages
 
-For reference, this section is based on chapter 6 of the lectures on stellar evolution by Onno Pols, available at https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/ .
+For reference, this section is based on chapter 6 of the lectures on stellar evolution by Onno Pols, available at [https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/](https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/).
 
 ## Basic definitions
 
@@ -122,7 +122,7 @@ Excluding the S-factor, the exponential term in the integral is such that it pea
 
 ![Gamow peak](assets/7_nucleo1/gamow.svg)
 
-This figure shows the value of the exponential term in equation $(6.5)$ (normalized by its maximum) for different values of the ratio $b/\sqrt{k_\mathrm{B}T}$. These values are chosen to be representative of hydrogen burning at a temperature of $10^7\,\mathrm{K}$, helium burning at $10^8\,\mathrm{K}$ and carbon burning at $5\times 10^{8}\,\mathrm{K}$. This function is commonly referred to as the Gamow peak, and can to first order be approximated with a normal function. In that case, if one assumes $S(E)$ does not vary significantly within the range of energies relevant to the Gamow peak, it can be taken off the integral in equation (6.5), which can then be evaluated analytically (see exercises for this session). 
+This figure shows the value of the exponential term in equation $(6.5)$ (normalized by its maximum) for different values of the ratio $b/\sqrt{k_\mathrm{B}T}$. These values are chosen to be representative of hydrogen burning at a temperature of $10^7\,\mathrm{K}$, helium burning at $10^8\,\mathrm{K}$ and carbon burning at $5\times 10^{8}\,\mathrm{K}$. This function is commonly referred to as the Gamow peak, and can to first order be approximated with a Gaussian function. In that case, if one assumes $S(E)$ does not vary significantly within the range of energies relevant to the Gamow peak, it can be taken off the integral in equation (6.5), which can then be evaluated analytically (see exercises for this session). 
 
 ## Nuclear burning stages
 

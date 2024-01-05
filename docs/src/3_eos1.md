@@ -99,7 +99,7 @@ $$\rho=\rho(P,T),$$
 
 then changes in density are related to changes in pressure and temperature as
 
-$$\mathrm{d}\rho = \left(\frac{\partial \rho}{\partial P}\right)_T\mathrm{d}P + \left(\frac{\partial\rho}{\partial t}\right)_P\mathrm{d}T. \tag{2.9}$$
+$$\mathrm{d}\rho = \left(\frac{\partial \rho}{\partial P}\right)_T\mathrm{d}P + \left(\frac{\partial\rho}{\partial T}\right)_P\mathrm{d}T. \tag{2.9}$$
 
 The partial derivatives are commonly expressed in terms of logarithmic derivatives,
 
@@ -119,7 +119,7 @@ $$c_P\equiv \left(\frac{\partial q}{\partial T}\right)_P=\left(\frac{\partial u}
 
 and similarly, we have the specific heat at constant volume,
 
-$$c_v\equiv \left(\frac{\partial q}{\partial T}\right)_v=\left(\frac{\partial u}{\partial T}\right).$$
+$$c_v\equiv \left(\frac{\partial q}{\partial T}\right)_v=\left(\frac{\partial u}{\partial T}\right)_v.$$
 
 
 ## Rewriting the energy equation
@@ -184,7 +184,7 @@ $$\mathrm{d}q = \mathrm{d}u + P \mathrm{d}v.$$
 Applying $(2.10)$ we get
 
 $$\mathrm{d}q = \left(\frac{\partial u}{\partial T}\right)_v\mathrm{d}T + \left(\frac{\partial u}{\partial v}\right)_T\mathrm{d}v+P\mathrm{d}v$$
-$$=\left(\frac{\partial u}{\partial T}\right)_v+\left[\left(\frac{\partial u}{\partial v}\right)_T+P\right]\mathrm{d}v.$$
+$$=\left(\frac{\partial u}{\partial T}\right)_v\mathrm{d}T+\left[\left(\frac{\partial u}{\partial v}\right)_T+P\right]\mathrm{d}v.$$
 
 We use $(2.11)$ on the left hand side,
 
@@ -197,10 +197,10 @@ $$=c_v\mathrm{d}T-\frac{P\delta}{\rho\alpha}\left(\alpha\frac{\mathrm{d}P}{P}-\d
 $$=\left(c_v+\frac{P\delta^2}{\rho T \alpha}\right)\mathrm{d}T-\frac{\delta}{\rho}\mathrm{d}.P$$
 
 Using Equation $(2.14)$ we finally get what we were looking for:
-$$\mathrm{d}q = c_P\mathrm{d}T-\frac{\delta}{\rho}\mathrm{d}P.$$
+$$\mathrm{d}q = c_P\mathrm{d}T-\frac{\delta}{\rho}\mathrm{d}P.\tag{2.15}$$
 Using this expression we obtain the energy equation in terms of $\partial P/\partial t$ and $\partial T/\partial t$,
 
-$$\boxed{c_P\frac{\partial T}{\partial t}+\frac{\delta}{\rho}\frac{\partial P}{\partial t}=\varepsilon_\mathrm{nuc}-\frac{\partial L}{\partial m}.}$$
+$$\boxed{c_P\frac{\partial T}{\partial t}-\frac{\delta}{\rho}\frac{\partial P}{\partial t}=\varepsilon_\mathrm{nuc}-\frac{\partial L}{\partial m}.}$$
 
 A very useful property of the gas is the adiabatic temperature gradient,
 

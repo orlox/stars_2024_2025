@@ -15,7 +15,7 @@ $$[\kappa]=\mathrm{cm^{2}\,g^{-1}},$$
 
 where brackets denote the units of what is inside.
 
-So what is opacity? Let's stars by thinking of a medium with particles of mass $m$, which interact with passing radiation. We will consider each particle acts as a disk of area $\sigma$ (its cross section), and that all radiation is absorbed when it hits a particle. We can now consider a thin slab of material as follows:
+So what is opacity? Let's start by thinking of a medium with particles of mass $m$, which interact with passing radiation. We will consider each particle acts as a disk of area $\sigma$ (its cross section), and that all radiation is absorbed when it hits a particle. We can now consider a thin slab of material as follows:
 
 ![asdf](assets/5_radiative/opacity.svg)
 
@@ -145,7 +145,7 @@ where we have defined the diffusion coefficient $D$ which has units
 
 $$[D]=\mathrm{cm^{2}\;s^{-1}}.$$
 
-In practice we have multiple velocities and mean free paths, so one would generally use an average $\langle vl_\mathrm{f} \rangle $.
+In practice we have multiple velocities and mean free paths, so one would generally use an average $\langle vl_\mathrm{f} \rangle$.
 
 The flux described by equation $(4.6)$ needs not just be energy, it can also describe a flux of particles of different types. Now, we will not formally derive (4.6), but we will provide a 1-D analogue. Consider motion only happens in the $+x$ or $-x$ direction. We then take an are $\mathrm{d}A$ separating two regions of length equal to $l_\mathrm{f}$,
 
@@ -174,9 +174,9 @@ $$l_\mathrm{f}=\frac{1}{\kappa\rho}.$$
 
 Assuming radial symmetry, equations $(4.5)$ and $(4.6)$ give
 
-$$F_r = \left.-\frac{c}{3\kappa\rho}\frac{\partial U}{\partial r} = -\frac{4acT^3}{3\kappa\rho}\frac{\partial T}{\partial r}\quad\right/4\pi r^2\cdot$$
+$$F_r = \left.-\frac{c}{3\kappa\rho}\frac{\partial U}{\partial r} = -\frac{4acT^3}{3\kappa\rho}\frac{\partial T}{\partial r}\quad\right/4\pi r^2\cdot \tag{4.7}$$
 $$L = -\frac{16 \pi r^2 acT^3}{3\kappa\rho}\frac{\partial T}{\partial r}$$
-$$\rightarrow \boxed{\frac{\partial T}{\partial r}=-\frac{3\kappa \rho L}{16\pi r^2 a c t^3}}.\tag{4.8}$$
+$$\rightarrow \boxed{\frac{\partial T}{\partial r}=-\frac{3\kappa \rho L}{16\pi r^2 a c T^3}}.\tag{4.8}$$
 
 Whenever energy transport happens through radiation, this equation describes the temperature gradient required. In cases where other mechanisms transport energy, equation (4.8) describes the radiative luminosity $L_\mathrm{rad}$ rather than the total one.
 

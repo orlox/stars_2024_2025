@@ -26,7 +26,7 @@ where $\mathrm{e}$ and $\mathrm{s}$ stand for the properties of the environment 
 
 ### Core convection
 
-Consider the adiabatic gradient
+Consider the radiative temperature gradient
 
 $$\nabla_\mathrm{rad}=\frac{3}{16\pi a c G}\frac{\kappa l P}{m T^4}.$$
 

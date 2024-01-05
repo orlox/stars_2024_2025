@@ -4,40 +4,26 @@
 
 ### 1: The nuclear timescale
 
-Compute the nuclear timescale $\tau_{\mathrm{nuc}}$
+The objective of this exercise is to determine the nuclear burning timescale $\tau_{\mathrm{nuc}}$ for stars of different masses. For simplicity, let us take the entire star to be composed of hydrogen, and assume a fraction $\alpha$ of it is burnt into helium. For a luminosity $L$, which we take to be constant through the main sequence, and an energy $\epsilon$ released per gram of hydrogen fused, the nuclear timescale is
 
-$$\tau_{\mathrm{nuc}}=\phi f_{\mathrm{nuc}}\dfrac{Mc^2}{L}$$
+$$\tau_{\mathrm{nuc}}=\frac{\alpha M\epsilon}{L}.$$
  
-for these three reference values of stars masses: $M_1=1\:M_{\odot}$, $M_2=10\:M_{\odot}$ and $M_3=100\:M_{\odot}$. Here above, we called $\phi$ the efficiency of energy conversion for the fueling nuclear reaction, and $f_{\mathrm{nuc}}\simeq 0.1$ the fraction of the star's mass which may serve as nuclear fuel. We are going to calculate this timescale **during the Main Sequence** (MS), when the nuclear energy is provided by the pp-chain and/or the CNO cycle. The net reaction for hydrogen fusion after the annihilation of
-positrons is:
-
-$$4^1\mathrm{H}+4e\rightarrow ^4\mathrm{He}+2e+2\nu$$
-
-Atomic masses include electron masses, so the net energy of the process (ignoring energy
-losses due to neutrinos) can be computed by taking the mass difference,
-
-$$E=\frac{4m_\mathrm{H}-m_\mathrm{He}}{m_\mathrm{u}}c^2,$$
-
-where $m_\mathrm{H}$ and $m_\mathrm{He}$ are the atomic masses of the hydrogen and helium atom respectively.
-
-- First compute the energy release $E$ for hydrogen fusion taking into account the atomic masses of hydrogen and helium.
+- First compute the energy release $\epsilon$ for hydrogen fusion taking into account the atomic masses of hydrogen and helium.
 
   | **element** | $Z$ | $A$ | $m/m_u$ |
   |:-----------:|:---:|:---:|:----------:|
   |    **H**    |  1  |  1  |  1.007825  |
   |    **He**   |  2  |  4  |  4.002603  |
 
-  Remember that $m_u$ is defined as $1/12$ times the mass of the $^{12}\mathrm{C}$ atom. Also, the electron mass is $m_e=9.109382\times 10^{-28}\:\mathrm{g}$, therefore $m_{e}/m_u=0.00054854$. You may want to use the useful identity 
+  Remember that the atomic mass unit $m_u$ (defined as $1/12$ times the mass of the $^{12}\mathrm{C}$ atom) is equal to $1.660540\times 10^{-24}\,\mathrm{g}$. Also, the speed of light is equal to $c\simeq 3\times 10^{10}$. With this information compute the value of $\epsilon$ while ignoring energy losses due to neutrinos. Remember that atomic masses refer to neutral atoms, so they include electron masses.
 
-$$m_u c^2\simeq 931\:\mathrm{MeV}=0.00149\:\mathrm{erg}\:.$$
+- In the next class we will show that stars follow a steep mass luminosity relationship: 
 
-- Later on we will show that for stars burning hydrogen through the mainly through the PP chain, their mass luminosity relationship in the zero age main sequence (ZAMS) is approximately: 
+  $$L\propto M^{3}\:,$$ 
 
-  $$L_{\mathrm{ZAMS}}\propto M_{\mathrm{ZAMS}}^{5}\:,$$ 
+  the exponent is modified from $3$ in connection with the exact form of the surface opacity and nuclear burning process powering the star. It is also modified at very high masses as they approach the Eddington limit. But an exponent of $3$ is a good approximation through a broad range of masses. Using this power law dependence, determine $\tau_\mathrm{nuc}$ for stars of masses $1M_\odot$, $10M_\odot$ and $100M_\odot$. For reference, the solar luminosity is $L_\odot\sim 3.9\times 10^{33}\,\mathrm{erg}\,\mathrm{s}^{-1}$ and the solar mass is $M_\odot\sim 2.0\times 10^{33}\,\mathrm{g}$. Take $\alpha=0.1$.
 
-  compute $\tau_{\mathrm{nuc}}$ (see exercise of part 1) for stars of $1M_\odot$, $10M_\odot$ and a $100M_\odot$ using the solar luminosity as a reference point. You will assume that your star will have a constant $L_{\mathrm{ZAMS}}$ throughout all its MS lifetime.
-
-- From detailed calculations, it's shown that for very high mass stars $\gtrsim 100\:M_{\odot}$ the ZAMS mass-luminosity relation becomes linear. What is the main implication of this fact? And how does $\tau_{\mathrm{nuc}}$ change?
+- From detailed calculations, it's shown that for very high mass stars $\gtrsim 100\:M_{\odot}$ the ZAMS mass-luminosity relation becomes almost linear. What does this imply for the scaling of $\tau_\mathrm{nuc}$ with mass?
 
 ### 2: Temperature dependence of reaction rates
 
@@ -45,7 +31,7 @@ We saw in class that the thermally averaged reaction cross-section $\left<\sigma
 
 $$\left<\sigma v\right>=(8/\pi m)^{1/2}(k_{\mathrm{B}}T)^{-3/2}S(E_0)\int_0^{\infty}\underbrace{\exp{\left(-\dfrac{E}{k_{\mathrm{B}}T}-\dfrac{b}{E^{1/2}}\right)}}_{\equiv f(E)}\:dE\:,$$
 
-where $S(E_0)$ is the astrophysical S-factor (~constant outside resonances) and we defined the function $f(E)$, referred to as **Gamow peak**, being a very sharply peaked function around an energy value $E_0$. Also remember that $b\approx Z_iZ_jA^{1/2}$ with $A\equiv A_iA_j/(A_j+A_i)$, setting the proportionality of the Gamow factor to the Coulomb barrier and the types of nuclei.
+where $S(E_0)$ is the astrophysical S-factor (almost constant outside resonances) and we defined the function $f(E)$, referred to as the **Gamow peak**, being a very sharply peaked function around an energy value $E_0$. Also remember that $b\approx Z_iZ_jA^{1/2}$ with $A\equiv A_iA_j/(A_j+A_i)$, setting the shape of the Gamow factor in terms of the Coulomb barrier and the types of nuclei.
 
 1. Show that the Gamow peak energy $E_0$ is
 
@@ -91,13 +77,13 @@ where we are schematizing a reaction of the nucleus $X$, of mass $m_Y$, with a p
 
 ![alt text for screen readers](assets/pp_chains.png)
 
-you can see that three of the reactions in the chains are accompanied by neutrino emission. The average neutrino energy $\left<E_{\nu}\right>$ is different in each chain:
+you can see that three of the reactions in the chains are accompanied by neutrino emission. The average neutrino energy $\left<E_{\nu}\right>$ is different in each chain (see section 18.1 of [Stellar Structure and evolution](https://link.springer.com/book/10.1007/978-3-642-30304-3) by Kippenhahn, Weigert & Weiss):
 
-$^1\mathrm{H}+^1\mathrm{H}\rightarrow ^2\mathrm{H}+e^++\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=0.265\:\mathrm{MeV}$
+$^1\mathrm{H}+^1\mathrm{H}\rightarrow ^2\mathrm{H}+e^++\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=0.267\:\mathrm{MeV}$
 
-$^7\mathrm{Be}+e^-\rightarrow ^7\mathrm{Li}+\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=0.814\:\mathrm{MeV}$
+$^7\mathrm{Be}+e^-\rightarrow ^7\mathrm{Li}+\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=0.738\:\mathrm{MeV}$
 
-$^8\mathrm{B}\rightarrow ^8\mathrm{Be}+e^++\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=6.71\:\mathrm{MeV}$
+$^8\mathrm{B}\rightarrow ^8\mathrm{Be}+e^++\nu\hspace{1cm}$ gives $\left<E_{\nu}\right>=6.735\:\mathrm{MeV}$
 
 Considering these energy losses calculate the total effective $Q$-value for the production of one $^4\mathrm{He}$ nucleus in each chain.
 
@@ -105,10 +91,34 @@ Considering these energy losses calculate the total effective $Q$-value for the 
 
 ### 1: The nuclear timescale
 
-TODO
+- We start by computing the total energy released from fusing four hydrogen atoms into a helium atom,
 
-If we take into account the caveat that $L_{\mathrm{ZAMS}}\propto M_{\mathrm{ZAMS}}$ for very high masses $\gtrsim 100\:M_{\odot}$, then we obtain that the nuclear timescale becomes basically independent on the mass of the stars. Owing to this, the above expression. underestimates the lifetime of the most massive stars, which turns
-out to be about $2\;\mathrm{Myrs}$.
+  $$Q=(4m_\mathrm{H}-m_\mathrm{He})c^2$$
+
+  where $m_\mathrm{H}$ and $m_\mathrm{He}$ are the masses of the hydrogen and helium atoms (their atomic masses multiplied by the atomic mass unit). This results in
+
+  $$Q= 4.3\times 10^{-5}\,\mathrm{erg}=26.8\,\mathrm{MeV}.$$
+
+  Part of this energy is lost to neutrino emission, but we are ignoring that for the moment. We want the energy released per unit mass, which is
+
+  $$\epsilon = \frac{Q}{4 m_\mathrm{H}}=6.4\times 10^{18}\,\mathrm{erg}\,\mathrm{g}^{-1}.$$
+
+- Using the solar luminosity and mass as a scaling factors, the given mass luminosity relationship implies
+
+  $$\displaystyle L = L_\odot \left(\frac{M}{M_\odot}\right)^3$$
+
+  which in turn gives for the nuclear timescale
+
+  $$\tau_\mathrm{nuc}=\frac{\alpha M\epsilon}{L_\odot}\left(\frac{M}{M_\odot}\right)^{-3}$$
+  $$= \frac{\alpha M_\odot \epsilon}{L_\odot}\left(\frac{M}{M_\odot}\right)^{-2}$$
+
+  We can evaluate the factor outside parenthesis (using $\alpha=0.1$) to obtain
+
+  $$\tau_\mathrm{nuc}\simeq 10\,[\mathrm{Gyr}]\left(\frac{M}{M_\odot}\right)^{-2}.$$
+
+  With this we quickly estimate that the (hydrogen) nuclear burning lifetimes of stars of masses $1M_\odot$, $10M_\odot$ and $100M_\odot$ would be $10\,\mathrm{Gyr}$, $100\,\mathrm{Myr}$ and $1\,\mathrm{Myr}$. The lifetime of stars changes dramatically with mass! Although the power-law index in the mass luminosity relationship changes significantly with mass, all these estimates are correct within an order of magnitude.
+
+- If we take into account the caveat that $L_{\mathrm{ZAMS}}\propto M_{\mathrm{ZAMS}}$ for very high masses $\gtrsim 100\:M_{\odot}$, then we obtain that the nuclear timescale becomes basically independent on the mass of the stars. This flattening of the mass luminosity relationship starts well below $100M_\odot$, so the previous part of the exercise actually underestimates the lifetime of very massive stars. Through detailed calculations, one finds that this mass-independent lifetime is about $2\;\mathrm{Myrs}$, which represents the shortest (hydrogen-burning) life any unperturbed star can have.
 
 ### 2: Temperature dependence of reaction rates
 
@@ -122,7 +132,7 @@ out to be about $2\;\mathrm{Myrs}$.
 
 2. The expression comes directly from evaluation:
 
-   $$\displaystylef(E_0)=\left.\exp{\left(-\dfrac{E}{k_{\mathrm{B}}T}-\dfrac{b}{E^{1/2}}\right)}\right|_{E=E_0}=\exp{\left[-\dfrac{E_0}{k_{\mathrm{B}}T}-2^{1/3}\left(\dfrac{b^2}{k_{\mathrm{B}}T}\right)^{1/3}\right]}=$$
+   $$\displaystyle f(E_0)=\left.\exp{\left(-\dfrac{E}{k_{\mathrm{B}}T}-\dfrac{b}{E^{1/2}}\right)}\right|_{E=E_0}=\exp{\left[-\dfrac{E_0}{k_{\mathrm{B}}T}-2^{1/3}\left(\dfrac{b^2}{k_{\mathrm{B}}T}\right)^{1/3}\right]}=$$
 
    $$\displaystyle=\exp{\left[-\dfrac{E_0}{k_{\mathrm{B}}T}-\dfrac{2E_0}{k_{\mathrm{B}}T}\right]}=\exp{\left(-\dfrac{3E_0}{k_{\mathrm{B}}T}\right)}\equiv e^{-\tau}\:.$$
 
@@ -168,4 +178,10 @@ out to be about $2\;\mathrm{Myrs}$.
 
 ### 3: Energetics of the pp-chains
 
-Solution comes from direct calculation of Q-values. As the electrons contain
+One could complete this exercise by computing the energy release of each individual reaction in the corresponding chain, and then add them up while substracting neutrino losses. However, it is enough to compute the total energy released by fusing four hydrogen atoms into one helium atom first. This was done in the first exercise, resulting in $Q=26.8\,\mathrm{Mev}$. The effective energy released for each of the chains can then be computed by substracting the neutrino energy losses relevant to each chain:
+
+$$Q_\mathrm{PP-I}=Q-0.267\,\mathrm{Mev}=26.5\,\mathrm{Mev},$$
+$$Q_\mathrm{PP-II}=Q-0.267\,\mathrm{Mev}-0.738\,\mathrm{Mev}=25.8\,\mathrm{Mev},$$
+$$Q_\mathrm{PP-III}=Q-0.267\,\mathrm{Mev}-6.735\,\mathrm{Mev}=19.8\,\mathrm{Mev}.$$
+
+The exact energy released by fusing hydrogen is then dependant on the ratio that each of these chains contribute.

@@ -5,7 +5,7 @@ Goals:
 - Homology
 - Main-sequence homology (mass-radius relationship)
 
-For reference, this section is based on chapter 7 of the lectures on stellar evolution by Onno Pols, available at https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/.
+For reference, this section is based on chapter 7 of the lectures on stellar evolution by Onno Pols, available at [https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/](https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/).
 
 ## Homology
 
@@ -110,7 +110,7 @@ $$L\propto \kappa^{-1}\mu^{4}M^3.$$
 
 Note that this is independent of the energy source powering the star!
 
-### Main sequence homology
+## Main sequence homology
 
 The relationships derived so far allow us to determine how the different properties of a homogeneous star scale with mass and radius. These relationships can be used to describe a star that is out of thermal equilibrium, where its energy source comes from sinking in its own potential well. Placing an extra homology constraint can the allow us to determine a mass-radius relationship. We can do this by applying the equation of thermal equilibrium,
 

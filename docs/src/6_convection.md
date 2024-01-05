@@ -6,7 +6,7 @@ Goals:
 - Brunt-Väisälä frequency
 - Mixing length theory
 
-## Scharzschild criterion
+## Schwarzschild criterion
 
 So far we have considered two processes to transport energy, conduction and radiation. If we were to consider higher and higher luminosities, while fixing the temperature, density and radius, we would need increasingly steeper temperature gradients (see equation $(4.8)$). But, as we will see now, dynamical instabilities arise if the temperature gradient becomes too steep.
 
@@ -48,7 +48,7 @@ $$\frac{\mathrm{d}\rho}{\rho}=\alpha\frac{\mathrm{d}P}{P}-\delta\frac{\mathrm{d}
 
 where
 
-$$\alpha=\left(\frac{\partial \rho}{\partial P}\right)_T,\quad \delta=-\left(\frac{\partial \rho}{\partial T}\right)_P.$$
+$$\alpha=\left(\frac{\partial \ln\rho}{\partial \ln P}\right)_T,\quad \delta=-\left(\frac{\partial \ln \rho}{\partial \ln T}\right)_P.$$
 
 Using this the left hand side of equation $(5.2)$ can be rewritten as
 
