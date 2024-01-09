@@ -21,7 +21,7 @@ end
 Evals = LinRange(0,100,1000)
 
 f = Figure();
-ax = Axis(f[1,1], ylabel=L"\exp\left(-b E^{1/2}-E/(k_\mathrm{B}T)\right)/\max", xlabel=L"E/(k_\mathrm{B}T)", xticks=[0,10,20,30,40,50,60,70])
+ax = Axis(f[1,1], ylabel=L"\exp\left(-b E^{-1/2}-E/(k_\mathrm{B}T)\right)/\max", xlabel=L"E/(k_\mathrm{B}T)", xticks=[0,10,20,30,40,50,60,70])
 lines!(ax, Evals, exp_factor.(Evals, 23)./maximum(exp_factor.(Evals, 23)), label=L"b/\sqrt{k_\mathrm{B}T}=23")
 lines!(ax, Evals, exp_factor.(Evals, 60)./maximum(exp_factor.(Evals, 60)), label=L"b/\sqrt{k_\mathrm{B}T}=60")
 lines!(ax, Evals, exp_factor.(Evals, 420)./maximum(exp_factor.(Evals, 420)), label=L"b/\sqrt{k_\mathrm{B}T}=420")
