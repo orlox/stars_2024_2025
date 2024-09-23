@@ -1,3 +1,3 @@
-module stars_2023_2024
+module stars_2024_2025
 
 end
