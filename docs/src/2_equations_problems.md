@@ -94,7 +94,7 @@ $$P(r) = -\frac{4\pi \rho_c^2 G}{6} (r^2-R^2)=P_\mathrm{c}(1-r^2/R^2).$$
 
 ### 2: Lower bound on central pressure of the Sun
 
-We can integrate the equation over mass, again ignoring central pressure:
+We can integrate the equation over mass, again ignoring surface pressure:
 
 $$\int_0^{M} \frac{\partial P}{\partial m} dm = -P_\mathrm{c}=-\int_0^{M} \frac{Gm}{4\pi r^4}$$
 
