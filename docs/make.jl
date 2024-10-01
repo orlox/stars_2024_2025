@@ -17,10 +17,10 @@ makedocs(sitename="Stellar Structure and Evolution",
                 "Introduction (23/09/24)" => ["Notes" => "1_introduction.md",
                                               "Exercises"=>"1_introduction_problems.md",
                                               "Julia setup"=>"1_introduction_julia.md",
-                                              "1_introduction_computational.md"],])
+                                              "1_introduction_computational.md"],
                 "Equations (08/10/24)" => ["Notes" => "2_equations.md",
                                               "Exercises"=>"2_equations_problems.md",
-                                              "2_equations_computational.md"],
+                                              "2_equations_computational.md"],])
                 #"Energy equation and EOS (10/10/23)" => ["Notes" => "3_eos1.md",
                 #                              "Exercises"=>"3_eos1_problems.md"],
                 #"Degenerate EOS (17/10/23)" => ["Notes" => "4_eos2.md",
