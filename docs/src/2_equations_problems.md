@@ -64,7 +64,7 @@ $$\rho=\rho_\mathrm{c}w_n^n, \quad P=P_c w_n^{1+n}, \quad r = r_n z, \quad r_n^2
 
 The central boundary conditions for this equation are $w_n(0)=1$ and $w_n'(0)=0$, while the surface is defined by the first zero of $w_n$, at which point we define $z_1$ and $R=r_n z_1$.
 
-- Show that the mass contained inside a given value of the coordinate $\xi$ is given by  
+- Show that the mass contained inside a given value of the coordinate $z$ is given by  
 $m(z)=4\pi r_n^3 \rho_\mathrm{c}(-z^2 w_n'(z)).$
 - Show that for an equation of state $P=K\rho^{5/3}$ higher mass stars have smaller radii.
 
