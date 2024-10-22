@@ -107,7 +107,7 @@ $$\frac{dU}{dT}\sim \frac{k_B \rho}{m_u},\quad v\sim\sqrt{\frac{kT}{m_e}},\quad 
 
 we find that
 
-$$ k_\mathrm{cd} \sim \frac{k_B^{7/2}T^{5/2}}{\pi m_e^{1/2}k_C^2 e^4}.$$
+$$k_\mathrm{cd} \sim \frac{k_B^{7/2}T^{5/2}}{\pi m_e^{1/2}k_C^2 e^4}.$$
 
 The steep dependence with temperature comes from the increased velocity, which not only leads to a faster spread of the diffusing particles but also to a lower effective cross section.
 
