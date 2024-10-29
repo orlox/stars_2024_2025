@@ -157,7 +157,7 @@ $$\frac{\mathrm{d}n}{\mathrm{d}x} = \frac{n_{+x}-n_{-x}}{l_\mathrm{f}}.$$
 
 Each box contains a certain amount of particles,
 
-$$\mathrm{d}N_{-x}=\frac{n_{+x}-n_{-x}}{l_\mathrm{f}}.$$
+$$\mathrm{d}N_{-x}=n_{-x}\mathrm{d}Al_\mathrm{f},\;\;\mathrm{d}N_{+x}=n_{+x}\mathrm{d}Al_\mathrm{f}.$$
 
 If we take all particles to move with a velocity $v$ in either the $+x$ or $-x$ direction (with equal probability), then in a time $l_\mathrm{f}/v$ half of the particles from each box will cross the interface, resulting in a flux
 
