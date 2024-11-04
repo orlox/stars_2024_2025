@@ -95,7 +95,7 @@ in the end the temperature and the pressure at the stellar surface are not zero.
 We can now sketch the general idea behind the numerical algorithm used by stellar evolution codes to actually solve the system of equations of stellar evolution. 
 
 ### Discretization
-The first step is to discretize the equations 1-5 by replacing the partial derivatives with finite differences, introducing a spatial finite precision, $\Delta m\equiv m_{i+1}-m_{i-1}$. We are diving our star in $K$ cells, with index $i=1,...,K$ each at mass coordinate $m_i$. Notice that, with our definition of $\Delta m$, the center of each cell will have mass coordinate $m_i$, and the lower (upper) borders are at $m_{i-1}$ ($m_{i+1}$). Let us apply the discretization to the energy transport equation, Equ. 3:
+The first step is to discretize the equations 1-5 by replacing the partial derivatives with finite differences, introducing a spatial finite precision, $\Delta m\equiv m_{i+1}-m_{i-1}$. We are dividing our star in $K$ cells, with index $i=1,...,K$ each at mass coordinate $m_i$. Notice that, with our definition of $\Delta m$, the center of each cell will have mass coordinate $m_i$, and the lower (upper) borders are at $m_{i-1}$ ($m_{i+1}$). Let us apply the discretization to the energy transport equation, Equ. 3:
 
 $$\dfrac{\partial L}{\partial m}=\epsilon_{\mathrm{nuc}}-c_P\dfrac{\partial T}{\partial t}+\dfrac{\delta}{\rho}\dfrac{\partial P}{\partial t}\hspace{0.5cm}\rightarrow$$
 
@@ -116,7 +116,7 @@ $$f^3_i=f^3_i(r_{i-1},r,r_{i+1},...,X^l_{i-1},X^l,X^l_{i+1})\:,$$
 where we have indexed the isotope mass fractions $X^l$ with an index $l=1,...,N$.
 
 #### Convergence
-These difference equations represent an **approximation** of the full differential equations, the accuracy of which can be improved by reducing $\Delta t$ and $\Delta m$. A good approach is to choose $m_i$ for each $j$ such, that all variables change by less than a predefined upper limit between points $i+1$ and $i-1$. *Spatial convergence* of the stellar model is achieved when the change in variables is reduced such that the numerical solution no longer depends on the $\Delta m$. Similarly, *temporal convergence* is achieved when the change in the variables is reduced till independence on $\Delta t$.
+These difference equations represent an **approximation** of the full differential equations, the accuracy of which can be improved by reducing $\Delta t$ and $\Delta m$. A good approach is to choose $m_i$ for each equation such, that all variables change by less than a predefined upper limit between points $i+1$ and $i-1$. *Spatial convergence* of the stellar model is achieved when the change in variables is reduced such that the numerical solution no longer depends on the $\Delta m$. Similarly, *temporal convergence* is achieved when the change in the variables is reduced till independence on $\Delta t$.
 
 #### The full discretized system
 If we now introduce the index $j=1,...,I+4$ to label the different equations of stellar evolution, we can write the entire system 1-5 for the cell $i$ in the compact form below:
