@@ -1,12 +1,12 @@
 # Questions
 
 ## Preliminary instructions
-Download the input files from your [Toledo](https://toledo.kuleuven.be/portal) page of the Stellar Structure & Evolution class, or from here [input_files_LAB1](assets/lab1_input.tar.xz). You should find those in the last published announcement. After decompressing your download, put the content in the ```MESA_LAB1``` directory:
+Download the input files from here [input_files_LAB1](assets/lab1_input.tar.xz). After decompressing your download, put the content in the ```MESA_LAB1``` directory:
 
 ```bash
 # Move to the directory of your choice
 cd MESA_LAB1
-# Decompress the downloaded file from Toledo
+# Decompress the downloaded file
 tar -xf lab1_input.tar.xz
 # Copy all the input files and put them in place of the ones already present in the MESA_LAB1 folder
 cp -R ./lab1_input/* .

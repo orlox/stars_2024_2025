@@ -38,6 +38,7 @@ If you still have time during the second hour of the session, you can start goin
 ### Formalities
 - **PAGE LIMIT**  
   Maximum of 12 pages (including figures) with classical font and fontsize ($\geq$ 12pt please). Include your name and student number on the first page of the PDF.
+  - Do NOT exceed the page limit. I will not correct any additional page beyond the 12th, no exception made for the bonus exercises.
 
 - **SUBMISSION FORMAT**  
    Submit a tar / zip named as ```name_lastname_XMsun_LAB1.zip```, where $X$ is defined as $M=X\:M_{\odot}$ and $M$ is the mass of your assigned star (see below!). Remember to always include your ```inlist_project``` in the submission.
@@ -50,10 +51,13 @@ The idea is that you go through *every* question; the final question (*Bonus: Ra
 - **GRADES** Points for each question are made explicit in the text. The maximum is 16 points / 16. Let us say that you totalize N points / 16: in total, this report will weight N / 4 grades out of your final 20! So if you manage to score full grade in this report, 4 points out of your final 20 are granted. Good luck! 🍀
 
 - ▶️ **DEADLINE**  Report must be completed by 
-  12 December, 14:00 CET 
+  3 December, 14:00 CET.
+  No extension possible!
 
 - **TO BE SENT**
   Via email to annachiara.picco@kuleuven.be, with the subject of the email matching the name of the attached zip / tar file, i.e. something like ```name_lastname_XMsun_LAB1.zip```.
+
+<!-- - **RETAKE EXAM RESUBMISSION** If you are planning to do the retake exam in August, you will be able to resubmit both your reports for LAB1 and LAB2, with deadline strictly before the retake day, no extension possible. The reports will be graded again and the new grades will be used to recalculate your overall grade with your written retake exam.  -->
 
 ## MESA instructions
 ### The lab computers
@@ -71,13 +75,11 @@ echo $MESASDK_VERSION
 ```
 
 ### The MESA work folder
-In the following, I am going to assume that you are working in a folder called ```MESA_LAB1```; you should adapt the commands to the (path of the) folder you chose to use. More specifically, you are going to work with a copy of the template work directory of the MESAstar module:
+In the following, I am going to assume that you are working in a folder called ```MESA_LAB1```; you should adapt the commands to the (path of the) folder you chose to use.
 
 ```bash
  # Move to the directory of your choice
  cd MESA_LAB1
- # Copy the template work directory from the MESA distribution
- cp -R $MESA_DIR/star/work/* .
 ```
 
 After running a simulation, this folder will contain the following elements:
@@ -108,12 +110,12 @@ After running a simulation, this folder will contain the following elements:
    List of all the information, about evolutionary quantities along the track, that are printed in the output file ```history.data```, and used in the pgstar dynamic window.
 
 ### How to run MESA
-You will always run MESA from the folder called ```MESA_LAB1```. In such folder, there is a very nicely written ```README.rst``` file with a reminder on how to run / compile (and restart, when needed) the simulation. Download the input files from your [Toledo](https://toledo.kuleuven.be/portal) page of the Stellar Structure & Evolution class, or from here [input_files_LAB1](assets/lab1_input.tar.xz), and put them inside the ```MESA_LAB1``` folder.
+You will always run MESA from the folder called ```MESA_LAB1```. In such folder, there is a very nicely written ```README.rst``` file with a reminder on how to run / compile (and restart, when needed) the simulation. Download the input files from here [input_files_LAB1](assets/lab1_input.tar.xz), and put them inside the ```MESA_LAB1``` folder.
 
 ```bash
 # Move to the directory of your choice
 cd MESA_LAB1
-# Decompress the downloaded file from Toledo
+# Decompress the downloaded file
 tar -xf lab1_input.tar.xz
 # Copy all the input files and put them in place of the ones already present in the MESA_LAB1 folder
 cp -R ./lab1_input/* .
