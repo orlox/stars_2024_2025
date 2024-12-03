@@ -13,7 +13,7 @@ You will be given 5 weeks to complete the report and send it to us.
 - **GRADES** Each part of the lab counts for 4 points. The maximum is 16 points / 16. Let us say that you totalize N points / 16: in total, this report will weight N / 4 grades out of your final 20! So if you manage to score full grade in this report, 4 points out of your final 20 are granted. Good luck! 🍀
 
 - ▶️ **DEADLINE**  Report must be completed by 
-   16 January , 14:00 CET
+   14 January , 14:00 CET
 - **TO BE SENT** Via email to annachiara.picco@kuleuven.be, with the subject of the   email matching the name of the attached zip / tar file, i.e. something like ```name_lastname_LAB2.zip```.
 
 ## MESA instructions
