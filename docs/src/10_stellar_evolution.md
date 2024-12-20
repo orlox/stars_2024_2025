@@ -131,3 +131,30 @@ We can also make use of our surface boundary conditions to determine the propert
 
 ## Basic main sequence structure
 
+A simple thing we can check is how stars transition from PP to CNO burning being dominant as we consider higher masses. In particular we have from zero-age main-sequence homology that the central temperature scales with mass as
+
+$$T_\mathrm{c}\propto M^{-0.29}\;\mathrm{(PP)},\;M^{-1.4}\;\mathrm{(CNO)}.$$
+
+If we consider the ratio between the energy generation rates from PP and CNO, we find that
+
+$$\frac{\varepsilon_{\mathrm{PP,c}}}{\varepsilon_{\mathrm{CNO,c}}}=\frac{\varepsilon_{\mathrm{0,PP}\rho_\mathrm{c}}T_\mathrm{c}^{\nu,\mathrm{PP}}}{\varepsilon_{\mathrm{0,CNO}}\rho_\mathrm{c}T_\mathrm{c}^{\nu,\mathrm{CNO}}}\propto T_\mathrm{c}^{\nu,\mathrm{PP}- \nu,\mathrm{CNO}},\tag{10.4}$$
+
+where we distinguish between the power exponents for PP ($\nu,\mathrm{PP}\simeq 4$) and CNO burning ($\nu,\mathrm{CNO}\simeq 18$). Let us assume that at a certain mass burning is completely dominated by the PP chain, such that the relationship $T_\mathrm{c}\propto M^{-0.29}$ for PP burning holds and $(10.4)$ gives
+
+$$\frac{\varepsilon_{\mathrm{PP,c}}}{\varepsilon_{\mathrm{CNO,c}}}\propto M^{0.57(\nu,\mathrm{PP}- \nu,\mathrm{CNO})}.$$
+
+The exponent is significantly smaller than zero, meaning that there is a narrow range in masses where there is a switch between PP burning being absolutely dominant and CNO burning being the one dominating energy generation. This also serves to justify our use of either PP burning or CNO burning for the scaling of $\varepsilon_\mathrm{nuc}$.
+
+The shift from PP to CNO drives an important change on how energy is transported in stellar interiors. Stars with masses similar to the Sun or lower have radiative cores and convective envelopes, while the inverse is the case for more massive stars,
+
+IMAGE
+
+As a star evolves in the main sequence it depletes core hydrogen. Low mass and high mass stars show a distinctive difference in their abundance profiles as they evolve towards core-hydrogen depletion. Low mass stars exhibit a smooth composition profile with hydrogen mass fractions having their lowest value at the core, while intermediate and massive stars have well mixed cores where hydrogen is kept at a nearly fixed abundance.
+
+IMAGE
+
+As illustrated above, the convective cores of intermediate and massive stars recede in the mass coordinate as the star evolves. This reduction of the convective core mass is partially explained by the lowered opacity of helium rich material. As deep in the stellar interior opacity is well approximated by electron scattering, $\kappa_\mathrm{es}=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, and as $\nabla_\mathrm{rad}\propto \kappa_\mathrm{es}$ a lowering opacity decreases $\nabla_\mathrm{rad}$ favoring convective stability. Although this is an important element, one needs to be careful with this argument as $\nabla_\mathrm{rad}$ depends on various other properties that do not remain fixed as the star evolves.
+
+## Evolution in the $\rho_\mathrm{c}$-$T_\mathrm{c}$ diagram
+
+Thinking beyond
