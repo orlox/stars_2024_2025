@@ -107,7 +107,7 @@ $$P(\tau=2/3)=\frac{2g_\mathrm{s}}{3\kappa(\tau=2/3)}+P(\tau=0).$$
 
 The pressure at $P(\tau=0)$ is given by $P_\mathrm{r}(\tau=0), but in many cases it can be neglected. It is important though for very luminous stars near the Eddington limit.
 
-## The main sequence in thee Hertzsprung-Russel diagram
+## The main sequence in the Hertzsprung-Russel diagram
 
 Now that we have a way to connect luminosity and radius to effective temperature, we can use our homology relationships to discuss the shape of the main sequence. We start from the mass radius relationship that we derived for both PP and CNO burning,
 
@@ -153,8 +153,40 @@ As a star evolves in the main sequence it depletes core hydrogen. Low mass and h
 
 IMAGE
 
-As illustrated above, the convective cores of intermediate and massive stars recede in the mass coordinate as the star evolves. This reduction of the convective core mass is partially explained by the lowered opacity of helium rich material. As deep in the stellar interior opacity is well approximated by electron scattering, $\kappa_\mathrm{es}=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, and as $\nabla_\mathrm{rad}\propto \kappa_\mathrm{es}$ a lowering opacity decreases $\nabla_\mathrm{rad}$ favoring convective stability. Although this is an important element, one needs to be careful with this argument as $\nabla_\mathrm{rad}$ depends on various other properties that do not remain fixed as the star evolves.
+As illustrated above, the convective cores of intermediate and massive stars recede in the mass coordinate as the star evolves. This reduction of the convective core mass is partially explained by the lowered opacity of helium rich material. As deep in the stellar interior opacity is well approximated by electron scattering, $\kappa_\mathrm{es}=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, and as $\nabla_\mathrm{rad}\propto \kappa_\mathrm{es}$ a decrease in $X$ decreases $\nabla_\mathrm{rad}$ favoring convective stability. Although this is an important element, one needs to be careful with this argument as $\nabla_\mathrm{rad}$ depends on various other properties that do not remain fixed as the star evolves.
 
 ## Evolution in the $\rho_\mathrm{c}$-$T_\mathrm{c}$ diagram
 
-Thinking beyond
+Thinking beyond the main sequence we can make use of our results so far to discuss the conditions under which stars ignote different nuclear fuels. Before $H$ is ignited, or in-between burning phases, evolution can be approximately described by homologous contraction. Beyond the main sequence the hydrogen envelope can expand significantly, but the helium core will contract near-homologously. Using our homology relationships derived in the previous class we find that
+
+$$\rho_\mathrm{c}\propto MR^{-1},\quad \rho_\mathrm{c}\propto MR^{-3}.$$
+
+Since we have
+
+$$R^{-1}\propto T_\mathrm{c}M^{-1},$$
+
+we get
+
+$$\rho_\mathrm{c}\propto M^{-2}T_\mathrm{c}^3\;\rightarrow\; \log T_\mathrm{c} =\frac{2}{3}\log M + \frac{1}{3}\log \rho_\mathrm{c}.$$
+
+This indicates that at the same central density stars of higher mass have a higher central temperature.
+
+Now, these homology relationships were made using an ideal gas equation of state but they can break down as we reach higher densities and the gas potentially becomes degenerate. We can assess this by considering the characteristic energy of a particle of the ideal gas,
+
+$$E_\mathrm{id} = k_\mathrm{B}T$$
+
+and the energy associated to a particle with the Fermi momentum. In the non-relativistic case we have
+
+$$R_\mathrm{deg,NR}\sim \frac{p_\mathrm{F}}{2m},\;p_\mathrm{F}\propto \rho^{1/3}\;\rightarrow\;E_\mathrm{deg}\propto\rho^{2/3}.$$
+
+In the extremely relativistic case we have
+
+$$E_\mathrm{deg, ER}\sim p_\mathrm{F}c\propto \rho^{1/3}.$$
+
+Moreover we can determine a critical density of a degenerate gas, $\rho_\mathrm{crit}$, above which the ER regime is a more appropriate description,
+
+$$\frac{E_\mathrm{deg,NR}(\rho_\mathrm{crit})}{E_\mathrm{deg,ER}(\rho_\mathrm{crit})}\sim 1\;\rightarrow \rho_\mathrm{crit}=\mathrm{constant}.$$
+
+This allows us to draw various boundaries in a $\log T_\mathrm{c}-\log \rho_\mathrm{c}$ plane, which are sketched below.
+
+IMAGE
