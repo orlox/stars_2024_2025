@@ -145,13 +145,13 @@ $$\frac{\varepsilon_{\mathrm{PP,c}}}{\varepsilon_{\mathrm{CNO,c}}}\propto M^{0.5
 
 The exponent is significantly smaller than zero, meaning that there is a narrow range in masses where there is a switch between PP burning being absolutely dominant and CNO burning being the one dominating energy generation. This also serves to justify our use of either PP burning or CNO burning for the scaling of $\varepsilon_\mathrm{nuc}$.
 
-The shift from PP to CNO drives an important change on how energy is transported in stellar interiors. Stars with masses similar to the Sun or lower have radiative cores and convective envelopes, while the inverse is the case for more massive stars,
+The shift from PP to CNO drives an important change on how energy is transported in stellar interiors. Stars with masses similar to the Sun have radiative cores and convective envelopes, while the inverse is the case for more massive stars, the shift being around $1.5M_\odot$. Stars below $\sim0.5M_\odot$ are completely convective during the main sequence. 
 
-IMAGE
+![asdf](assets/10_stellar_evo/convection.svg)
 
-As a star evolves in the main sequence it depletes core hydrogen. Low mass and high mass stars show a distinctive difference in their abundance profiles as they evolve towards core-hydrogen depletion. Low mass stars exhibit a smooth composition profile with hydrogen mass fractions having their lowest value at the core, while intermediate and massive stars have well mixed cores where hydrogen is kept at a nearly fixed abundance.
+As a star evolves in the main sequence it depletes core hydrogen. solar mass stars and high mass stars show a distinctive difference in their abundance profiles as they evolve towards core-hydrogen depletion. Low mass stars exhibit a smooth composition profile with hydrogen mass fractions having their lowest value at the core, while intermediate and massive stars have well mixed cores where hydrogen is kept at a nearly fixed abundance.
 
-IMAGE
+![asdf](assets/10_stellar_evo/composition.svg)
 
 As illustrated above, the convective cores of intermediate and massive stars recede in the mass coordinate as the star evolves. This reduction of the convective core mass is partially explained by the lowered opacity of helium rich material. As deep in the stellar interior opacity is well approximated by electron scattering, $\kappa_\mathrm{es}=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, and as $\nabla_\mathrm{rad}\propto \kappa_\mathrm{es}$ a decrease in $X$ decreases $\nabla_\mathrm{rad}$ favoring convective stability. Although this is an important element, one needs to be careful with this argument as $\nabla_\mathrm{rad}$ depends on various other properties that do not remain fixed as the star evolves.
 
@@ -189,4 +189,8 @@ $$\frac{E_\mathrm{deg,NR}(\rho_\mathrm{crit})}{E_\mathrm{deg,ER}(\rho_\mathrm{cr
 
 This allows us to draw various boundaries in a $\log T_\mathrm{c}-\log \rho_\mathrm{c}$ plane, which are sketched below.
 
-IMAGE
+![asdf](assets/10_stellar_evo/log_T_rho.svg)
+
+Red lines illustrate the evolution of stars with different masses, while the dashed lines show different ignition lines for nuclear fuels. As we discussed while studying nucleosynthesis, burning stages are well separated in temperature and have a very strong temperature dependency, making these lines close to horizontal in the diagram. Stars with lower masses reach the non-relativistic degeneracy regime at earlier evolutionary stages, at which point temperature decouples from pressure and the star stops contracting and cools down. This corresponds to the white dwarf stage, and more massive stars can produce different types of white dwarfs (helium, CO and O-Ne-Mg white dwarfs). Stars born with more than $\sim 8M_\odot$ avoid the electron degeneracy region, and keep contracting and heating up beyond silicon burning. Eventually, the central temperature becomes so high that photons within the gas are extremely energetic and can destroy nuclei, undoing the chain of fusion processes that led to an iron-core in an endothermic process that leads to core-collapse and the formation of a neutron star or black-hole.
+
+It is important to point out two other different outcomes. Stars slightly below $8M_\odot$ can undergo collapse of their O-Ne-Mg cores due to electron captures into Magnesium and Neon, which is expected to result in a neutron star. Stars that finish their lives with helium cores in excess of $\sim 45M_\odot$ (noting there are large uncertainties on this due to uncertainties in nuclear reaction rates) are expected to experience an instability due to the creation of electron positron pairs in their cores, which softens the equation of state and leads to collapse before oxygen depletion. This produces a thermonuclear condition which can disrupt the entire star (known as a pair-instability supernova) leaving no compact remnant behind.

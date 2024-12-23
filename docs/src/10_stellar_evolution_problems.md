@@ -26,4 +26,31 @@ It is currently thought that massive stars with high rotation rates experience s
 
 ## Solutions
 
-TBD
+### 1: Homology with radiation pressure
+
+### 2: Chemically homogeneous evolution
+
+We can make use of the mass-luminosity and mass-radius relationships derived in the previous for main-sequence homology: 
+
+$$L\propto \kappa^{-1}\mu^{4}M^3.$$
+$$R\propto \mu^{(\nu-4)/(\nu-3)}M^{(\nu-1)/(\nu+3)}\kappa^{1/(\nu+3)}.$$
+
+In this case, as the star evolves homogeneously keeping a fixed composition throughout, we can apply these relationships by just shifting $\mu$ as evolution proceeds. Considering a massive star undergoing CNO burning, we take $\nu\simeq 18$. We will also ignore changes in mass that can be produced by winds, such that we consider evolution at a fixed mass. Opacity can also change with composition, so we do not ignore its variations. Considering all this we have
+
+$$L\propto \kappa^{-1}\mu^4$$
+$$R\propto \mu^{0.93}\kappa^{0.048}.$$
+
+To connect this with the evolution in the HR diagram, we use that
+
+$$T_\mathrm{eff}^4 \propto \frac{L}{R^2},$$
+
+which gives us that
+
+$$T_\mathrm{eff}\propto \kappa^{-1.1}\mu^{2.13}.$$
+
+We can relate the properties at any stage during the main sequence to those at ZAMS by considering the value of $\kappa$ and $\mu$ at each of those stages,
+
+$$L=L_\mathrm{ZAMS}\left(\frac{\kappa}{\kappa_\mathrm{ZAMS}}\right)^{-1}\left(\frac{\mu}{\mu_\mathrm{ZAMS}}\right)^4$$
+$$T_\mathrm{eff}=T_\mathrm{ZAMS} \left(\frac{\kappa}{\kappa_\mathrm{ZAMS}}\right)^{-1.1}\left(\frac{\mu}{\mu_\mathrm{ZAMS}}\right)^{2.13}.$$
+
+Now we can consider the variation between the zero-age main sequence with a hydrogen mass fraction of $X\sim 0.7$ and the terminal-age main sequence at $X=0$. Considering electron scattering opacity $\kappa=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, we have $\kappa_\mathrm{TAMS}/\kappa_\mathrm{ZAMS}=0.59$. For a fully ionized gas the mean molecular weight is well approximated by $\mu \simeq 4/(3+5X)$.
