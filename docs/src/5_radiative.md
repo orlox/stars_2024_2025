@@ -17,7 +17,7 @@ where brackets denote the units of what is inside.
 
 So what is opacity? Let's start by thinking of a medium with particles of mass $m$, which interact with passing radiation. We will consider each particle acts as a disk of area $\sigma$ (its cross section), and that all radiation is absorbed when it hits a particle. We can now consider a thin slab of material as follows:
 
-![asdf](assets/5_radiative/opacity.svg)
+![Area covered by particles of cross-area $\mathrm{d}\sigma$ in a thin slab.](assets/5_radiative/opacity.svg)
 
 The total number of particles in the slab is
 
@@ -38,7 +38,7 @@ $$\kappa\equiv \frac{\sigma}{m}\rightarrow P_\mathrm{coll}=\kappa\rho\mathrm{d}z
 Now let's see how flux changes as it goes through the slab:
 
  
-![asdf](assets/5_radiative/flux.svg)
+![Change in flux due to passage through the thin slab.](assets/5_radiative/flux.svg)
 
 Absent any emission from the slab itself, the difference between the fluxes at the faces is just
 
@@ -88,7 +88,7 @@ What does this imply for the distribution of momenta? Remember that we defined t
 
 We take an area element $\mathrm{d}A$, and photons crossing it with a momentum covering a solid angle $\mathrm{d}\Omega$ around the perpendicular direction,
 
-![asdf](assets/5_radiative/intensity.svg)
+![](assets/5_radiative/intensity.svg)
 
 In a time $\mathrm{d}t$, the number of photons crossing $\mathrm{d}A$ with directions contained in $\mathrm{d}\Omega$ is
 
@@ -149,7 +149,7 @@ In practice we have multiple velocities and mean free paths, so one would genera
 
 The flux described by equation $(4.6)$ needs not just be energy, it can also describe a flux of particles of different types. Now, we will not formally derive (4.6), but we will provide a 1-D analogue. Consider motion only happens in the $+x$ or $-x$ direction. We then take an are $\mathrm{d}A$ separating two regions of length equal to $l_\mathrm{f}$,
 
-![asdf](assets/5_radiative/diffusion.svg)
+![Neighboring boxes with different particle densities that will experience diffusive mixing.](assets/5_radiative/diffusion.svg)
 
 We approximate the particle density at each side as $n_{-x}$ and $n_{+x}$ with
 

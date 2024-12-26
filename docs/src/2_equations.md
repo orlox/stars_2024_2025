@@ -12,7 +12,7 @@ Goals:
 
 We first consider the 3D problem before reducing it to radial symmetry. Start with a box with sides of size $\mathrm{d}l$ and density $\rho$.
 
-![asd](assets/2_equations/eom.svg)
+![Infinitesimal box with sides of length $\mathrm{d}l$ used to determine the equation of motion.](assets/2_equations/eom.svg)
 
 The mass of the box is simply
 
@@ -28,7 +28,7 @@ $$\vec{f}_g=-\mathrm{d}m\nabla\Phi,\quad \nabla^2\Phi = 4\pi G \rho.$$
 
 To compute $\vec{f}_P$, we focus first on its component in one cartesian direction. If our box is aligned with the $x$ axis, then the force of pressure will be given by the difference in pressure between two sides, multiplied by the area of the face. This is illustrated in the figure below, where $P_{-x}$ and $P_{+x}$ is the value of the pressure at each side.
 
-![asdf](assets/2_equations/pressure.svg)
+![Pressure acting on two opposite faces of the box.](assets/2_equations/pressure.svg)
 
 The $x$ component of the pressure force is then
 
@@ -61,7 +61,7 @@ $$\frac{\mathrm{d}}{\mathrm{d} t} = \frac{\partial}{\partial t} + v\cdot\nabla.$
 
 If we have an energy flux $\vec{F}$ going through the fluid, our mass element $\mathrm{d}m$ can have energy deposited onto it if $\vec{F}$ is not constant in space. To determine this, we apply a similar reasoning to what we did in the previous section, considering first the energy that flows through two sides of the box in the $x$ direction. The energy being deposited in each side of the box corresponds to the flux times the area, as illustrated below where $F_{x,-x}$ and $F_{x,+x}$ represent the flux at each of the faces.
 
-![asdf](assets/2_equations/flux.svg)
+![Flux crossing the cube along one axis.](assets/2_equations/flux.svg)
 
 The heat deposited by radiation (per unit time and mass) in the $x$ direction is then
 
@@ -94,7 +94,7 @@ $$\mathrm{dm}=(dl)^3\rho \rightarrow \frac{\partial \rho}{\partial t}=\frac{1}{\
 
 The image below shows how, during an amount of time $\mathrm{d}t$, material would flow from the two sides of the box in the x-direction.
 
-![asdf](assets/2_equations/continuity.svg)
+![Material crossing two opposite faces of a box (considered fixed relative to the velocity field).](assets/2_equations/continuity.svg)
 
 Material coming from the $-x$ direction would fill a region of volume $(\mathrm{d}l)^2v_{x,-x}\mathrm{d}t$, from which the total mass flowing is obtained by mutiplying by the density at the face. The corresponding change in mass at each face is then
 
