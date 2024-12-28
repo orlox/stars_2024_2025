@@ -28,6 +28,36 @@ It is currently thought that massive stars with high rotation rates experience s
 
 ### 1: Homology with radiation pressure
 
+1. We have that
+   
+   $$1-\beta=\frac{P_\mathrm{rad}}{P},\;\beta=\frac{P_\mathrm{gas}}{P}.$$
+
+   Using this we can write
+
+   $$\left(\frac{1-\beta}{\beta^4}\right)^{1/3}=\left(\frac{P_\mathrm{rad}}{P_\mathrm{gas}^4}P^3\right)^{1/3}=\left(\frac{a^{1/3}}{3^{1/3}k_\mathrm{B}^{4/3}}\right)\left(\frac{\rho}{\mu}\right)^{-4/3}P,$$
+
+   from which the desired result follows directly.
+
+2. For a constant $\beta$ the equation of state becomes a polytrope with $n=3$, so having a solution for the Lane-Emden equation with $n=3$ allows one to construct arbitrary solutions for different values of $\beta$.
+
+3. Taking $f_1=f(\beta_1)$ and $f_2=f(\beta_2)$ and taking the ratio between the equation of state for both homologous models we find that
+
+   $$\frac{P_1}{P_2}=\left(\frac{\rho_1}{\rho_2}\right)^{4/3}\left(\frac{\mu_1}{\mu_2}\right)^{-4/3}\left(\frac{f_1}{f_2}\right)^{1/3}.$$
+
+   for the ratio between pressures and the ratio between densities we can use the homology relationships that were derived from the equation of hydrostatic equilibrium and the equation of continuity respectively,
+
+   $$\left(\frac{M_1}{M_2}\right)^{2}\left(\frac{R_1}{R_2}\right)^{-4}=\left(\frac{M_1}{M_2}\right)^{4/3}\left(\frac{R_1}{R_2}\right)^{-4}\left(\frac{\mu_1}{\mu_2}\right)^{-4/3}\left(\frac{f_1}{f_2}\right)^{1/3}.$$
+
+   Isolating $f_1/f_2$ gives us the desired homology relationship,
+
+   $$\frac{f_1}{f_2}=\left(\frac{M_1}{M_2}\right)^{2}\left(\frac{\mu_1}{\mu_2}\right)^{4},$$
+
+   or equivalently,
+
+   $$f(\beta)\propto M^2\mu^4.$$
+
+4. We see that $f(\beta)$ increases with mass, which in turn implies $\beta$ decreases with mass. Since $\beta=P_\mathrm{gas}/P$, this means that more massive stars have a smaller fraction of their total pressure coming from gas pressure.
+
 ### 2: Chemically homogeneous evolution
 
 We can make use of the mass-luminosity and mass-radius relationships derived in the previous for main-sequence homology: 

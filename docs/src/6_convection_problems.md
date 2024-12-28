@@ -94,15 +94,15 @@ $$\frac{1}{\rho}\left[\left(\frac{d\rho}{dr}\right)_\mathrm{e}-\left(\frac{d\rho
 
 Multiplication by $H_P$ turns the derivatives into derivatives with respect to pressure,
 
-$$\frac{H_P}{\rho}\left[\left(\frac{d\rho}{dr}\right)_\mathrm{e}-\left(\frac{d\rho}{d r}\right)_\mathrm{s}\right] = \frac{P\delta}{T}\left(\frac{d T}{dP}\right)_\mathrm{e}-\frac{P\delta}{T}\left(\frac{d T}{dr}\right)_\mathrm{s}-\frac{P\varphi}{\mu}\left(\frac{d \mu}{dr}\right)_\mathrm{s}.$$
+$$\frac{H_P}{\rho}\left[\left(\frac{d\rho}{dr}\right)_\mathrm{e}-\left(\frac{d\rho}{d r}\right)_\mathrm{s}\right] = \frac{P\delta}{T}\left(\frac{d T}{dP}\right)_\mathrm{e}-\frac{P\delta}{T}\left(\frac{d T}{dr}\right)_\mathrm{s}+\frac{P\varphi}{\mu}\left(\frac{d \mu}{dr}\right)_\mathrm{s}.$$
 
 Turning all derivatives on the right side on logarithmic derivatives of the form $d \ln X/d\ln P$, we get
 
-$$\frac{H_P}{\rho}\left[\left(\frac{d\rho}{dr}\right)_\mathrm{e}-\left(\frac{d\rho}{d r}\right)_\mathrm{s}\right] = \delta\nabla_\mathrm{e}-\delta\nabla-\varphi\nabla_\mu.$$
+$$\frac{H_P}{\rho}\left[\left(\frac{d\rho}{dr}\right)_\mathrm{e}-\left(\frac{d\rho}{d r}\right)_\mathrm{s}\right] = \delta\nabla_\mathrm{e}-\delta\nabla+\varphi\nabla_\mu.$$
 
-For an adiabatic displacement where $\delta_\mathrm{e}=\delta_\mathrm{ad}$, the stability condition is then:
+For an adiabatic displacement where $\nabla_\mathrm{e}=\nabla_\mathrm{ad}$, the stability condition is then:
 
-$$\delta\nabla_\mathrm{ad}-\delta\nabla-\varphi\nabla_\mu > 0,$$
+$$\delta\nabla_\mathrm{ad}-\delta\nabla+\varphi\nabla_\mu > 0,$$
 
 which gives the desired result if $\delta>0$. Do you expect $\delta>0$?
 

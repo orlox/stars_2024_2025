@@ -46,7 +46,7 @@ $$F(z)-F(z+\mathrm{d}z)=F(z)P_\mathrm{coll}=F(z)\kappa\rho\mathrm{d}z,$$
 
 and approximating the different in flux with a partial derivative gives us a differential equation for the flux,
 
-$$\frac{\mathrm{d}F}{\mathrm{d}z} = \kappa\rho F(z).$$
+$$\frac{\mathrm{d}F}{\mathrm{d}z} = -\kappa\rho F(z).$$
 
 For a constant $\kappa\rho$, the solution to this differential equation corresponds to exponential decay,
 
