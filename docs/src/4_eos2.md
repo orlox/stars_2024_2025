@@ -34,7 +34,7 @@ as the integral gives the internal energy per unit volume, which is turned into 
 
 Computing pressure is a bit more complex. Consider a slab of area $\mathrm{d}\sigma$ embedded in the gas, on which particles will be bouncing,
 
-![asdf](assets/4_eos2/pressure1.svg)
+![Particle impacting and bouncing of an area $\mathrm{d}\sigma$.](assets/4_eos2/pressure1.svg)
 
 A particle with momentum $p$ colliding at an angle $\theta$ with respect to the normal will transfer momentum equal to
 
@@ -42,7 +42,7 @@ $$\Delta p = 2p\cos{\theta}. \tag{3.1}$$
 
 The pressure corresponds to a force per unit area, and a force corresponds to a change in momentum per unit time. This means that if we know the rate of collisions per unit time and direction on $\mathrm{d}\sigma$ we can integrate over all directions to get the pressure. Let's consider particles coming from a direction $\theta,\phi$, which cover a solid angle $\mathrm{d}\vec{\Omega}$ in the direction of their momenta $p$ and hit the slab $\mathrm{d}\sigma$,
 
- ![asdf](assets/4_eos2/pressure2.svg)
+ ![Particles impacting the area $\mathrm{d}\sigma$ from a solid angle $\mathrm{d}\Omega$](assets/4_eos2/pressure2.svg)
 
 As the distribution is isotropic, the number of particles with momenta between $p$ and $p+\mathrm{d}p$ contained in the solid angle $\mathrm{d}\vec{\Omega}$ is
 
@@ -50,7 +50,7 @@ $$N(p,p+\mathrm{d}p,\mathrm{d}\vec{\Omega})=\frac{f(p)}{4\pi}\mathrm{d}p\mathrm{
 
 next we need to know how many particles per unit time, unit momenta and unit solid angle will cross the slab. If we consider particles with momentum $p$ hitting the slab at an angle $\theta$, and take the velocity $v_p$ for a given momentum, then in a time $\Delta t$ all particles in an area $v_p\cos\theta\mathrm{d}\sigma\Delta t$ will cross the slab.
 
- ![asdf](assets/4_eos2/pressure3.svg)
+ ![Determination of particle flux impacting $\mathrm{d}\sigma$ from a given direction.](assets/4_eos2/pressure3.svg)
 
 The number of collisions per unit time onto the slab, with momenta between $p$ and $p+\mathrm{d}p$ coming from a solid angle $\mathrm{d}\vec{\Omega}$ is
 
@@ -78,7 +78,7 @@ $$\mathrm{d}^3p=\frac{h^3}{2\mathrm{d}^3 x}.$$
 
 As they go to the lowest possible energy states, we can think they fill a sphere in momentum space up to a value $p_\mathrm{F}$, known as the Fermi momentum:
 
- ![asdf](assets/4_eos2/momentum.svg)
+ ![Distribution of particle momentum filling all lower energy states up to the Fermi momentum.](assets/4_eos2/momentum.svg)
 
 The volume in momentum is simply
 
@@ -94,6 +94,7 @@ This expression allows us to compute the Fermi momentum if we know the particle 
 So what is $f(p)$? Between momenta $p$ and $p+\mathrm{d}p$ we have a volume in momentum equal to
 $$V_\mathrm{p}(p,p+\mathrm{d}p)=4\pi p^2\mathrm{d}p.$$
 The number of particles in this momentum shell within the volume $\mathrm{d}^3 x$ is
+
 $$N(p,p+\mathrm{d}p)=\frac{4\pi p^2 \mathrm{d}p}{\displaystyle\left(\frac{h^3}{2\mathrm{d}^3 x}\right)},$$
 which from the definition of $f(p)$ means that
 $$\boxed{f(p)=
@@ -157,7 +158,7 @@ $$r = r_nz,\quad r_n^2 = \frac{(n+1)P_\mathrm{c}}{4\pi G \rho_\mathrm{c}^2}.$$
 
 The surface is located at the value $z_n$ where the function has its first zero.
 
-![Degeneracy at solar core](assets/4_eos2/polytrope.svg)
+![Degeneracy at the solar core.](assets/4_eos2/polytrope.svg)
 
 As part of the exercises it was also shown that the total mass of a polytropic model is
 

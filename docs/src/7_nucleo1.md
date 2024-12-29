@@ -30,7 +30,7 @@ $$E_{\mathrm{b},i}=[(A_i-Z_i)m_n + Z_i m_p - m_i]c^2.$$
 
 If we consider the most common isotopes for each element, one can see how the energy per baryon varies with mass number (image source: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Binding_energy_curve_-_common_isotopes.svg)),
 
-![Binding energy of most common isotopes](assets/7_nucleo1/binding.svg)
+![Binding energy of most common isotopes.](assets/7_nucleo1/binding.svg)
 
 We see that the most bound nucleus is $^{56}\mathrm{Fe}$. This means that by fusing lighter atoms we can release energy (exothermic reactions), but once we burn everything into iron any additional fusion process requires energy (endothermic reaction). The formation of an iron core then represents a critical evolutionary stage, as we will see later.
 
@@ -90,7 +90,7 @@ where in practice one adds up over all possible reactions.
 
 For two nuclei with atomic numbers $Z_1$ and $Z_2$, their interaction is described by a potential that is dominated by nuclear forces at very small separations and by the Coulomb potential farther away.
 
-![Nuclear potential](assets/7_nucleo1/potential.svg)
+![Illustration of the nuclear potential.](assets/7_nucleo1/potential.svg)
 
 If we consider the core of the Sun, which has a temperature of order $10^7$ Kelvin, the typical particle energy is $\sim k_\mathrm{B}T\sim \mathrm{keV}$. In a classical picture, we need $\mathrm{MeV}$ energies to go above the Coulomb potential and produce a nuclear reaction. One could think it is still possible considering the high energy tail of a Maxwell-Boltzmann distribution, but the probability of having even a single particle with enough energy is vanishingly small.
 
@@ -120,7 +120,7 @@ $$\langle\sigma v\rangle = f(T,m)\int_0^\infty S(E)\exp\left(-bE^{-1/2}-\frac{E}
 
 Excluding the S-factor, the exponential term in the integral is such that it peaks at a narrow range of energies, as depicted below.
 
-![Gamow peak](assets/7_nucleo1/gamow.svg)
+![Gamow peak.](assets/7_nucleo1/gamow.svg)
 
 This figure shows the value of the exponential term in equation $(6.5)$ (normalized by its maximum) for different values of the ratio $b/\sqrt{k_\mathrm{B}T}$. These values are chosen to be representative of hydrogen burning at a temperature of $10^7\,\mathrm{K}$, helium burning at $10^8\,\mathrm{K}$ and carbon burning at $5\times 10^{8}\,\mathrm{K}$. This function is commonly referred to as the Gamow peak, and can to first order be approximated with a Gaussian function. In that case, if one assumes $S(E)$ does not vary significantly within the range of energies relevant to the Gamow peak, it can be taken off the integral in equation (6.5), which can then be evaluated analytically (see exercises for this session). 
 
@@ -130,11 +130,11 @@ This figure shows the value of the exponential term in equation $(6.5)$ (normali
 
 As under specific conditions tunneling is favored for the particles with lower $Z$, the first (and longer-lasting) phase of nuclear burning of a star is that of core-hydrogen burning, were hydrogen is fused into helium. This stage is known as the main-sequence, and the onset of core-hydrogen burning is known as the zero-age main sequence. As a hydrogen atom is composed of a single baryon, while helium consists of 4, we need a series of reactions to build it up. The identification of the specific set of reactions that are dominant in stellar evolution led to the discovery of two different burning processes. The first one is the PP-chain, which in its simpler form (called the PP-I chain), is what one might think as the most natural way to fuse four hydrogen atoms into helium. This is depicted in the figure below.
 
-![PP-I chain](assets/7_nucleo1/PPI.svg)
+![PP-I chain.](assets/7_nucleo1/PPI.svg)
 
 However, it is found that for stars with masses above $\sim 1.5M_\odot$, a different and much less intuitive process is dominant, known as the CNO cycle. The CNO cycle uses carbon, nitrogen and oxygen as catalysts, where through a series of hydrogen fusion processes with the CNO elements and beta decays helium can be produced without modifying the total number of CNO atoms. The figure below illustrates the CNO-I (left loop) and CNO-II (right loop) cycles.
 
-![CNO-I and CNO_II burning processes](assets/7_nucleo1/CNO.svg)
+![CNO-I and CNO_II burning processes.](assets/7_nucleo1/CNO.svg)
 
 Based on the Gamow peak, nuclear energy production rates can be approximated around a specific temperature in terms of a power-law index $\nu$ (see exercises for this session):
 

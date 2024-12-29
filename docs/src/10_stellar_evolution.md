@@ -105,7 +105,7 @@ By using the thin atmosphere approximation, with $g\simeq g_\mathrm{s}\equiv GM/
 
 $$P(\tau=2/3)=\frac{2g_\mathrm{s}}{3\kappa(\tau=2/3)}+P(\tau=0).$$
 
-The pressure at $P(\tau=0)$ is given by $P_\mathrm{r}(\tau=0), but in many cases it can be neglected. It is important though for very luminous stars near the Eddington limit.
+The pressure at $P(\tau=0)$ is given by $P_\mathrm{r}(\tau=0)$, but in many cases it can be neglected. It is important though for very luminous stars near the Eddington limit.
 
 ## The main sequence in the Hertzsprung-Russel diagram
 
@@ -147,11 +147,11 @@ The exponent is significantly smaller than zero, meaning that there is a narrow 
 
 The shift from PP to CNO drives an important change on how energy is transported in stellar interiors. Stars with masses similar to the Sun have radiative cores and convective envelopes, while the inverse is the case for more massive stars, the shift being around $1.5M_\odot$. Stars below $\sim0.5M_\odot$ are completely convective during the main sequence. 
 
-![asdf](assets/10_stellar_evo/convection.svg)
+![Different forms of energy transport in main-sequence stars according to their masses.](assets/10_stellar_evo/convection.svg)
 
 As a star evolves in the main sequence it depletes core hydrogen. solar mass stars and high mass stars show a distinctive difference in their abundance profiles as they evolve towards core-hydrogen depletion. Low mass stars exhibit a smooth composition profile with hydrogen mass fractions having their lowest value at the core, while intermediate and massive stars have well mixed cores where hydrogen is kept at a nearly fixed abundance.
 
-![asdf](assets/10_stellar_evo/composition.svg)
+![Sketch of the evolution of hydrogen mass fraction profiles through the main-sequence for stars of different masses.](assets/10_stellar_evo/composition.svg)
 
 As illustrated above, the convective cores of intermediate and massive stars recede in the mass coordinate as the star evolves. This reduction of the convective core mass is partially explained by the lowered opacity of helium rich material. As deep in the stellar interior opacity is well approximated by electron scattering, $\kappa_\mathrm{es}=0.2(1+X)\;\mathrm{cm^2\,g^{-1}}$, and as $\nabla_\mathrm{rad}\propto \kappa_\mathrm{es}$ a decrease in $X$ decreases $\nabla_\mathrm{rad}$ favoring convective stability. Although this is an important element, one needs to be careful with this argument as $\nabla_\mathrm{rad}$ depends on various other properties that do not remain fixed as the star evolves.
 
@@ -189,7 +189,7 @@ $$\frac{E_\mathrm{deg,NR}(\rho_\mathrm{crit})}{E_\mathrm{deg,ER}(\rho_\mathrm{cr
 
 This allows us to draw various boundaries in a $\log T_\mathrm{c}-\log \rho_\mathrm{c}$ plane, which are sketched below.
 
-![asdf](assets/10_stellar_evo/log_T_rho.svg)
+![Illustrative evolution of stars in the $\log\rho_\mathrm{c}-\log T_\mathrm{c}$ diagram.](assets/10_stellar_evo/log_T_rho.svg)
 
 Red lines illustrate the evolution of stars with different masses, while the dashed lines show different ignition lines for nuclear fuels. As we discussed while studying nucleosynthesis, burning stages are well separated in temperature and have a very strong temperature dependency, making these lines close to horizontal in the diagram. Stars with lower masses reach the non-relativistic degeneracy regime at earlier evolutionary stages, at which point temperature decouples from pressure and the star stops contracting and cools down. This corresponds to the white dwarf stage, and more massive stars can produce different types of white dwarfs (helium, CO and O-Ne-Mg white dwarfs). Stars born with more than $\sim 8M_\odot$ avoid the electron degeneracy region, and keep contracting and heating up beyond silicon burning. Eventually, the central temperature becomes so high that photons within the gas are extremely energetic and can destroy nuclei, undoing the chain of fusion processes that led to an iron-core in an endothermic process that leads to core-collapse and the formation of a neutron star or black-hole.
 

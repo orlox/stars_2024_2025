@@ -12,7 +12,7 @@ So far we have considered two processes to transport energy, conduction and radi
 
 Let's consider a mass element that is radially displaced upwards a distance $\Delta r$.
 
-![convective blob](assets/6_convection/convection.svg)
+![Change in properties of a convective element compared to its surroundings.](assets/6_convection/convection.svg)
 
 Here we differentiate between properties of the mass element with the subscript "e" and those of its surroundings with a subscript "s". Before the perturbation, we take the properties of the element and its surroundings to be equal,
 
@@ -125,7 +125,7 @@ But how much energy flux do we expect? In principle this is a very complex 3D hy
 
 As small perturbations induce instability, let's assume that a convective region is entirely composed of blobs of materials that are unstable and move up or down. We consider a slab of material of area $\mathrm{d}A$, and consider the mass elements crossing it in a time $\mathrm{d}t$,
 
-![convective blob 2](assets/6_convection/blobs.svg)
+![](assets/6_convection/blobs.svg)
 
 These elements have different velocities, sizes and temperature contrasts $DT$. We simplify things by taking all elements to have a characteristic absolute velocity $|v|$ and absolute temperature contrast $|DT|$ (positive for rising elements, negative otherwise). The amount of mass crossing $\mathrm{d}A$ upwards in time $\mathrm{d}t$ is
 

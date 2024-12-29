@@ -67,7 +67,7 @@ Consider that the white dwarf is composed of ionized helium ($\mu_e\simeq 2$). F
 
 The Fermi momentum is connected to the number density of a specific particle via
 
-$$n=\int_0^{p_\mathrm{F}} n_p(p)dp=\frac{8\pi}{3h^3} p_\mathrm{F}^3\rightarrow p_\mathrm{F}=\left(\frac{3h^3 n}{8\pi}\right).$$
+$$n=\int_0^{p_\mathrm{F}} n_p(p)dp=\frac{8\pi}{3h^3} p_\mathrm{F}^3\rightarrow p_\mathrm{F}=\left(\frac{3h^3 n}{8\pi}\right)^{1/3}.$$
 
 For an ionized helium gas we can express the electron and ion densities as
 
